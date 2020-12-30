@@ -117,4 +117,54 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="siticoneShadowForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="siticoneCirclePictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <metadata name="siticoneDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>189, 17</value>
+  </metadata>
 </root>

@@ -40,5 +40,15 @@ namespace ooad.GUI
         {
             
         }
+
+        private void roundButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void roundButton2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

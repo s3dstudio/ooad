@@ -45,6 +45,9 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Siticone.UI">
+      <HintPath>..\packages\Siticone.UI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -95,6 +98,9 @@
     <Compile Include="Controls\LollipopToggle.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,41 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\HP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\HP.Designer.cs">
+      <DependentUpon>HP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\KHDT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\KHDT.Designer.cs">
+      <DependentUpon>KHDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\KQHT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\KQHT.Designer.cs">
+      <DependentUpon>KQHT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\PCGD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\PCGD.Designer.cs">
+      <DependentUpon>PCGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\TKB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\TKB.Designer.cs">
+      <DependentUpon>TKB.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIManagers\DrawHelper.cs" />
     <Compile Include="UIManagers\FontManager.cs" />
     <EmbeddedResource Include="GUI\Login.resx">
@@ -119,14 +160,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="UC\HP.resx">
+      <DependentUpon>HP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\KHDT.resx">
+      <DependentUpon>KHDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\KQHT.resx">
+      <DependentUpon>KQHT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\PCGD.resx">
+      <DependentUpon>PCGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\TKB.resx">
+      <DependentUpon>TKB.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -145,6 +196,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monthly-calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-course.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plan-idea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test-results.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh-dai-dien-FB-200.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

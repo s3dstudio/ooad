@@ -30,9 +30,44 @@ namespace ooad.GUI
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
-        private void materialTabSelector1_Click(object sender, EventArgs e)
+        private void Main_Load(object sender, EventArgs e)
         {
+            siticoneShadowForm1.SetShadowForm(this);
+        }
 
+        private void roundButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void roundButton2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void siticoneButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (siticoneButton1.Checked) khdt1.BringToFront();
+        }
+
+        private void siticoneButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (siticoneButton2.Checked) pcgd1.BringToFront();
+        }
+
+        private void siticoneButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (siticoneButton3.Checked) tkb1.BringToFront();
+        }
+
+        private void siticoneButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (siticoneButton4.Checked) kqht1.BringToFront();
+        }
+
+        private void siticoneButton5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (siticoneButton5.Checked) hp1.BringToFront();
         }
     }
 }
