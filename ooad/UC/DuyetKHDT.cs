@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace ooad.UC
 {
-    public partial class KHDT : UserControl
+    public partial class DuyetKHDT : UserControl
     {
-        public KHDT()
+        public DuyetKHDT()
         {
             InitializeComponent();
         }
 
-        private void KHDT_Load(object sender, EventArgs e)
+        private void siticoneGradientButton1_Click(object sender, EventArgs e)
+        {
+            this.SendToBack();
+        }
+
+        private void DuyetKHDT_Load(object sender, EventArgs e)
         {
             int count = 4;
             for (int i = 0; i < count; i++)
@@ -26,11 +31,6 @@ namespace ooad.UC
                 uC_Component.Location = new Point(20 + (i * 300), 0);
                 tableLayoutPanel1.Controls.Add(uC_Component);
             }
-        }
-
-        private void siticoneButton1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -120,6 +120,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UC\CreateKHDT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\CreateKHDT.Designer.cs">
+      <DependentUpon>CreateKHDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\DuyetKHDT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\DuyetKHDT.Designer.cs">
+      <DependentUpon>DuyetKHDT.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\HP.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -150,6 +162,12 @@
     <Compile Include="UC\TKB.Designer.cs">
       <DependentUpon>TKB.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC_Component.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Component.Designer.cs">
+      <DependentUpon>UC_Component.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIManagers\DrawHelper.cs" />
     <Compile Include="UIManagers\FontManager.cs" />
     <EmbeddedResource Include="GUI\Login.resx">
@@ -162,6 +180,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\CreateKHDT.resx">
+      <DependentUpon>CreateKHDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\DuyetKHDT.resx">
+      <DependentUpon>DuyetKHDT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\HP.resx">
       <DependentUpon>HP.cs</DependentUpon>
@@ -177,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\TKB.resx">
       <DependentUpon>TKB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Component.resx">
+      <DependentUpon>UC_Component.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -229,6 +256,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\anh-dai-dien-FB-200.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %288%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

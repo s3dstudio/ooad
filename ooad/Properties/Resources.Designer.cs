@@ -173,6 +173,46 @@ namespace ooad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap output_onlinepngtools__5_ {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinepngtools (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap output_onlinepngtools__6_ {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinepngtools (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap output_onlinepngtools__7_ {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinepngtools (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap output_onlinepngtools__8_ {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinepngtools (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plan_idea {
             get {
                 object obj = ResourceManager.GetObject("plan-idea", resourceCulture);

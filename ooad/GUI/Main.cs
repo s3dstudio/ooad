@@ -47,7 +47,13 @@ namespace ooad.GUI
 
         private void siticoneButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (siticoneButton1.Checked) khdt1.BringToFront();
+            if (siticoneButton1.Checked)
+            {
+                khdt1.BringToFront();
+                siticoneButton6.BringToFront();
+                siticoneButton7.BringToFront();
+                siticoneCircleButton2.BringToFront();
+            }
         }
 
         private void siticoneButton2_CheckedChanged(object sender, EventArgs e)
@@ -68,6 +74,32 @@ namespace ooad.GUI
         private void siticoneButton5_CheckedChanged(object sender, EventArgs e)
         {
             if (siticoneButton5.Checked) hp1.BringToFront();
+        }
+        
+        
+        private void uC_Component1_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void khdt1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void siticoneButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void siticoneButton7_Click(object sender, EventArgs e)
+        {
+            createKHDT1.BringToFront();
+        }
+
+        private void siticoneButton6_Click(object sender, EventArgs e)
+        {
+            duyetKHDT1.BringToFront();
         }
     }
 }
