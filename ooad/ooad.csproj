@@ -168,6 +168,24 @@
     <Compile Include="UC\UC_Component.Designer.cs">
       <DependentUpon>UC_Component.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC_DKGD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_DKGD.Designer.cs">
+      <DependentUpon>UC_DKGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_DPC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_DPC.Designer.cs">
+      <DependentUpon>UC_DPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_PCGD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_PCGD.Designer.cs">
+      <DependentUpon>UC_PCGD.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIManagers\DrawHelper.cs" />
     <Compile Include="UIManagers\FontManager.cs" />
     <EmbeddedResource Include="GUI\Login.resx">
@@ -204,6 +222,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_Component.resx">
       <DependentUpon>UC_Component.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_DKGD.resx">
+      <DependentUpon>UC_DKGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_DPC.resx">
+      <DependentUpon>UC_DPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_PCGD.resx">
+      <DependentUpon>UC_PCGD.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
