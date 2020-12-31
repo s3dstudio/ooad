@@ -63,7 +63,11 @@ namespace ooad.GUI
 
         private void siticoneButton3_CheckedChanged(object sender, EventArgs e)
         {
-            if (siticoneButton3.Checked) tkb1.BringToFront();
+            if (siticoneButton3.Checked)
+            {
+                //tkb1.BringToFront();
+                tkB_DEV1.BringToFront();
+            }
         }
 
         private void siticoneButton4_CheckedChanged(object sender, EventArgs e)
