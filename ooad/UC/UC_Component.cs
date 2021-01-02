@@ -16,17 +16,28 @@ namespace ooad.UC
         {
             InitializeComponent();
         }
+
+        LinkLabel[] linkLabel = new LinkLabel[5];
         private void UC_Component_Load(object sender, EventArgs e)
         {
+            //dynamic funtion
             int count = 5;
             for (int i = 0; i < count; i++)
             {
-                LinkLabel linkLabel = new LinkLabel();
-                linkLabel.Text = "LinkLabel " + i.ToString();
-                linkLabel.Location = new Point(17, 90+(20*i));
-                linkLabel.LinkColor = Color.White;
-                this.metroListView1.Controls.Add(linkLabel);
+                linkLabel[i] = new LinkLabel();
+                linkLabel[i].Text = $"LinkLabel {i.ToString()}";
+                linkLabel[i].Name = "ll" + i.ToString();
+                linkLabel[i].Location = new Point(17, 90 + (20 * i));
+                linkLabel[i].LinkColor = Color.White;
                 this.Height = 150 + (20 * i);
+
+                //áp dụng lambda funtion để handle linklabel
+                linkLabel[i].Click += new EventHandler(delegate (object s, EventArgs args)
+                {
+                    Console.WriteLine(((LinkLabel)s).Text+"Clicked"); //lưu ý handle như dòng này
+                    Console.WriteLine(s.ToString());
+                });
+                this.metroListView1.Controls.Add(linkLabel[i]);
             }
         }
     }
