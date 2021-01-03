@@ -190,11 +190,23 @@
     <Compile Include="UC\UC_DKGD.Designer.cs">
       <DependentUpon>UC_DKGD.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC_DKHP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_DKHP.Designer.cs">
+      <DependentUpon>UC_DKHP.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UC_DPC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC\UC_DPC.Designer.cs">
       <DependentUpon>UC_DPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_MNL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_MNL.Designer.cs">
+      <DependentUpon>UC_MNL.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UC_PCGD.cs">
       <SubType>UserControl</SubType>
@@ -246,8 +258,14 @@
     <EmbeddedResource Include="UC\UC_DKGD.resx">
       <DependentUpon>UC_DKGD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_DKHP.resx">
+      <DependentUpon>UC_DKHP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_DPC.resx">
       <DependentUpon>UC_DPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_MNL.resx">
+      <DependentUpon>UC_MNL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_PCGD.resx">
       <DependentUpon>UC_PCGD.cs</DependentUpon>

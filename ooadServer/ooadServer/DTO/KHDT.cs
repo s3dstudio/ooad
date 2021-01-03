@@ -8,6 +8,6 @@ namespace ooadServer.DTO
     public class KHDT
     {
         public int idkhdt { get; set; }
-        public char tenkhdt { get; set; }
+        public string tenkhdt { get; set; }
     }
 }

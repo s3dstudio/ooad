@@ -135,3 +135,5 @@ C:\Users\Lenovo\Desktop\git\ooad\ooad\bin\Debug\ja\DevExpress.Office.v19.1.Core.
 C:\Users\Lenovo\Desktop\git\ooad\ooad\bin\Debug\ru\DevExpress.Office.v19.1.Core.resources.dll
 C:\Users\Lenovo\Desktop\git\ooad\ooad\obj\Debug\ooad.UC.TKB_DEV.resources
 C:\Users\Lenovo\Desktop\git\ooad\ooad\obj\Debug\ooad.exe.licenses
+C:\Users\Lenovo\Desktop\git\ooad\ooad\obj\Debug\ooad.UC.UC_DKHP.resources
+C:\Users\Lenovo\Desktop\git\ooad\ooad\obj\Debug\ooad.UC.UC_MNL.resources

@@ -70,5 +70,35 @@ namespace ooadServer.DAL
         {
             throw new System.NotImplementedException();
         }
+
+        public List<KHOA> GetKHOARecords()
+        {
+            return _context.khoa.ToList();
+        }
+
+        public void AddKHOARecord(KHOA khoa)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateKHOARecord(KHOA khoa)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteKHOARecord(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public KHOA GetKHOASingleRecord(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<KHOA> GetkhoaRecords()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

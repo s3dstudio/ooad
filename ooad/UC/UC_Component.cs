@@ -34,8 +34,7 @@ namespace ooad.UC
                 //áp dụng lambda funtion để handle linklabel
                 linkLabel[i].Click += new EventHandler(delegate (object s, EventArgs args)
                 {
-                    Console.WriteLine(((LinkLabel)s).Text+"Clicked"); //lưu ý handle như dòng này
-                    Console.WriteLine(s.ToString());
+                   MessageBox.Show(((LinkLabel)s).Name+" Clicked"); //lưu ý handle như dòng này
                 });
                 this.metroListView1.Controls.Add(linkLabel[i]);
             }
