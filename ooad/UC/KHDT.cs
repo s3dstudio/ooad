@@ -16,9 +16,20 @@ namespace ooad.UC
         {
             InitializeComponent();
         }
-
+        protected void check()
+        {
+            UC_Component uC_Component = new UC_Component();
+            uC_Component.openUC += load;
+        }
+        private void load (object sender, EventArgs e)
+        {
+            uC_KHDT1.Show();
+            uC_KHDT1.BringToFront();
+        }
         private void KHDT_Load(object sender, EventArgs e)
         {
+            uC_KHDT1.Hide();
+            check();
             int count = 4;
             for (int i = 0; i < count; i++)
             {
@@ -30,7 +41,7 @@ namespace ooad.UC
 
         private void siticoneButton1_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

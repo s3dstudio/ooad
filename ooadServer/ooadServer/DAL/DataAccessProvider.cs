@@ -17,33 +17,33 @@ namespace ooadServer.DAL
 
         public void AddKHDTRecord(KHDT k)
         {
-            _context.kHDT.Add(k);
+            _context.khdt.Add(k);
             _context.SaveChanges();
         }
 
         public void UpdateKHDTRecord(KHDT k)
         {
-            _context.kHDT.Update(k);
+            _context.khdt.Update(k);
             _context.SaveChanges();
         }
 
         public void DeleteKHDTRecord(string id)
         {
             Console.WriteLine(id);
-            var entity = _context.kHDT.FirstOrDefault(t => Convert.ToString(t.idkhdt) == id);
-            _context.kHDT.Remove(entity);
+            var entity = _context.khdt.FirstOrDefault(t => Convert.ToString(t.idkhdt) == id);
+            _context.khdt.Remove(entity);
             _context.SaveChanges();
             Console.WriteLine(id);
         }
 
         public KHDT GetKHDTSingleRecord(string id)
         {
-            return _context.kHDT.FirstOrDefault(t => Convert.ToString(t.idkhdt) == id);
+            return _context.khdt.FirstOrDefault(t => Convert.ToString(t.idkhdt) == id);
         }
 
         public List<KHDT> GetKHDTRecords()
         {
-            return _context.kHDT.ToList();
+            return _context.khdt.ToList();
         }
 
         public void AddkhdtRecord(KHDT k)

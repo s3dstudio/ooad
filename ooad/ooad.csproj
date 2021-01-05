@@ -202,6 +202,12 @@
     <Compile Include="UC\UC_DPC.Designer.cs">
       <DependentUpon>UC_DPC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC_KHDT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_KHDT.Designer.cs">
+      <DependentUpon>UC_KHDT.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UC_MNL.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_DPC.resx">
       <DependentUpon>UC_DPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_KHDT.resx">
+      <DependentUpon>UC_KHDT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_MNL.resx">
       <DependentUpon>UC_MNL.cs</DependentUpon>

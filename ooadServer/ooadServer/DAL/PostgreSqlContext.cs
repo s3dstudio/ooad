@@ -10,7 +10,7 @@ namespace ooadServer.DAL
         {
         }
 
-        public DbSet<KHDT> kHDT { get; set; }
+        public DbSet<KHDT> khdt { get; set; }
         public DbSet<KHOA> khoa { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

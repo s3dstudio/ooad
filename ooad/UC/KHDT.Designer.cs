@@ -45,6 +45,7 @@ namespace ooad.UC
             this.siticoneLabel3 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel2 = new Siticone.UI.WinForms.SiticoneLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.uC_KHDT1 = new ooad.UC.UC_KHDT();
             this.siticoneCustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneCirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneCirclePictureBox1)).BeginInit();
@@ -248,6 +249,14 @@ namespace ooad.UC
             this.tableLayoutPanel1.Size = new System.Drawing.Size(853, 403);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
+            // uC_KHDT1
+            // 
+            this.uC_KHDT1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_KHDT1.Location = new System.Drawing.Point(0, 0);
+            this.uC_KHDT1.Name = "uC_KHDT1";
+            this.uC_KHDT1.Size = new System.Drawing.Size(894, 604);
+            this.uC_KHDT1.TabIndex = 4;
+            // 
             // KHDT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +264,7 @@ namespace ooad.UC
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.siticoneCustomGradientPanel1);
+            this.Controls.Add(this.uC_KHDT1);
             this.Name = "KHDT";
             this.Size = new System.Drawing.Size(894, 604);
             this.Load += new System.EventHandler(this.KHDT_Load);
@@ -283,5 +293,6 @@ namespace ooad.UC
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel13;
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private UC_KHDT uC_KHDT1;
     }
 }
