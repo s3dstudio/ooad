@@ -68,6 +68,35 @@ namespace ooadServer.DAL
         NHOMLOP GetNHOMLOPSingleRecord(string id);
         List<NHOMLOP> GetNHOMLOPRecords();
 
+        void AddPHONGHOCRecord(PHONGHOC ph);
+        void UpdatePHONGHOCRecord(PHONGHOC ph);
+        void DeletePHONGHOCRecord(string id);
+        PHONGHOC GetPHONGHOCSingleRecord(string id);
+        List<PHONGHOC> GetPHONGHOCRecords();
+
+        void AddSINHVIENRecord(SINHVIEN sv);
+        void UpdateSINHVIENRecord(SINHVIEN sv);
+        void DeleteSINHVIENRecord(string id);
+        SINHVIEN GetSINHVIENSingleRecord(string id);
+        List<SINHVIEN> GetSINHVIENRecords();
+
+        void AddSUCCHUARecord(SUCCHUA sc);
+        void UpdateSUCCHUARecord(SUCCHUA sc);
+        void DeleteSUCCHUARecord(string id);
+        SUCCHUA GetSUCCHUASingleRecord(string id);
+        List<SUCCHUA> GetSUCCHUARecords();
+
+        void AddTRINHDORecord(TRINHDO td);
+        void UpdateTRINHDORecord(TRINHDO td);
+        void DeleteTRINHDORecord(string id);
+        TRINHDO GetTRINHDOSingleRecord(string id);
+        List<TRINHDO> GetTRINHDORecords();
+
+        void AddKETQUAHOCTAPRecord(KETQUAHOCTAP kqht);
+        void UpdateKETQUAHOCTAPRecord(KETQUAHOCTAP kqht);
+        void DeleteKETQUAHOCTAPRecord(string id);
+        KETQUAHOCTAP GetKETQUAHOCTAPSingleRecord(string id);
+        List<KETQUAHOCTAP> GetKETQUAHOCTAPRecords();
 
     }
 }

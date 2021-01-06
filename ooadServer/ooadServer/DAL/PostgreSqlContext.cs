@@ -20,6 +20,11 @@ namespace ooadServer.DAL
         public DbSet<HOPDONG> hopdong { get; set; }
         public DbSet<LOAIHINHDT> loaihinhdt { get; set; }
         public DbSet<NHOMLOP> nhomlop { get; set; }
+        public DbSet<PHONGHOC> phonghoc { get; set; }
+        public DbSet<SINHVIEN> sinhvien { get; set; }
+        public DbSet<SUCCHUA> succhua { get; set; }
+        public DbSet<TRINHDO> trinhdo { get; set; }
+        public DbSet<KETQUAHOCTAP> ketquahoctap { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -44,6 +49,16 @@ namespace ooadServer.DAL
                 .HasKey("idlhdt");
             builder.Entity<NHOMLOP>()
                 .HasKey("idnhomlop");
+            builder.Entity<PHONGHOC>()
+                .HasKey("idphonghoc");
+            builder.Entity<SINHVIEN>()
+                .HasKey("idsv");
+            builder.Entity<SUCCHUA>()
+                .HasKey("idsucchua");
+            builder.Entity<TRINHDO>()
+                .HasKey("idtrinhdo");
+            builder.Entity<KETQUAHOCTAP>()
+                .HasKey("idketquahoctap");
         }
 
         public override int SaveChanges()
