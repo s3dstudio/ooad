@@ -111,6 +111,12 @@
     <Compile Include="Controls\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="GUI\KHDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KHDT.Designer.cs">
+      <DependentUpon>KHDT.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </Compile>
     <Compile Include="UIManagers\DrawHelper.cs" />
     <Compile Include="UIManagers\FontManager.cs" />
+    <EmbeddedResource Include="GUI\KHDT.resx">
+      <DependentUpon>KHDT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
