@@ -25,6 +25,9 @@ namespace ooadServer.DAL
         public DbSet<SUCCHUA> succhua { get; set; }
         public DbSet<TRINHDO> trinhdo { get; set; }
         public DbSet<KETQUAHOCTAP> ketquahoctap { get; set; }
+        public DbSet<TKBSV> tkbsv { get; set; }
+        public DbSet<TKBNHOMLOP> tkbnhomlop { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -59,6 +62,10 @@ namespace ooadServer.DAL
                 .HasKey("idtrinhdo");
             builder.Entity<KETQUAHOCTAP>()
                 .HasKey("idketquahoctap");
+            builder.Entity<TKBSV>()
+                .HasKey("idtkbsinhvien");
+            builder.Entity<TKBNHOMLOP>()
+                .HasKey("idtkbnhomlop");
         }
 
         public override int SaveChanges()
