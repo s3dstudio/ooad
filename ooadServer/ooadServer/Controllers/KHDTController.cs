@@ -28,8 +28,9 @@ namespace ooadServer.Controllers
         {
             if (ModelState.IsValid)
             {
-                Guid obj = Guid.NewGuid();
-                k.idkhdt = Convert.ToInt32(obj);
+                //Guid obj = Guid.NewGuid();
+                
+                //k.idkhdt = int.Parse(obj.ToString());
                 _dataAccessProvider.AddKHDTRecord(k);
                 return Ok();
             }
