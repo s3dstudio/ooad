@@ -41,6 +41,8 @@ namespace ooad.GUI
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siticoneGradientButton2 = new Siticone.UI.WinForms.SiticoneGradientButton();
+            this.siticoneGradientButton1 = new Siticone.UI.WinForms.SiticoneGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,12 +135,49 @@ namespace ooad.GUI
             this.Column8.HeaderText = "Tiết tham quan";
             this.Column8.Name = "Column8";
             // 
+            // siticoneGradientButton2
+            // 
+            this.siticoneGradientButton2.BorderRadius = 10;
+            this.siticoneGradientButton2.CheckedState.Parent = this.siticoneGradientButton2;
+            this.siticoneGradientButton2.CustomImages.Parent = this.siticoneGradientButton2;
+            this.siticoneGradientButton2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.siticoneGradientButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneGradientButton2.ForeColor = System.Drawing.Color.White;
+            this.siticoneGradientButton2.HoveredState.Parent = this.siticoneGradientButton2;
+            this.siticoneGradientButton2.Location = new System.Drawing.Point(642, 511);
+            this.siticoneGradientButton2.Name = "siticoneGradientButton2";
+            this.siticoneGradientButton2.ShadowDecoration.Parent = this.siticoneGradientButton2;
+            this.siticoneGradientButton2.Size = new System.Drawing.Size(112, 45);
+            this.siticoneGradientButton2.TabIndex = 14;
+            this.siticoneGradientButton2.Text = "Đồng ý";
+            // 
+            // siticoneGradientButton1
+            // 
+            this.siticoneGradientButton1.BorderColor = System.Drawing.Color.DimGray;
+            this.siticoneGradientButton1.BorderRadius = 10;
+            this.siticoneGradientButton1.BorderThickness = 1;
+            this.siticoneGradientButton1.CheckedState.Parent = this.siticoneGradientButton1;
+            this.siticoneGradientButton1.CustomImages.Parent = this.siticoneGradientButton1;
+            this.siticoneGradientButton1.FillColor = System.Drawing.Color.White;
+            this.siticoneGradientButton1.FillColor2 = System.Drawing.Color.White;
+            this.siticoneGradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneGradientButton1.ForeColor = System.Drawing.Color.DimGray;
+            this.siticoneGradientButton1.HoveredState.Parent = this.siticoneGradientButton1;
+            this.siticoneGradientButton1.Location = new System.Drawing.Point(508, 511);
+            this.siticoneGradientButton1.Name = "siticoneGradientButton1";
+            this.siticoneGradientButton1.ShadowDecoration.Parent = this.siticoneGradientButton1;
+            this.siticoneGradientButton1.Size = new System.Drawing.Size(112, 45);
+            this.siticoneGradientButton1.TabIndex = 13;
+            this.siticoneGradientButton1.Text = "Huỷ";
+            // 
             // KHDT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 520);
+            this.ClientSize = new System.Drawing.Size(800, 568);
+            this.Controls.Add(this.siticoneGradientButton2);
+            this.Controls.Add(this.siticoneGradientButton1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -165,5 +204,7 @@ namespace ooad.GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton2;
+        private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton1;
     }
 }

@@ -61,6 +61,7 @@ namespace ooad.GUI
                 siticoneButton6.BringToFront();
                 siticoneButton7.BringToFront();
                 siticoneCircleButton2.BringToFront();
+                siticoneButton8.BringToFront();
             }
         }
 
@@ -112,6 +113,12 @@ namespace ooad.GUI
         private void siticoneButton6_Click(object sender, EventArgs e)
         {
             duyetKHDT1.BringToFront();
+        }
+
+        private void siticoneButton8_Click(object sender, EventArgs e)
+        {
+            ooad.GUI.KHDT k = new KHDT();
+            k.Show();
         }
     }
 }
