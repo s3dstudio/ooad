@@ -172,12 +172,6 @@
     <Compile Include="UC\PCGD.Designer.cs">
       <DependentUpon>PCGD.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\TKB.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\TKB.Designer.cs">
-      <DependentUpon>TKB.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC\TKB_DEV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -207,6 +201,12 @@
     </Compile>
     <Compile Include="UC\UC_DPC.Designer.cs">
       <DependentUpon>UC_DPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_Duyet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Duyet.Designer.cs">
+      <DependentUpon>UC_Duyet.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UC_KHDT.cs">
       <SubType>UserControl</SubType>
@@ -261,9 +261,6 @@
     <EmbeddedResource Include="UC\PCGD.resx">
       <DependentUpon>PCGD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\TKB.resx">
-      <DependentUpon>TKB.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UC\TKB_DEV.resx">
       <DependentUpon>TKB_DEV.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_DPC.resx">
       <DependentUpon>UC_DPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Duyet.resx">
+      <DependentUpon>UC_Duyet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_KHDT.resx">
       <DependentUpon>UC_KHDT.cs</DependentUpon>

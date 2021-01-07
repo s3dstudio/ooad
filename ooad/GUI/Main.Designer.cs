@@ -52,7 +52,6 @@ namespace ooad.GUI
             this.siticoneButton7 = new Siticone.UI.WinForms.SiticoneButton();
             this.siticoneButton8 = new Siticone.UI.WinForms.SiticoneButton();
             this.khdt1 = new ooad.UC.KHDT();
-            this.tkb1 = new ooad.UC.TKB();
             this.pcgd1 = new ooad.UC.PCGD();
             this.kqht1 = new ooad.UC.KQHT();
             this.hp1 = new ooad.UC.HP();
@@ -332,7 +331,6 @@ namespace ooad.GUI
             this.siticonePanel3.Controls.Add(this.siticoneButton6);
             this.siticonePanel3.Controls.Add(this.siticoneButton7);
             this.siticonePanel3.Controls.Add(this.khdt1);
-            this.siticonePanel3.Controls.Add(this.tkb1);
             this.siticonePanel3.Controls.Add(this.pcgd1);
             this.siticonePanel3.Controls.Add(this.kqht1);
             this.siticonePanel3.Controls.Add(this.hp1);
@@ -417,15 +415,6 @@ namespace ooad.GUI
             this.khdt1.Size = new System.Drawing.Size(894, 604);
             this.khdt1.TabIndex = 0;
             this.khdt1.Load += new System.EventHandler(this.khdt1_Load);
-            // 
-            // tkb1
-            // 
-            this.tkb1.BackColor = System.Drawing.Color.White;
-            this.tkb1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tkb1.Location = new System.Drawing.Point(0, 0);
-            this.tkb1.Name = "tkb1";
-            this.tkb1.Size = new System.Drawing.Size(894, 604);
-            this.tkb1.TabIndex = 4;
             // 
             // pcgd1
             // 
@@ -554,7 +543,6 @@ namespace ooad.GUI
         private UC.KHDT khdt1;
         private UC.KQHT kqht1;
         private UC.HP hp1;
-        private UC.TKB tkb1;
         private UC.PCGD pcgd1;
         private Siticone.UI.WinForms.SiticoneCircleButton siticoneCircleButton2;
         private Siticone.UI.WinForms.SiticoneButton siticoneButton6;

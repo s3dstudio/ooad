@@ -30,6 +30,7 @@ namespace ooad.UC
         private void InitializeComponent()
         {
             this.siticonePanel1 = new Siticone.UI.WinForms.SiticonePanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.siticoneGradientButton2 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.siticoneGradientButton1 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
@@ -39,6 +40,7 @@ namespace ooad.UC
             // siticonePanel1
             // 
             this.siticonePanel1.Controls.Add(this.siticoneLabel1);
+            this.siticonePanel1.Controls.Add(this.tableLayoutPanel1);
             this.siticonePanel1.Controls.Add(this.siticoneGradientButton2);
             this.siticonePanel1.Controls.Add(this.siticoneGradientButton1);
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -47,6 +49,21 @@ namespace ooad.UC
             this.siticonePanel1.ShadowDecoration.Parent = this.siticonePanel1;
             this.siticonePanel1.Size = new System.Drawing.Size(894, 604);
             this.siticonePanel1.TabIndex = 0;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoScroll = true;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(23, 75);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(849, 429);
+            this.tableLayoutPanel1.TabIndex = 15;
             // 
             // siticoneGradientButton2
             // 
@@ -87,11 +104,13 @@ namespace ooad.UC
             // siticoneLabel1
             // 
             this.siticoneLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneLabel1.Location = new System.Drawing.Point(52, 44);
+            this.siticoneLabel1.Font = new System.Drawing.Font("Roboto Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
+            this.siticoneLabel1.Location = new System.Drawing.Point(23, 28);
             this.siticoneLabel1.Name = "siticoneLabel1";
-            this.siticoneLabel1.Size = new System.Drawing.Size(29, 15);
-            this.siticoneLabel1.TabIndex = 15;
-            this.siticoneLabel1.Text = "duyet";
+            this.siticoneLabel1.Size = new System.Drawing.Size(254, 25);
+            this.siticoneLabel1.TabIndex = 1;
+            this.siticoneLabel1.Text = "DUYỆT ĐĂNG KÝ GIẢNG DẠY";
             // 
             // UC_DPC
             // 
@@ -101,6 +120,7 @@ namespace ooad.UC
             this.Controls.Add(this.siticonePanel1);
             this.Name = "UC_DPC";
             this.Size = new System.Drawing.Size(894, 604);
+            this.Load += new System.EventHandler(this.UC_DPC_Load);
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -112,6 +132,7 @@ namespace ooad.UC
         private Siticone.UI.WinForms.SiticonePanel siticonePanel1;
         private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton2;
         private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel1;
     }
 }

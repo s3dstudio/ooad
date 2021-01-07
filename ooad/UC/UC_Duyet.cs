@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ooad.UC
 {
-    public partial class TKB : UserControl
+    public partial class UC_Duyet : UserControl
     {
-        public TKB()
+        public UC_Duyet()
         {
             InitializeComponent();
         }
