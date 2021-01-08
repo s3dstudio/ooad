@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ooad.GUI;
 
 namespace ooad.UC
 {
@@ -15,10 +16,12 @@ namespace ooad.UC
         public UC_Component()
         {
             InitializeComponent();
+            
         }
-        public event EventHandler openUC;
         int i;
         LinkLabel[] linkLabel = new LinkLabel[5];
+        ooad.GUI.Main m = new Main();
+        
         private void UC_Component_Load(object sender, EventArgs e)
         {
             //dynamic funtion
@@ -31,15 +34,21 @@ namespace ooad.UC
                 linkLabel[i].Location = new Point(17, 90 + (20 * i));
                 linkLabel[i].LinkColor = Color.White;
                 this.Height = 150 + (20 * i);
-
                 ////áp dụng lambda funtion để handle linklabel
+               
                 linkLabel[i].Click += new EventHandler(delegate (object s, EventArgs args)
                 {
                     //(((LinkLabel)s).Name+" Clicked"); //lưu ý handle như dòng này
-                    Invoke(openUC);
+                    m.tempM = ((LinkLabel)s).Text;
                 });
+                linkLabel[i].Click += m.khdt_load;
                 this.metroListView1.Controls.Add(linkLabel[i]);
+
             }
         }
+        //private void khdt_load(object sender, EventArgs args)
+        //{
+          
+        //}
     }
 }

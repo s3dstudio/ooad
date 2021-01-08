@@ -19,7 +19,6 @@ namespace ooad.UC
         protected void check()
         {
             UC_Component uC_Component = new UC_Component();
-            uC_Component.openUC += load;
         }
         private void load (object sender, EventArgs e)
         {

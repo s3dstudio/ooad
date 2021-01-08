@@ -50,8 +50,8 @@ namespace ooad.GUI
             this.siticoneCircleButton2 = new Siticone.UI.WinForms.SiticoneCircleButton();
             this.siticoneButton6 = new Siticone.UI.WinForms.SiticoneButton();
             this.siticoneButton7 = new Siticone.UI.WinForms.SiticoneButton();
+            this.siticoneButton8 = new Siticone.UI.WinForms.SiticoneButton();
             this.khdt1 = new ooad.UC.KHDT();
-            this.tkb1 = new ooad.UC.TKB();
             this.pcgd1 = new ooad.UC.PCGD();
             this.kqht1 = new ooad.UC.KQHT();
             this.hp1 = new ooad.UC.HP();
@@ -326,11 +326,11 @@ namespace ooad.GUI
             this.siticonePanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.siticonePanel3.Controls.Add(this.siticoneButton8);
             this.siticonePanel3.Controls.Add(this.siticoneCircleButton2);
             this.siticonePanel3.Controls.Add(this.siticoneButton6);
             this.siticonePanel3.Controls.Add(this.siticoneButton7);
             this.siticonePanel3.Controls.Add(this.khdt1);
-            this.siticonePanel3.Controls.Add(this.tkb1);
             this.siticonePanel3.Controls.Add(this.pcgd1);
             this.siticonePanel3.Controls.Add(this.kqht1);
             this.siticonePanel3.Controls.Add(this.hp1);
@@ -390,6 +390,22 @@ namespace ooad.GUI
             this.siticoneButton7.Text = "TẠO MỚI";
             this.siticoneButton7.Click += new System.EventHandler(this.siticoneButton7_Click);
             // 
+            // siticoneButton8
+            // 
+            this.siticoneButton8.CheckedState.Parent = this.siticoneButton8;
+            this.siticoneButton8.CustomImages.Parent = this.siticoneButton8;
+            this.siticoneButton8.FillColor = System.Drawing.Color.Transparent;
+            this.siticoneButton8.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
+            this.siticoneButton8.HoveredState.Parent = this.siticoneButton8;
+            this.siticoneButton8.Location = new System.Drawing.Point(528, 20);
+            this.siticoneButton8.Name = "siticoneButton8";
+            this.siticoneButton8.ShadowDecoration.Parent = this.siticoneButton8;
+            this.siticoneButton8.Size = new System.Drawing.Size(88, 45);
+            this.siticoneButton8.TabIndex = 13;
+            this.siticoneButton8.Text = "KHDT MỚI";
+            this.siticoneButton8.Click += new System.EventHandler(this.siticoneButton8_Click);
+            // 
             // khdt1
             // 
             this.khdt1.BackColor = System.Drawing.Color.White;
@@ -399,15 +415,6 @@ namespace ooad.GUI
             this.khdt1.Size = new System.Drawing.Size(894, 604);
             this.khdt1.TabIndex = 0;
             this.khdt1.Load += new System.EventHandler(this.khdt1_Load);
-            // 
-            // tkb1
-            // 
-            this.tkb1.BackColor = System.Drawing.Color.White;
-            this.tkb1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tkb1.Location = new System.Drawing.Point(0, 0);
-            this.tkb1.Name = "tkb1";
-            this.tkb1.Size = new System.Drawing.Size(894, 604);
-            this.tkb1.TabIndex = 4;
             // 
             // pcgd1
             // 
@@ -536,7 +543,6 @@ namespace ooad.GUI
         private UC.KHDT khdt1;
         private UC.KQHT kqht1;
         private UC.HP hp1;
-        private UC.TKB tkb1;
         private UC.PCGD pcgd1;
         private Siticone.UI.WinForms.SiticoneCircleButton siticoneCircleButton2;
         private Siticone.UI.WinForms.SiticoneButton siticoneButton6;
@@ -544,5 +550,6 @@ namespace ooad.GUI
         private UC.CreateKHDT createKHDT1;
         private UC.DuyetKHDT duyetKHDT1;
         private UC.TKB_DEV tkB_DEV1;
+        private Siticone.UI.WinForms.SiticoneButton siticoneButton8;
     }
 }

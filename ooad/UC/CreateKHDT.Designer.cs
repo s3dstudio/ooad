@@ -38,7 +38,6 @@ namespace ooad.UC
             this.siticoneGradientButton2 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lollipopFileInput1 = new LollipopFileInput();
             ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +59,7 @@ namespace ooad.UC
             this.siticoneLabel2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneLabel2.Location = new System.Drawing.Point(30, 125);
             this.siticoneLabel2.Name = "siticoneLabel2";
-            this.siticoneLabel2.Size = new System.Drawing.Size(38, 19);
+            this.siticoneLabel2.Size = new System.Drawing.Size(38, 20);
             this.siticoneLabel2.TabIndex = 1;
             this.siticoneLabel2.Text = "Khoá :";
             // 
@@ -80,7 +79,7 @@ namespace ooad.UC
             this.siticoneLabel3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneLabel3.Location = new System.Drawing.Point(30, 175);
             this.siticoneLabel3.Name = "siticoneLabel3";
-            this.siticoneLabel3.Size = new System.Drawing.Size(38, 19);
+            this.siticoneLabel3.Size = new System.Drawing.Size(38, 20);
             this.siticoneLabel3.TabIndex = 4;
             this.siticoneLabel3.Text = "Khoa :";
             // 
@@ -90,7 +89,7 @@ namespace ooad.UC
             this.linkLabel1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.Location = new System.Drawing.Point(26, 214);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(81, 17);
+            this.linkLabel1.Size = new System.Drawing.Size(81, 18);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Thêm khoa...";
@@ -147,28 +146,11 @@ namespace ooad.UC
             this.textBox2.Size = new System.Drawing.Size(199, 20);
             this.textBox2.TabIndex = 10;
             // 
-            // lollipopFileInput1
-            // 
-            this.lollipopFileInput1.Filter = "All Files (*.*)|*.*";
-            this.lollipopFileInput1.FocusedColor = "#508ef5";
-            this.lollipopFileInput1.FontColor = "#999999";
-            this.lollipopFileInput1.IsEnabled = true;
-            this.lollipopFileInput1.Location = new System.Drawing.Point(280, 170);
-            this.lollipopFileInput1.MaxLength = 32767;
-            this.lollipopFileInput1.Name = "lollipopFileInput1";
-            this.lollipopFileInput1.ReadOnly = false;
-            this.lollipopFileInput1.Size = new System.Drawing.Size(22, 24);
-            this.lollipopFileInput1.TabIndex = 11;
-            this.lollipopFileInput1.Text = "lollipopFileInput1";
-            this.lollipopFileInput1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.lollipopFileInput1.UseSystemPasswordChar = false;
-            // 
             // CreateKHDT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.lollipopFileInput1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.siticoneGradientButton2);
@@ -197,6 +179,5 @@ namespace ooad.UC
         private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private LollipopFileInput lollipopFileInput1;
     }
 }

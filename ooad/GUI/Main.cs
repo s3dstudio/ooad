@@ -13,6 +13,7 @@ namespace ooad.GUI
 {
     public partial class Main : Form
     {
+        public string tempM { get; set; }
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
        (
@@ -29,7 +30,14 @@ namespace ooad.GUI
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
+        public void khdt_load (object sender, EventArgs args)
+        {
+            KHDT k = new KHDT();
+            k.Text = this.tempM;
+            k.Show();
 
+            
+        }
         private void Main_Load(object sender, EventArgs e)
         {
             siticoneShadowForm1.SetShadowForm(this);
@@ -53,6 +61,7 @@ namespace ooad.GUI
                 siticoneButton6.BringToFront();
                 siticoneButton7.BringToFront();
                 siticoneCircleButton2.BringToFront();
+                siticoneButton8.BringToFront();
             }
         }
 
@@ -104,6 +113,12 @@ namespace ooad.GUI
         private void siticoneButton6_Click(object sender, EventArgs e)
         {
             duyetKHDT1.BringToFront();
+        }
+
+        private void siticoneButton8_Click(object sender, EventArgs e)
+        {
+            ooad.GUI.KHDT k = new KHDT();
+            k.Show();
         }
     }
 }

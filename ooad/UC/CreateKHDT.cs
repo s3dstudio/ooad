@@ -30,10 +30,6 @@ namespace ooad.UC
             textBox.Location = new Point(textBox2.Location.X, textBox2.Location.Y + (50 * temp));
             textBox.Width = 199;
             this.Controls.Add(textBox);
-            LollipopFileInput lollipopFileInput = new LollipopFileInput();
-            lollipopFileInput.Width = lollipopFileInput1.Width;
-            lollipopFileInput.Location = new Point(lollipopFileInput1.Location.X, textBox2.Location.Y + (50 * temp));
-            this.Controls.Add(lollipopFileInput);
             temp++;
         }
 
