@@ -5,13 +5,10 @@ using System.Threading.Tasks;
 
 namespace ooadServer.DTO
 {
-    public class KHDT
+    public class CHUYENNGANH
     {
-        public int idkhdt { get; set; }
-        public string tenkhdt { get; set; }
-        public int idhdt { get; set; }
         public int idchuyennganh { get; set; }
-        public int idlhdt { get; set; }
-
+        public string tenchuyennganh { get; set; }
+        public int idkhoa { get; set; }
     }
 }

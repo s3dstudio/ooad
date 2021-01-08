@@ -10,42 +10,42 @@ namespace ooadServer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class KHOAController : Controller
+    public class SUCCHUAController : Controller
     {
         private readonly IDataAccessProvider _dataAccessProvider;
-        public KHOAController(IDataAccessProvider dataAccessProvider)
+        public SUCCHUAController(IDataAccessProvider dataAccessProvider)
         {
             _dataAccessProvider = dataAccessProvider;
         }
         [HttpGet("get")]
-        public IEnumerable<KHOA> Get()
+        public IEnumerable<SUCCHUA> Get()
         {
-            return _dataAccessProvider.GetKHOARecords();
+            return _dataAccessProvider.GetSUCCHUARecords();
         }
 
         [HttpPost("post")]
-        public IActionResult Create([FromBody] KHOA k)
+        public IActionResult Create([FromBody] SUCCHUA k)
         {
             if (ModelState.IsValid)
             {
-                _dataAccessProvider.AddKHOARecord(k);
+                _dataAccessProvider.AddSUCCHUARecord(k);
                 return Ok();
             }
             return BadRequest();
         }
 
         [HttpGet("getid/{id}")]
-        public KHOA Details(string id)
+        public SUCCHUA Details(string id)
         {
-            return _dataAccessProvider.GetKHOASingleRecord(id);
+            return _dataAccessProvider.GetSUCCHUASingleRecord(id);
         }
 
         [HttpPut("edit")]
-        public IActionResult Edit([FromBody] KHOA k)
+        public IActionResult Edit([FromBody] SUCCHUA k)
         {
             if (ModelState.IsValid)
             {
-                _dataAccessProvider.UpdateKHOARecord(k);
+                _dataAccessProvider.UpdateSUCCHUARecord(k);
                 return Ok();
             }
             return BadRequest();
@@ -53,13 +53,13 @@ namespace ooadServer.Controllers
         [HttpDelete("delete/{id}")]
         public IActionResult Delete(string id)
         {
-            var data = _dataAccessProvider.GetKHOASingleRecord(id);
+            var data = _dataAccessProvider.GetSUCCHUASingleRecord(id);
             Console.WriteLine(id);
             if (data == null)
             {
                 return NotFound();
             }
-            _dataAccessProvider.DeleteKHOARecord(id);
+            _dataAccessProvider.DeleteSUCCHUARecord(id);
             return Ok();
         }
     }

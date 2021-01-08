@@ -6,46 +6,47 @@ using ooadServer.DTO;
 using ooadServer.DAL;
 using System.Threading.Tasks;
 
+
 namespace ooadServer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class KHOAController : Controller
+    public class TRINHDOController : Controller
     {
         private readonly IDataAccessProvider _dataAccessProvider;
-        public KHOAController(IDataAccessProvider dataAccessProvider)
+        public TRINHDOController(IDataAccessProvider dataAccessProvider)
         {
             _dataAccessProvider = dataAccessProvider;
         }
         [HttpGet("get")]
-        public IEnumerable<KHOA> Get()
+        public IEnumerable<TRINHDO> Get()
         {
-            return _dataAccessProvider.GetKHOARecords();
+            return _dataAccessProvider.GetTRINHDORecords();
         }
 
         [HttpPost("post")]
-        public IActionResult Create([FromBody] KHOA k)
+        public IActionResult Create([FromBody] TRINHDO k)
         {
             if (ModelState.IsValid)
             {
-                _dataAccessProvider.AddKHOARecord(k);
+                _dataAccessProvider.AddTRINHDORecord(k);
                 return Ok();
             }
             return BadRequest();
         }
 
         [HttpGet("getid/{id}")]
-        public KHOA Details(string id)
+        public TRINHDO Details(string id)
         {
-            return _dataAccessProvider.GetKHOASingleRecord(id);
+            return _dataAccessProvider.GetTRINHDOSingleRecord(id);
         }
 
         [HttpPut("edit")]
-        public IActionResult Edit([FromBody] KHOA k)
+        public IActionResult Edit([FromBody] TRINHDO k)
         {
             if (ModelState.IsValid)
             {
-                _dataAccessProvider.UpdateKHOARecord(k);
+                _dataAccessProvider.UpdateTRINHDORecord(k);
                 return Ok();
             }
             return BadRequest();
@@ -53,13 +54,13 @@ namespace ooadServer.Controllers
         [HttpDelete("delete/{id}")]
         public IActionResult Delete(string id)
         {
-            var data = _dataAccessProvider.GetKHOASingleRecord(id);
+            var data = _dataAccessProvider.GetTRINHDOSingleRecord(id);
             Console.WriteLine(id);
             if (data == null)
             {
                 return NotFound();
             }
-            _dataAccessProvider.DeleteKHOARecord(id);
+            _dataAccessProvider.DeleteTRINHDORecord(id);
             return Ok();
         }
     }

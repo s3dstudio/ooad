@@ -15,6 +15,7 @@ namespace ooadServer.DAL
             _context = context;
         }
 
+        // KHDT
         public void AddKHDTRecord(KHDT k)
         {
             _context.khdt.Add(k);
@@ -46,31 +47,7 @@ namespace ooadServer.DAL
             return _context.khdt.ToList();
         }
 
-        public void AddkhdtRecord(KHDT k)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void UpdatekhdtRecord(KHDT k)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void DeletekhdtRecord(string id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public KHDT GetkhdtSingleRecord(string id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public List<KHDT> GetkhdtRecords()
-        {
-            throw new System.NotImplementedException();
-        }
-
+        // KHOA
         public List<KHOA> GetKHOARecords()
         {
             return _context.khoa.ToList();
@@ -78,27 +55,410 @@ namespace ooadServer.DAL
 
         public void AddKHOARecord(KHOA khoa)
         {
-            throw new NotImplementedException();
+            _context.khoa.Add(khoa);
+            _context.SaveChanges();
         }
 
         public void UpdateKHOARecord(KHOA khoa)
         {
-            throw new NotImplementedException();
+            _context.khoa.Update(khoa);
+            _context.SaveChanges();
         }
 
         public void DeleteKHOARecord(string id)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(id);
+            var entity = _context.khoa.FirstOrDefault(t => Convert.ToString(t.idkhoa) == id);
+            _context.khoa.Remove(entity);
+            _context.SaveChanges();
+            Console.WriteLine(id);
         }
 
         public KHOA GetKHOASingleRecord(string id)
         {
-            throw new NotImplementedException();
+            return _context.khoa.FirstOrDefault(t => Convert.ToString(t.idkhoa) == id);
         }
 
-        public List<KHOA> GetkhoaRecords()
+        // CHUYEN NGANH
+        public void AddCHUYENNGANHRecord(CHUYENNGANH cn)
         {
-            throw new NotImplementedException();
+            _context.chuyennganh.Add(cn);
+            _context.SaveChanges();
+        }
+        public void UpdateCHUYENNGANHRecord(CHUYENNGANH cn)
+        {
+            _context.chuyennganh.Update(cn);
+            _context.SaveChanges();
+        }
+        public void DeleteCHUYENNGANHRecord(string id)
+        {
+            var entity = _context.chuyennganh.FirstOrDefault(t => Convert.ToString(t.idchuyennganh) == id);
+            _context.chuyennganh.Remove(entity);
+            _context.SaveChanges();
+        }
+        public CHUYENNGANH GetCHUYENNGANHSingleRecord(string id)
+        {
+            return _context.chuyennganh.FirstOrDefault(t => Convert.ToString(t.idchuyennganh) == id);
+        }
+        public List<CHUYENNGANH> GetCHUYENNGANHRecords()
+        {
+            return _context.chuyennganh.ToList();
+        }
+
+        // GIANG VIEN
+        public void AddGIANGVIENRecord(GIANGVIEN GV)
+        {
+            _context.giangvien.Add(GV);
+            _context.SaveChanges();
+        }
+        public void UpdateGIANGVIENRecord(GIANGVIEN GV)
+        {
+            _context.giangvien.Update(GV);
+            _context.SaveChanges();
+        }
+        public void DeleteGIANGVIENRecord(string id)
+        {
+            var entity = _context.giangvien.FirstOrDefault(t => Convert.ToString(t.idgiangvien) == id);
+            _context.giangvien.Remove(entity);
+            _context.SaveChanges();
+        }
+        public GIANGVIEN GetGIANGVIENSingleRecord(string id)
+        {
+            return _context.giangvien.FirstOrDefault(t => Convert.ToString(t.idgiangvien) == id);
+        }
+        public List<GIANGVIEN> GetGIANGVIENRecords()
+        {
+            return _context.giangvien.ToList();
+        }
+
+        // CHUC NANG
+        public void AddCHUCNANGRecord(CHUCNANG cn)
+        {
+            _context.chucnang.Add(cn);
+            _context.SaveChanges();
+        }
+
+        public void UpdateCHUCNANGRecord(CHUCNANG cn)
+        {
+            _context.chucnang.Update(cn);
+            _context.SaveChanges();
+        }
+
+        public void DeleteCHUCNANGRecord(string id)
+        {
+            var entity = _context.chucnang.FirstOrDefault(t => Convert.ToString(t.idchucnang) == id);
+            _context.chucnang.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public CHUCNANG GetCHUCNANGSingleRecord(string id)
+        {
+            return _context.chucnang.FirstOrDefault(t => Convert.ToString(t.idchucnang) == id);
+        }
+
+        public List<CHUCNANG> GetCHUCNANGRecords()
+        {
+            return _context.chucnang.ToList();
+        }
+
+        //HE DAO TAO
+        public void AddHEDAOTAORecord(HEDAOTAO hdt)
+        {
+            _context.hedaotao.Add(hdt);
+            _context.SaveChanges();
+        }
+
+        public void UpdateHEDAOTAORecord(HEDAOTAO hdt)
+        {
+            _context.hedaotao.Update(hdt);
+            _context.SaveChanges();
+        }
+
+        public void DeleteHEDAOTAORecord(string id)
+        {
+            var entity = _context.hedaotao.FirstOrDefault(t => Convert.ToString(t.idhedaotao) == id);
+            _context.hedaotao.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public HEDAOTAO GetHEDAOTAOSingleRecord(string id)
+        {
+            return _context.hedaotao.FirstOrDefault(t => Convert.ToString(t.idhedaotao) == id);
+        }
+
+        public List<HEDAOTAO> GetHEDAOTAORecords()
+        {
+            return _context.hedaotao.ToList();
+        }
+
+        // HOC PHAN
+        public void AddHOCPHANRecord(HOCPHAN hp)
+        {
+            _context.hocphan.Add(hp);
+            _context.SaveChanges();
+        }
+
+        public void UpdateHOCPHANRecord(HOCPHAN hp)
+        {
+            _context.hocphan.Update(hp);
+            _context.SaveChanges();
+        }
+
+        public void DeleteHOCPHANRecord(string id)
+        {
+            var entity = _context.hocphan.FirstOrDefault(t => Convert.ToString(t.idhocphan) == id);
+            _context.hocphan.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public HOCPHAN GetHOCPHANSingleRecord(string id)
+        {
+            return _context.hocphan.FirstOrDefault(t => Convert.ToString(t.idhocphan) == id);
+        }
+
+        public List<HOCPHAN> GetHOCPHANRecords()
+        {
+            return _context.hocphan.ToList();
+        }
+        
+        // HOP DONG
+        public void AddHOPDONGRecord(HOPDONG hd)
+        {
+            _context.hopdong.Add(hd);
+            _context.SaveChanges();
+        }
+
+        public void UpdateHOPDONGRecord(HOPDONG hd)
+        {
+            _context.hopdong.Update(hd);
+            _context.SaveChanges();
+        }
+
+        public void DeleteHOPDONGRecord(string id)
+        {
+            var entity = _context.hopdong.FirstOrDefault(t => Convert.ToString(t.idhopdong) == id);
+            _context.hopdong.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public HOPDONG GetHOPDONGSingleRecord(string id)
+        {
+            return _context.hopdong.FirstOrDefault(t => Convert.ToString(t.idhopdong) == id);
+        }
+
+        public List<HOPDONG> GetHOPDONGRecords()
+        {
+            return _context.hopdong.ToList();
+        }
+
+        // LOAI HINH DAO TAO
+        public void AddLOAIHINHDTRecord(LOAIHINHDT lhdt)
+        {
+            _context.loaihinhdt.Add(lhdt);
+            _context.SaveChanges();
+        }
+
+        public void UpdateLOAIHINHDTRecord(LOAIHINHDT lhdt)
+        {
+            _context.loaihinhdt.Update(lhdt);
+            _context.SaveChanges();
+        }
+
+        public void DeleteLOAIHINHDTRecord(string id)
+        {
+            var entity = _context.loaihinhdt.FirstOrDefault(t => Convert.ToString(t.idlhdt) == id);
+            _context.loaihinhdt.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public LOAIHINHDT GetLOAIHINHDTSingleRecord(string id)
+        {
+            return _context.loaihinhdt.FirstOrDefault(t => Convert.ToString(t.idlhdt) == id);
+        }
+
+        public List<LOAIHINHDT> GetLOAIHINHDTRecords()
+        {
+            return _context.loaihinhdt.ToList();
+        }
+
+        // NHOM LOP
+        public void AddNHOMLOPRecord(NHOMLOP nl)
+        {
+            _context.nhomlop.Add(nl);
+            _context.SaveChanges();
+        }
+
+        public void UpdateNHOMLOPRecord(NHOMLOP nl)
+        {
+            _context.nhomlop.Update(nl);
+            _context.SaveChanges();
+        }
+
+        public void DeleteNHOMLOPRecord(string id)
+        {
+            var entity = _context.nhomlop.FirstOrDefault(t => Convert.ToString(t.idnhomlop) == id);
+            _context.nhomlop.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public NHOMLOP GetNHOMLOPSingleRecord(string id)
+        {
+            return _context.nhomlop.FirstOrDefault(t => Convert.ToString(t.idnhomlop) == id);
+        }
+
+        public List<NHOMLOP> GetNHOMLOPRecords()
+        {
+            return _context.nhomlop.ToList();
+        }
+
+        // PHONG HOC
+        public void AddPHONGHOCRecord(PHONGHOC ph)
+        {
+            _context.phonghoc.Add(ph);
+            _context.SaveChanges();
+        }
+
+        public void UpdatePHONGHOCRecord(PHONGHOC ph)
+        {
+            _context.phonghoc.Update(ph);
+            _context.SaveChanges();
+        }
+
+        public void DeletePHONGHOCRecord(string id)
+        {
+            var entity = _context.phonghoc.FirstOrDefault(t => Convert.ToString(t.idphonghoc) == id);
+            _context.phonghoc.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public PHONGHOC GetPHONGHOCSingleRecord(string id)
+        {
+            return _context.phonghoc.FirstOrDefault(t => Convert.ToString(t.idphonghoc) == id);
+        }
+
+        public List<PHONGHOC> GetPHONGHOCRecords()
+        {
+            return _context.phonghoc.ToList();
+        }
+
+        // SINH VIEN
+        public void AddSINHVIENRecord(SINHVIEN sv)
+        {
+            _context.sinhvien.Add(sv);
+            _context.SaveChanges();
+        }
+
+        public void UpdateSINHVIENRecord(SINHVIEN sv)
+        {
+            _context.sinhvien.Update(sv);
+            _context.SaveChanges();
+        }
+
+        public void DeleteSINHVIENRecord(string id)
+        {
+            var entity = _context.sinhvien.FirstOrDefault(t => Convert.ToString(t.idsv) == id);
+            _context.sinhvien.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public SINHVIEN GetSINHVIENSingleRecord(string id)
+        {
+            return _context.sinhvien.FirstOrDefault(t => Convert.ToString(t.idsv) == id);
+        }
+
+        public List<SINHVIEN> GetSINHVIENRecords()
+        {
+            return _context.sinhvien.ToList();
+        }
+
+        // SUC CHUA
+        public void AddSUCCHUARecord(SUCCHUA sc)
+        {
+            _context.succhua.Add(sc);
+            _context.SaveChanges();
+        }
+
+        public void UpdateSUCCHUARecord(SUCCHUA sc)
+        {
+            _context.succhua.Update(sc);
+            _context.SaveChanges();
+        }
+
+        public void DeleteSUCCHUARecord(string id)
+        {
+            var entity = _context.succhua.FirstOrDefault(t => Convert.ToString(t.idsucchua) == id);
+            _context.succhua.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public SUCCHUA GetSUCCHUASingleRecord(string id)
+        {
+            return _context.succhua.FirstOrDefault(t => Convert.ToString(t.idsucchua) == id);
+        }
+
+        public List<SUCCHUA> GetSUCCHUARecords()
+        {
+            return _context.succhua.ToList();
+        }
+
+        // TRINH DO
+        public void AddTRINHDORecord(TRINHDO td)
+        {
+            _context.trinhdo.Add(td);
+            _context.SaveChanges();
+        }
+
+        public void UpdateTRINHDORecord(TRINHDO td)
+        {
+            _context.trinhdo.Update(td);
+            _context.SaveChanges();
+        }
+
+        public void DeleteTRINHDORecord(string id)
+        {
+            var entity = _context.trinhdo.FirstOrDefault(t => Convert.ToString(t.idtrinhdo) == id);
+            _context.trinhdo.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public TRINHDO GetTRINHDOSingleRecord(string id)
+        {
+            return _context.trinhdo.FirstOrDefault(t => Convert.ToString(t.idtrinhdo) == id);
+        }
+
+        public List<TRINHDO> GetTRINHDORecords()
+        {
+            return _context.trinhdo.ToList();
+        }
+
+        // KET QUA HOC TAP
+        public void AddKETQUAHOCTAPRecord(KETQUAHOCTAP kqht)
+        {
+            _context.ketquahoctap.Add(kqht);
+            _context.SaveChanges();
+        }
+
+        public void UpdateKETQUAHOCTAPRecord(KETQUAHOCTAP kqht)
+        {
+            _context.ketquahoctap.Update(kqht);
+            _context.SaveChanges();
+        }
+
+        public void DeleteKETQUAHOCTAPRecord(string id)
+        {
+            var entity = _context.ketquahoctap.FirstOrDefault(t => Convert.ToString(t.idketquahoctap) == id);
+            _context.ketquahoctap.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public KETQUAHOCTAP GetKETQUAHOCTAPSingleRecord(string id)
+        {
+            return _context.ketquahoctap.FirstOrDefault(t => Convert.ToString(t.idketquahoctap) == id);
+        }
+
+        public List<KETQUAHOCTAP> GetKETQUAHOCTAPRecords()
+        {
+            return _context.ketquahoctap.ToList();
         }
     }
 }

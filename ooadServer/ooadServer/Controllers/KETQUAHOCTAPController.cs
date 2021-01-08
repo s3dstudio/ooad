@@ -10,42 +10,42 @@ namespace ooadServer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class KHOAController : Controller
+    public class KETQUAHOCTAPController : Controller
     {
         private readonly IDataAccessProvider _dataAccessProvider;
-        public KHOAController(IDataAccessProvider dataAccessProvider)
+        public KETQUAHOCTAPController(IDataAccessProvider dataAccessProvider)
         {
             _dataAccessProvider = dataAccessProvider;
         }
         [HttpGet("get")]
-        public IEnumerable<KHOA> Get()
+        public IEnumerable<KETQUAHOCTAP> Get()
         {
-            return _dataAccessProvider.GetKHOARecords();
+            return _dataAccessProvider.GetKETQUAHOCTAPRecords();
         }
 
         [HttpPost("post")]
-        public IActionResult Create([FromBody] KHOA k)
+        public IActionResult Create([FromBody] KETQUAHOCTAP k)
         {
             if (ModelState.IsValid)
             {
-                _dataAccessProvider.AddKHOARecord(k);
+                _dataAccessProvider.AddKETQUAHOCTAPRecord(k);
                 return Ok();
             }
             return BadRequest();
         }
 
         [HttpGet("getid/{id}")]
-        public KHOA Details(string id)
+        public KETQUAHOCTAP Details(string id)
         {
-            return _dataAccessProvider.GetKHOASingleRecord(id);
+            return _dataAccessProvider.GetKETQUAHOCTAPSingleRecord(id);
         }
 
         [HttpPut("edit")]
-        public IActionResult Edit([FromBody] KHOA k)
+        public IActionResult Edit([FromBody] KETQUAHOCTAP k)
         {
             if (ModelState.IsValid)
             {
-                _dataAccessProvider.UpdateKHOARecord(k);
+                _dataAccessProvider.UpdateKETQUAHOCTAPRecord(k);
                 return Ok();
             }
             return BadRequest();
@@ -53,13 +53,13 @@ namespace ooadServer.Controllers
         [HttpDelete("delete/{id}")]
         public IActionResult Delete(string id)
         {
-            var data = _dataAccessProvider.GetKHOASingleRecord(id);
+            var data = _dataAccessProvider.GetKETQUAHOCTAPSingleRecord(id);
             Console.WriteLine(id);
             if (data == null)
             {
                 return NotFound();
             }
-            _dataAccessProvider.DeleteKHOARecord(id);
+            _dataAccessProvider.DeleteKETQUAHOCTAPRecord(id);
             return Ok();
         }
     }
