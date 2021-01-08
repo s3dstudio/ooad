@@ -460,5 +460,65 @@ namespace ooadServer.DAL
         {
             return _context.ketquahoctap.ToList();
         }
+
+        // TKB SINH VIEN
+        public void AddTKBSVRecord(TKBSV tkbsv)
+        {
+            _context.tkbsv.Add(tkbsv);
+            _context.SaveChanges();
+        }
+
+        public void UpdateTKBSVRecord(TKBSV tkbsv)
+        {
+            _context.tkbsv.Update(tkbsv);
+            _context.SaveChanges();
+        }
+
+        public void DeleteTKBSVRecord(string id)
+        {
+            var entity = _context.tkbsv.FirstOrDefault(t => Convert.ToString(t.idtkbsinhvien) == id);
+            _context.tkbsv.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public TKBSV GetTKBSVSingleRecord(string id)
+        {
+            return _context.tkbsv.FirstOrDefault(t => Convert.ToString(t.idtkbsinhvien) == id);
+        }
+
+        public List<TKBSV> GetTKBSVRecords()
+        {
+            return _context.tkbsv.ToList();
+        }
+
+        // TKB NHOM LOP
+        public void AddTKBNHOMLOPRecord(TKBNHOMLOP tkbnl)
+        {
+            _context.tkbnhomlop.Add(tkbnl);
+            _context.SaveChanges();
+        }
+
+        public void UpdateTKBNHOMLOPRecord(TKBNHOMLOP tkbnl)
+        {
+            _context.tkbnhomlop.Update(tkbnl);
+            _context.SaveChanges();
+        }
+
+        public void DeleteTKBNHOMLOPRecord(string id)
+        {
+            var entity = _context.tkbnhomlop.FirstOrDefault(t => Convert.ToString(t.idtkbnhomlop) == id);
+            _context.tkbnhomlop.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public TKBNHOMLOP GetTKBNHOMLOPSingleRecord(string id)
+        {
+            return _context.tkbnhomlop.FirstOrDefault(t => Convert.ToString(t.idtkbnhomlop) == id);
+        }
+
+        public List<TKBNHOMLOP> GetTKBNHOMLOPRecords()
+        {
+            return _context.tkbnhomlop.ToList();
+        }
     }
 }

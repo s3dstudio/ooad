@@ -98,5 +98,17 @@ namespace ooadServer.DAL
         KETQUAHOCTAP GetKETQUAHOCTAPSingleRecord(string id);
         List<KETQUAHOCTAP> GetKETQUAHOCTAPRecords();
 
+        void AddTKBSVRecord(TKBSV tkbsv);
+        void UpdateTKBSVRecord(TKBSV tkbsv);
+        void DeleteTKBSVRecord(string id);
+        TKBSV GetTKBSVSingleRecord(string id);
+        List<TKBSV> GetTKBSVRecords();
+
+        void AddTKBNHOMLOPRecord(TKBNHOMLOP tkbnl);
+        void UpdateTKBNHOMLOPRecord(TKBNHOMLOP tkbnl);
+        void DeleteTKBNHOMLOPRecord(string id);
+        TKBNHOMLOP GetTKBNHOMLOPSingleRecord(string id);
+        List<TKBNHOMLOP> GetTKBNHOMLOPRecords();
+
     }
 }
