@@ -31,13 +31,13 @@ namespace ooad.UC
         {
             this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel2 = new Siticone.UI.WinForms.SiticoneLabel();
-            this.siticonePictureBox1 = new Siticone.UI.WinForms.SiticonePictureBox();
             this.siticoneLabel3 = new Siticone.UI.WinForms.SiticoneLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.siticoneGradientButton1 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.siticoneGradientButton2 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.siticonePictureBox1 = new Siticone.UI.WinForms.SiticonePictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,19 +59,9 @@ namespace ooad.UC
             this.siticoneLabel2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneLabel2.Location = new System.Drawing.Point(30, 125);
             this.siticoneLabel2.Name = "siticoneLabel2";
-            this.siticoneLabel2.Size = new System.Drawing.Size(38, 20);
+            this.siticoneLabel2.Size = new System.Drawing.Size(38, 17);
             this.siticoneLabel2.TabIndex = 1;
             this.siticoneLabel2.Text = "Khoá :";
-            // 
-            // siticonePictureBox1
-            // 
-            this.siticonePictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.siticonePictureBox1.Location = new System.Drawing.Point(392, 0);
-            this.siticonePictureBox1.Name = "siticonePictureBox1";
-            this.siticonePictureBox1.ShadowDecoration.Parent = this.siticonePictureBox1;
-            this.siticonePictureBox1.Size = new System.Drawing.Size(502, 604);
-            this.siticonePictureBox1.TabIndex = 3;
-            this.siticonePictureBox1.TabStop = false;
             // 
             // siticoneLabel3
             // 
@@ -79,7 +69,7 @@ namespace ooad.UC
             this.siticoneLabel3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneLabel3.Location = new System.Drawing.Point(30, 175);
             this.siticoneLabel3.Name = "siticoneLabel3";
-            this.siticoneLabel3.Size = new System.Drawing.Size(38, 20);
+            this.siticoneLabel3.Size = new System.Drawing.Size(38, 17);
             this.siticoneLabel3.TabIndex = 4;
             this.siticoneLabel3.Text = "Khoa :";
             // 
@@ -89,7 +79,7 @@ namespace ooad.UC
             this.linkLabel1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.Location = new System.Drawing.Point(26, 214);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(81, 18);
+            this.linkLabel1.Size = new System.Drawing.Size(80, 15);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Thêm khoa...";
@@ -146,14 +136,25 @@ namespace ooad.UC
             this.textBox2.Size = new System.Drawing.Size(199, 20);
             this.textBox2.TabIndex = 10;
             // 
+            // siticonePictureBox1
+            // 
+            this.siticonePictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.siticonePictureBox1.Image = global::ooad.Properties.Resources._2202995;
+            this.siticonePictureBox1.Location = new System.Drawing.Point(279, 0);
+            this.siticonePictureBox1.Name = "siticonePictureBox1";
+            this.siticonePictureBox1.ShadowDecoration.Parent = this.siticonePictureBox1;
+            this.siticonePictureBox1.Size = new System.Drawing.Size(615, 604);
+            this.siticonePictureBox1.TabIndex = 3;
+            this.siticonePictureBox1.TabStop = false;
+            // 
             // CreateKHDT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.siticoneGradientButton2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.siticoneGradientButton2);
             this.Controls.Add(this.siticoneGradientButton1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.siticoneLabel3);

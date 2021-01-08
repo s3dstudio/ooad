@@ -135,6 +135,5 @@ C:\Users\Lenovo\Desktop\git\ooad\ooad\obj\Debug\ooad.UC.TKB_DEV.resources
 C:\Users\Lenovo\Desktop\git\ooad\ooad\obj\Debug\ooad.exe.licenses
 C:\Users\Lenovo\Desktop\git\ooad\ooad\obj\Debug\ooad.UC.UC_DKHP.resources
 C:\Users\Lenovo\Desktop\git\ooad\ooad\obj\Debug\ooad.UC.UC_MNL.resources
-C:\Users\Lenovo\Desktop\git\ooad\ooad\obj\Debug\ooad.UC.UC_KHDT.resources
 C:\Users\Lenovo\Desktop\git\ooad\ooad\obj\Debug\ooad.GUI.KHDT.resources
 C:\Users\Lenovo\Desktop\git\ooad\ooad\obj\Debug\ooad.UC.UC_Duyet.resources
