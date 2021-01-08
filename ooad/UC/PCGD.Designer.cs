@@ -40,7 +40,6 @@ namespace ooad.UC
             this.siticoneButton2 = new Siticone.UI.WinForms.SiticoneButton();
             this.siticoneButton1 = new Siticone.UI.WinForms.SiticoneButton();
             this.uC_DKGD1 = new ooad.UC.UC_DKGD();
-            this.uC_PCGD1 = new ooad.UC.UC_PCGD();
             this.uC_DPC1 = new ooad.UC.UC_DPC();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,7 +60,6 @@ namespace ooad.UC
             this.siticonePanel1.Controls.Add(this.siticoneButton2);
             this.siticonePanel1.Controls.Add(this.siticoneButton1);
             this.siticonePanel1.Controls.Add(this.uC_DKGD1);
-            this.siticonePanel1.Controls.Add(this.uC_PCGD1);
             this.siticonePanel1.Controls.Add(this.uC_DPC1);
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
@@ -209,15 +207,6 @@ namespace ooad.UC
             this.uC_DKGD1.TabIndex = 7;
             this.uC_DKGD1.Load += new System.EventHandler(this.uC_DKGD1_Load);
             // 
-            // uC_PCGD1
-            // 
-            this.uC_PCGD1.BackColor = System.Drawing.Color.White;
-            this.uC_PCGD1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_PCGD1.Location = new System.Drawing.Point(0, 0);
-            this.uC_PCGD1.Name = "uC_PCGD1";
-            this.uC_PCGD1.Size = new System.Drawing.Size(894, 604);
-            this.uC_PCGD1.TabIndex = 8;
-            // 
             // uC_DPC1
             // 
             this.uC_DPC1.BackColor = System.Drawing.Color.White;
@@ -282,7 +271,6 @@ namespace ooad.UC
         private Siticone.UI.WinForms.SiticoneButton siticoneButton2;
         private Siticone.UI.WinForms.SiticoneButton siticoneButton1;
         private UC_DKGD uC_DKGD1;
-        private UC_PCGD uC_PCGD1;
         private UC_DPC uC_DPC1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

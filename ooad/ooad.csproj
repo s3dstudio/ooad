@@ -220,12 +220,6 @@
     <Compile Include="UC\UC_MNL.Designer.cs">
       <DependentUpon>UC_MNL.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UC_PCGD.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UC_PCGD.Designer.cs">
-      <DependentUpon>UC_PCGD.cs</DependentUpon>
-    </Compile>
     <Compile Include="UIManagers\DrawHelper.cs" />
     <Compile Include="UIManagers\FontManager.cs" />
     <EmbeddedResource Include="GUI\KHDT.resx">
@@ -284,9 +278,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_MNL.resx">
       <DependentUpon>UC_MNL.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC_PCGD.resx">
-      <DependentUpon>UC_PCGD.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

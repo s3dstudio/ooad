@@ -16,5 +16,11 @@ namespace ooad.UC
         {
             InitializeComponent();
         }
+
+        private void siticoneGradientButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.SendToBack();
+        }
     }
 }

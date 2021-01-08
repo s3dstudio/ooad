@@ -30,10 +30,10 @@ namespace ooad.UC
         private void InitializeComponent()
         {
             this.siticonePanel1 = new Siticone.UI.WinForms.SiticonePanel();
+            this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.siticoneGradientButton2 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.siticoneGradientButton1 = new Siticone.UI.WinForms.SiticoneGradientButton();
-            this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +49,17 @@ namespace ooad.UC
             this.siticonePanel1.ShadowDecoration.Parent = this.siticonePanel1;
             this.siticonePanel1.Size = new System.Drawing.Size(894, 604);
             this.siticonePanel1.TabIndex = 0;
+            // 
+            // siticoneLabel1
+            // 
+            this.siticoneLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel1.Font = new System.Drawing.Font("Roboto Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
+            this.siticoneLabel1.Location = new System.Drawing.Point(23, 28);
+            this.siticoneLabel1.Name = "siticoneLabel1";
+            this.siticoneLabel1.Size = new System.Drawing.Size(254, 25);
+            this.siticoneLabel1.TabIndex = 1;
+            this.siticoneLabel1.Text = "DUYỆT ĐĂNG KÝ GIẢNG DẠY";
             // 
             // tableLayoutPanel1
             // 
@@ -100,17 +111,6 @@ namespace ooad.UC
             this.siticoneGradientButton1.TabIndex = 13;
             this.siticoneGradientButton1.Text = "Huỷ";
             this.siticoneGradientButton1.Click += new System.EventHandler(this.siticoneGradientButton1_Click);
-            // 
-            // siticoneLabel1
-            // 
-            this.siticoneLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneLabel1.Font = new System.Drawing.Font("Roboto Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
-            this.siticoneLabel1.Location = new System.Drawing.Point(23, 28);
-            this.siticoneLabel1.Name = "siticoneLabel1";
-            this.siticoneLabel1.Size = new System.Drawing.Size(254, 25);
-            this.siticoneLabel1.TabIndex = 1;
-            this.siticoneLabel1.Text = "DUYỆT ĐĂNG KÝ GIẢNG DẠY";
             // 
             // UC_DPC
             // 

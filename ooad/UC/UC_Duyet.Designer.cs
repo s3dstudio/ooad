@@ -161,7 +161,7 @@ namespace ooad.UC
             this.label8.Location = new System.Drawing.Point(159, 56);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 15);
+            this.label8.Size = new System.Drawing.Size(42, 15);
             this.label8.TabIndex = 27;
             this.label8.Text = "mã gv";
             // 
