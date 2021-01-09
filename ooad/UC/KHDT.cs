@@ -22,12 +22,9 @@ namespace ooad.UC
         }
         private void load (object sender, EventArgs e)
         {
-            uC_KHDT1.Show();
-            uC_KHDT1.BringToFront();
         }
         private void KHDT_Load(object sender, EventArgs e)
         {
-            uC_KHDT1.Hide();
             check();
             int count = 4;
             for (int i = 0; i < count; i++)

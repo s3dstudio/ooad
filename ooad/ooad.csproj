@@ -208,23 +208,11 @@
     <Compile Include="UC\UC_Duyet.Designer.cs">
       <DependentUpon>UC_Duyet.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UC_KHDT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UC_KHDT.Designer.cs">
-      <DependentUpon>UC_KHDT.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC\UC_MNL.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC\UC_MNL.Designer.cs">
       <DependentUpon>UC_MNL.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC\UC_PCGD.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UC_PCGD.Designer.cs">
-      <DependentUpon>UC_PCGD.cs</DependentUpon>
     </Compile>
     <Compile Include="UIManagers\DrawHelper.cs" />
     <Compile Include="UIManagers\FontManager.cs" />
@@ -279,14 +267,8 @@
     <EmbeddedResource Include="UC\UC_Duyet.resx">
       <DependentUpon>UC_Duyet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC_KHDT.resx">
-      <DependentUpon>UC_KHDT.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_MNL.resx">
       <DependentUpon>UC_MNL.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC_PCGD.resx">
-      <DependentUpon>UC_PCGD.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -351,6 +333,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\output-onlinepngtools %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7474 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7668-01 %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2202995.jpg" />
+    <Content Include="Resources\7474.jpg" />
+    <Content Include="Resources\7474.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

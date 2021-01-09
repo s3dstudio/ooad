@@ -26,14 +26,11 @@ namespace ooad.UC
         private void uC_DKGD1_Load(object sender, EventArgs e)
         {
             uC_DKGD1.Hide();
-            uC_PCGD1.Hide();
             uC_DPC1.Hide();
         }
 
         private void siticoneButton3_Click(object sender, EventArgs e)
         {
-            uC_PCGD1.Show();
-            uC_PCGD1.BringToFront();
         }
 
         private void siticoneButton2_Click(object sender, EventArgs e)

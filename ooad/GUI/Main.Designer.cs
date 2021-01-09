@@ -1,6 +1,7 @@
 ﻿
 namespace ooad.GUI
 {
+   
     partial class Main
     {
         /// <summary>

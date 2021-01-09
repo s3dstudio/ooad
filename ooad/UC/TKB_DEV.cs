@@ -17,24 +17,30 @@ namespace ooad.UC
         public TKB_DEV()
         {
             InitializeComponent();
-            dataGridView1.AutoGenerateColumns = false;
-            foreach (DataGridViewColumn col in dataGridView1.Columns)
+            siticoneDataGridView1.AutoGenerateColumns = false;
+            foreach (DataGridViewColumn col in siticoneDataGridView1.Columns)
             {
                 col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 col.HeaderCell.Style.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
             }
-            while(dataGridView1.Rows.Count<9)
+            while(siticoneDataGridView1.Rows.Count<9)
             {
-                dataGridView1.Rows.Add();
+                siticoneDataGridView1.Rows.Add();
             }
-            dataGridView1[1, 1].Value = "1";
-            dataGridView1[1, 2].Value = "1";
+            siticoneDataGridView1[1, 1].Value = "1";
+            siticoneDataGridView1[1, 2].Value = "1";
+            siticoneDataGridView1[1, 3].Value = "1";
+            siticoneDataGridView1[1, 4].Value = "2";
             IsTheSameCellValue(1, 2);
+            if(IsTheSameCellValue(1,2))
+            {
+                this.BackColor = Color.Red;
+            }
         }
         public bool IsTheSameCellValue(in int column,in int row)
         {
-            DataGridViewCell cell1 = dataGridView1[column, row];
-            DataGridViewCell cell2 = dataGridView1[column, row - 1];
+            DataGridViewCell cell1 = siticoneDataGridView1[column, row];
+            DataGridViewCell cell2 = siticoneDataGridView1[column, row - 1];
             if (cell1.Value == null || cell2.Value == null)
             {
                 return false;
@@ -42,9 +48,9 @@ namespace ooad.UC
             return cell1.Value.ToString() == cell2.Value.ToString();
         }
 
-        private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
 
+        private void siticoneDataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
             e.AdvancedBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.None;
             if (e.RowIndex < 1 || e.ColumnIndex < 0)
                 return;
@@ -54,11 +60,11 @@ namespace ooad.UC
             }
             else
             {
-                e.AdvancedBorderStyle.Top = dataGridView1.AdvancedCellBorderStyle.Top;
+                e.AdvancedBorderStyle.Top = siticoneDataGridView1.AdvancedCellBorderStyle.Top;
             }
         }
 
-        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void siticoneDataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.RowIndex == 0)
                 return;
