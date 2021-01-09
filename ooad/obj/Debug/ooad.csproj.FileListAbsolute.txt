@@ -382,3 +382,4 @@ C:\Users\Lenovo\Desktop\git\minhduc2\ooad\ooad\obj\Debug\ooad.csproj.CopyComplet
 C:\Users\Lenovo\Desktop\git\minhduc2\ooad\ooad\obj\Debug\ooad.exe
 C:\Users\Lenovo\Desktop\git\minhduc2\ooad\ooad\obj\Debug\ooad.pdb
 C:\Users\Lenovo\Desktop\git\minhduc2\ooad\ooad\obj\Debug\ooad.GUI.ThemKhoa.resources
+D:\Git\ooad\ooad\obj\Debug\ooad.GUI.ThemKhoa.resources

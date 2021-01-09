@@ -35,6 +35,8 @@ namespace ooad.UC
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.schedulerDataStorage1 = new DevExpress.XtraScheduler.SchedulerDataStorage(this.components);
             this.siticoneDataGridView1 = new Siticone.UI.WinForms.SiticoneDataGridView();
+            this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.TIẾT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +44,6 @@ namespace ooad.UC
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerDataStorage1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +73,7 @@ namespace ooad.UC
             this.siticoneDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.siticoneDataGridView1.ColumnHeadersHeight = 35;
             this.siticoneDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TIẾT,
             this.Column1,
             this.Column2,
             this.Column3,
@@ -91,6 +93,7 @@ namespace ooad.UC
             this.siticoneDataGridView1.GridColor = System.Drawing.Color.DimGray;
             this.siticoneDataGridView1.Location = new System.Drawing.Point(25, 100);
             this.siticoneDataGridView1.Name = "siticoneDataGridView1";
+            this.siticoneDataGridView1.ReadOnly = true;
             this.siticoneDataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.siticoneDataGridView1.RowHeadersVisible = false;
             this.siticoneDataGridView1.RowTemplate.Height = 30;
@@ -111,7 +114,7 @@ namespace ooad.UC
             this.siticoneDataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.siticoneDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.siticoneDataGridView1.ThemeStyle.HeaderStyle.Height = 35;
-            this.siticoneDataGridView1.ThemeStyle.ReadOnly = false;
+            this.siticoneDataGridView1.ThemeStyle.ReadOnly = true;
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Tahoma", 8.25F);
@@ -122,51 +125,64 @@ namespace ooad.UC
             this.siticoneDataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.siticoneDataGridView1_CellFormatting);
             this.siticoneDataGridView1.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.siticoneDataGridView1_CellPainting);
             // 
+            // siticoneLabel1
+            // 
+            this.siticoneLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
+            this.siticoneLabel1.Location = new System.Drawing.Point(30, 35);
+            this.siticoneLabel1.Name = "siticoneLabel1";
+            this.siticoneLabel1.Size = new System.Drawing.Size(168, 26);
+            this.siticoneLabel1.TabIndex = 2;
+            this.siticoneLabel1.Text = "THỜI KHOÁ BIỂU";
+            // 
+            // TIẾT
+            // 
+            this.TIẾT.HeaderText = "TIẾT";
+            this.TIẾT.Name = "TIẾT";
+            this.TIẾT.ReadOnly = true;
+            // 
             // Column1
             // 
             this.Column1.HeaderText = "THỨ 2";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "THỨ 3";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "THỨ 4";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "THỨ 5";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "THỨ 6";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "THỨ 7";
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "CHỦ NHẬT";
             this.Column7.Name = "Column7";
-            // 
-            // siticoneLabel1
-            // 
-            this.siticoneLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneLabel1.Font = new System.Drawing.Font("Roboto Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
-            this.siticoneLabel1.Location = new System.Drawing.Point(30, 35);
-            this.siticoneLabel1.Name = "siticoneLabel1";
-            this.siticoneLabel1.Size = new System.Drawing.Size(150, 25);
-            this.siticoneLabel1.TabIndex = 2;
-            this.siticoneLabel1.Text = "THỜI KHOÁ BIỂU";
+            this.Column7.ReadOnly = true;
             // 
             // TKB_DEV
             // 
@@ -190,6 +206,8 @@ namespace ooad.UC
         private DevExpress.XtraEditors.Controls.CalendarControl calendarControl1;
         private DevExpress.XtraScheduler.SchedulerDataStorage schedulerDataStorage1;
         private Siticone.UI.WinForms.SiticoneDataGridView siticoneDataGridView1;
+        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIẾT;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -197,6 +215,5 @@ namespace ooad.UC
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel1;
     }
 }

@@ -29,26 +29,30 @@ namespace ooad.UC
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticonePanel1 = new Siticone.UI.WinForms.SiticonePanel();
             this.siticoneLabel3 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel2 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneDataGridView1 = new Siticone.UI.WinForms.SiticoneDataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneButton2 = new Siticone.UI.WinForms.SiticoneButton();
             this.siticoneButton1 = new Siticone.UI.WinForms.SiticoneButton();
             this.uC_DKGD1 = new ooad.UC.UC_DKGD();
             this.uC_DPC1 = new ooad.UC.UC_DPC();
+            this.cHUYENNGANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nHOMLOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idnhomlopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idhocphanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoigianmoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHUYENNGANHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHOMLOPBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // siticonePanel1
@@ -71,58 +75,59 @@ namespace ooad.UC
             // siticoneLabel3
             // 
             this.siticoneLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneLabel3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneLabel3.ForeColor = System.Drawing.Color.DimGray;
             this.siticoneLabel3.Location = new System.Drawing.Point(794, 81);
             this.siticoneLabel3.Name = "siticoneLabel3";
-            this.siticoneLabel3.Size = new System.Drawing.Size(69, 17);
+            this.siticoneLabel3.Size = new System.Drawing.Size(67, 18);
             this.siticoneLabel3.TabIndex = 6;
             this.siticoneLabel3.Text = "20/11/2020";
             // 
             // siticoneLabel2
             // 
             this.siticoneLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneLabel2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneLabel2.ForeColor = System.Drawing.Color.DimGray;
             this.siticoneLabel2.Location = new System.Drawing.Point(665, 81);
             this.siticoneLabel2.Name = "siticoneLabel2";
-            this.siticoneLabel2.Size = new System.Drawing.Size(123, 17);
+            this.siticoneLabel2.Size = new System.Drawing.Size(128, 18);
             this.siticoneLabel2.TabIndex = 5;
             this.siticoneLabel2.Text = "Cập nhật lần cuối lúc: ";
             // 
             // siticoneDataGridView1
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.siticoneDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.siticoneDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.siticoneDataGridView1.AutoGenerateColumns = false;
             this.siticoneDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.siticoneDataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.siticoneDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.siticoneDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.siticoneDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(147)))), ((int)(((byte)(209)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.siticoneDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(147)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.siticoneDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.siticoneDataGridView1.ColumnHeadersHeight = 20;
             this.siticoneDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.siticoneDataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
+            this.idnhomlopDataGridViewTextBoxColumn,
+            this.idhocphanDataGridViewTextBoxColumn,
+            this.tenDataGridViewTextBoxColumn,
+            this.thoigianmoDataGridViewTextBoxColumn});
+            this.siticoneDataGridView1.DataSource = this.nHOMLOPBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.siticoneDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.siticoneDataGridView1.EnableHeadersVisualStyles = false;
             this.siticoneDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.siticoneDataGridView1.Location = new System.Drawing.Point(25, 100);
@@ -154,44 +159,14 @@ namespace ooad.UC
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Chọn";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Mã HP";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tên HP";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Tín chỉ";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Tên GV";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Tiết";
-            this.Column6.Name = "Column6";
-            // 
             // siticoneLabel1
             // 
             this.siticoneLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneLabel1.Font = new System.Drawing.Font("Roboto Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
             this.siticoneLabel1.Location = new System.Drawing.Point(30, 35);
             this.siticoneLabel1.Name = "siticoneLabel1";
-            this.siticoneLabel1.Size = new System.Drawing.Size(271, 25);
+            this.siticoneLabel1.Size = new System.Drawing.Size(306, 26);
             this.siticoneLabel1.TabIndex = 3;
             this.siticoneLabel1.Text = "BẢNG PHÂN CÔNG GIẢNG DẠY";
             // 
@@ -200,7 +175,7 @@ namespace ooad.UC
             this.siticoneButton2.CheckedState.Parent = this.siticoneButton2;
             this.siticoneButton2.CustomImages.Parent = this.siticoneButton2;
             this.siticoneButton2.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneButton2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
             this.siticoneButton2.HoveredState.Parent = this.siticoneButton2;
             this.siticoneButton2.Location = new System.Drawing.Point(794, 21);
@@ -216,7 +191,7 @@ namespace ooad.UC
             this.siticoneButton1.CheckedState.Parent = this.siticoneButton1;
             this.siticoneButton1.CustomImages.Parent = this.siticoneButton1;
             this.siticoneButton1.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneButton1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
             this.siticoneButton1.HoveredState.Parent = this.siticoneButton1;
             this.siticoneButton1.Location = new System.Drawing.Point(703, 21);
@@ -246,6 +221,43 @@ namespace ooad.UC
             this.uC_DPC1.Size = new System.Drawing.Size(894, 604);
             this.uC_DPC1.TabIndex = 9;
             // 
+            // cHUYENNGANHBindingSource
+            // 
+            this.cHUYENNGANHBindingSource.DataSource = typeof(ooad.DTO.CHUYENNGANH);
+            // 
+            // nHOMLOPBindingSource
+            // 
+            this.nHOMLOPBindingSource.DataSource = typeof(ooad.DTO.NHOMLOP);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Chọn";
+            this.Column1.Name = "Column1";
+            // 
+            // idnhomlopDataGridViewTextBoxColumn
+            // 
+            this.idnhomlopDataGridViewTextBoxColumn.DataPropertyName = "Idnhomlop";
+            this.idnhomlopDataGridViewTextBoxColumn.HeaderText = "Mã Nhóm Lớp";
+            this.idnhomlopDataGridViewTextBoxColumn.Name = "idnhomlopDataGridViewTextBoxColumn";
+            // 
+            // idhocphanDataGridViewTextBoxColumn
+            // 
+            this.idhocphanDataGridViewTextBoxColumn.DataPropertyName = "Idhocphan";
+            this.idhocphanDataGridViewTextBoxColumn.HeaderText = "Mã HP";
+            this.idhocphanDataGridViewTextBoxColumn.Name = "idhocphanDataGridViewTextBoxColumn";
+            // 
+            // tenDataGridViewTextBoxColumn
+            // 
+            this.tenDataGridViewTextBoxColumn.DataPropertyName = "Ten";
+            this.tenDataGridViewTextBoxColumn.HeaderText = "Tên HP";
+            this.tenDataGridViewTextBoxColumn.Name = "tenDataGridViewTextBoxColumn";
+            // 
+            // thoigianmoDataGridViewTextBoxColumn
+            // 
+            this.thoigianmoDataGridViewTextBoxColumn.DataPropertyName = "Thoigianmo";
+            this.thoigianmoDataGridViewTextBoxColumn.HeaderText = "Thời Gian Mở";
+            this.thoigianmoDataGridViewTextBoxColumn.Name = "thoigianmoDataGridViewTextBoxColumn";
+            // 
             // PCGD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,6 +269,8 @@ namespace ooad.UC
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHUYENNGANHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHOMLOPBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,10 +287,11 @@ namespace ooad.UC
         private UC_DKGD uC_DKGD1;
         private UC_DPC uC_DPC1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idnhomlopDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idhocphanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thoigianmoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource nHOMLOPBindingSource;
+        private System.Windows.Forms.BindingSource cHUYENNGANHBindingSource;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ooad.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,19 @@ namespace ooad.UC
 {
     public partial class PCGD : UserControl
     {
+        List<NHOMLOP> _listNhomlop;
         public PCGD()
         {
             InitializeComponent();
+
+            string jsonString = Client.Client.Instance.Get("api/NHOMLOP/get");
+            _listNhomlop = NHOMLOP.FromJson(jsonString);
+
+            var bindingList = new BindingList<NHOMLOP>(_listNhomlop);
+            var source = new BindingSource(bindingList, null);
+
+            siticoneDataGridView1.DataSource = source;
+
         }
 
         private void siticoneButton1_Click(object sender, EventArgs e)

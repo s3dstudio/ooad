@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraScheduler;
+using ooad.DTO;
 
 namespace ooad.UC
 {
     public partial class TKB_DEV : DevExpress.XtraEditors.XtraUserControl
     {
+        List<TKB> _listTKBData;
         public TKB_DEV()
         {
             InitializeComponent();
@@ -23,19 +25,38 @@ namespace ooad.UC
                 col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 col.HeaderCell.Style.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
             }
-            while(siticoneDataGridView1.Rows.Count<9)
+            while(siticoneDataGridView1.Rows.Count<10)
             {
+                //int tiet = 1;
+                
                 siticoneDataGridView1.Rows.Add();
+              // siticoneDataGridView1[1, tiet].Value = "Tiết " + tiet;
+
+               // tiet++;
             }
-            siticoneDataGridView1[1, 1].Value = "1";
-            siticoneDataGridView1[1, 2].Value = "1";
-            siticoneDataGridView1[1, 3].Value = "1";
-            siticoneDataGridView1[1, 4].Value = "2";
-            IsTheSameCellValue(1, 2);
-            if(IsTheSameCellValue(1,2))
+
+            string jsonString = Client.Client.Instance.Get("api/TKB/get/1");
+            _listTKBData = TKB.FromJson(jsonString);
+
+            foreach(var item in _listTKBData)
             {
-                this.BackColor = Color.Red;
+                for (int tiet = (int)item.Tietbatdau ; tiet <= item.Tietketthuc; tiet++)
+                {
+                    string value = item.Idnhomlop + Environment.NewLine + item.Tennhomlop + Environment.NewLine + item.Thoigianmo.ToString();
+
+                    siticoneDataGridView1[(int)item.Thu, tiet].Value = value;
+                    siticoneDataGridView1.Columns[(int)item.Thu].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                   // siticoneDataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+                    //if (IsTheSameCellValue((int)item.Thu, tiet + 1))
+                    //{
+                    //    this.BackColor = Color.Red;
+                    //}
+                }
             }
+
+           
+            
         }
         public bool IsTheSameCellValue(in int column,in int row)
         {

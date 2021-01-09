@@ -50,7 +50,7 @@ namespace ooad.GUI
             this.siticoneTextBox1.Location = new System.Drawing.Point(12, 75);
             this.siticoneTextBox1.Name = "siticoneTextBox1";
             this.siticoneTextBox1.PasswordChar = '\0';
-            this.siticoneTextBox1.PlaceholderText = "Nhập tên khoa...";
+            this.siticoneTextBox1.PlaceholderText = "Nhập tên chuyên ngành...";
             this.siticoneTextBox1.SelectedText = "";
             this.siticoneTextBox1.ShadowDecoration.Parent = this.siticoneTextBox1;
             this.siticoneTextBox1.Size = new System.Drawing.Size(200, 36);
@@ -71,6 +71,7 @@ namespace ooad.GUI
             this.siticoneGradientButton1.Size = new System.Drawing.Size(62, 32);
             this.siticoneGradientButton1.TabIndex = 1;
             this.siticoneGradientButton1.Text = "Đồng ý";
+            this.siticoneGradientButton1.Click += new System.EventHandler(this.siticoneGradientButton1_Click);
             // 
             // ThemKhoa
             // 
@@ -80,7 +81,7 @@ namespace ooad.GUI
             this.Controls.Add(this.siticoneGradientButton1);
             this.Controls.Add(this.siticoneTextBox1);
             this.Name = "ThemKhoa";
-            this.Text = "ThemKhoa";
+            this.Text = "ThemChuyenNganh";
             this.ResumeLayout(false);
 
         }

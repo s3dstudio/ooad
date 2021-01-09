@@ -45,11 +45,11 @@ namespace ooad.UC
             // siticoneLabel1
             // 
             this.siticoneLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneLabel1.Font = new System.Drawing.Font("Roboto Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
             this.siticoneLabel1.Location = new System.Drawing.Point(69, 63);
             this.siticoneLabel1.Name = "siticoneLabel1";
-            this.siticoneLabel1.Size = new System.Drawing.Size(204, 27);
+            this.siticoneLabel1.Size = new System.Drawing.Size(231, 27);
             this.siticoneLabel1.TabIndex = 0;
             this.siticoneLabel1.Text = "Lập kế hoạch đào tạo";
             this.siticoneLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -57,30 +57,30 @@ namespace ooad.UC
             // siticoneLabel2
             // 
             this.siticoneLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneLabel2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneLabel2.Location = new System.Drawing.Point(30, 125);
             this.siticoneLabel2.Name = "siticoneLabel2";
-            this.siticoneLabel2.Size = new System.Drawing.Size(38, 17);
+            this.siticoneLabel2.Size = new System.Drawing.Size(40, 18);
             this.siticoneLabel2.TabIndex = 1;
             this.siticoneLabel2.Text = "Khoá :";
             // 
             // siticoneLabel3
             // 
             this.siticoneLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneLabel3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneLabel3.Location = new System.Drawing.Point(30, 175);
             this.siticoneLabel3.Name = "siticoneLabel3";
-            this.siticoneLabel3.Size = new System.Drawing.Size(38, 17);
+            this.siticoneLabel3.Size = new System.Drawing.Size(40, 18);
             this.siticoneLabel3.TabIndex = 4;
             this.siticoneLabel3.Text = "Khoa :";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.Location = new System.Drawing.Point(26, 214);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(49, 15);
+            this.linkLabel1.Size = new System.Drawing.Size(52, 16);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Thêm...";
@@ -214,8 +214,8 @@ namespace ooad.UC
         private System.Windows.Forms.LinkLabel linkLabel1;
         private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton1;
         private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton2;
-        private Siticone.UI.WinForms.SiticoneRoundedComboBox siticoneRoundedComboBox2;
         private LollipopTextBox lollipopTextBox1;
         private Siticone.UI.WinForms.SiticoneCircleButton siticoneCircleButton1;
+        private Siticone.UI.WinForms.SiticoneRoundedComboBox siticoneRoundedComboBox2;
     }
 }
