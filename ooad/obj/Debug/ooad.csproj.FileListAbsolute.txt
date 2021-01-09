@@ -250,3 +250,7 @@ D:\Git\ooad\ooad\obj\Debug\ooad.csproj.CoreCompileInputs.cache
 D:\Git\ooad\ooad\obj\Debug\ooad.csproj.CopyComplete
 D:\Git\ooad\ooad\obj\Debug\ooad.exe
 D:\Git\ooad\ooad\obj\Debug\ooad.pdb
+D:\Git\ooad\ooad\bin\Debug\Newtonsoft.Json.dll
+D:\Git\ooad\ooad\bin\Debug\System.Net.Http.Formatting.dll
+D:\Git\ooad\ooad\bin\Debug\Newtonsoft.Json.xml
+D:\Git\ooad\ooad\bin\Debug\System.Net.Http.Formatting.xml

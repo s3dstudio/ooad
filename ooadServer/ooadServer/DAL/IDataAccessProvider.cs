@@ -110,5 +110,11 @@ namespace ooadServer.DAL
         TKBNHOMLOP GetTKBNHOMLOPSingleRecord(string id);
         List<TKBNHOMLOP> GetTKBNHOMLOPRecords();
 
+        void AddKHOAHOCRecord(KHOAHOC kh);
+        void UpdateKHOAHOCRecord(KHOAHOC kh);
+        void DeleteKHOAHOCRecord(string id);
+        KHOAHOC GetKHOAHOCSingleRecord(string id);
+        List<KHOAHOC> GetKHOAHOCRecords();
+
     }
 }

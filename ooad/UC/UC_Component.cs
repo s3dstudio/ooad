@@ -13,24 +13,39 @@ namespace ooad.UC
 {
     public partial class UC_Component : UserControl
     {
-        public UC_Component()
+        private long _namkhoahoc;
+        public UC_Component(long namkhoahoc)
         {
+            _namkhoahoc = namkhoahoc;
             InitializeComponent();
             
         }
+        public UC_Component()
+        {
+            InitializeComponent();
+
+        }
         int i;
-        LinkLabel[] linkLabel = new LinkLabel[5];
+        LinkLabel[] linkLabel = new LinkLabel[1000];
         ooad.GUI.Main m = new Main();
         
         private void UC_Component_Load(object sender, EventArgs e)
         {
+
+            string jsonString = Client.Client.Instance.Get("api/KHDT/getfromyear/" + _namkhoahoc );
+            var listKHDT = DTO.KHDT.FromJson(jsonString);
+
+            siticoneLabel2.Text = "CTĐT Khoá " + this._namkhoahoc.ToString();
+
             //dynamic funtion
-            int count = 5;
+            int count = listKHDT.Count();
             for (i = 0; i < count; i++)
             {
+              
                 linkLabel[i] = new LinkLabel();
-                linkLabel[i].Text = $"LinkLabel {i.ToString()}";
+                linkLabel[i].Text = listKHDT[i].Tenkhdt;
                 linkLabel[i].Name = "ll" + i.ToString();
+                linkLabel[i].AutoSize = true;
                 linkLabel[i].Location = new Point(17, 90 + (20 * i));
                 linkLabel[i].LinkColor = Color.White;
                 this.Height = 150 + (20 * i);

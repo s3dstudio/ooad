@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ooad.Client;
 
 namespace ooad.UC
 {
@@ -26,10 +27,14 @@ namespace ooad.UC
         private void KHDT_Load(object sender, EventArgs e)
         {
             check();
-            int count = 4;
+
+            string jsonString = Client.Client.Instance.Get("api/KHOAHOC/get");
+            var listKHOAHOC = DTO.KHOAHOC.FromJson(jsonString);
+
+            int count = listKHOAHOC.Count();
             for (int i = 0; i < count; i++)
             {
-                UC_Component uC_Component = new UC_Component();
+                UC_Component uC_Component = new UC_Component(listKHOAHOC[i].Namkhoahoc);
                 uC_Component.Location = new Point(20 + (i * 300), 0);
                 tableLayoutPanel1.Controls.Add(uC_Component);
             }

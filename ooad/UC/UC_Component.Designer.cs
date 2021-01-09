@@ -41,10 +41,10 @@ namespace ooad.UC
             // siticoneLabel1
             // 
             this.siticoneLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneLabel1.Font = new System.Drawing.Font("Acre Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneLabel1.Location = new System.Drawing.Point(188, 28);
             this.siticoneLabel1.Name = "siticoneLabel1";
-            this.siticoneLabel1.Size = new System.Drawing.Size(136, 27);
+            this.siticoneLabel1.Size = new System.Drawing.Size(135, 27);
             this.siticoneLabel1.TabIndex = 1;
             this.siticoneLabel1.Text = "Add function";
             // 
@@ -60,11 +60,11 @@ namespace ooad.UC
             // siticoneLabel2
             // 
             this.siticoneLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(239)))));
-            this.siticoneLabel2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneLabel2.ForeColor = System.Drawing.Color.White;
             this.siticoneLabel2.Location = new System.Drawing.Point(26, 34);
             this.siticoneLabel2.Name = "siticoneLabel2";
-            this.siticoneLabel2.Size = new System.Drawing.Size(96, 25);
+            this.siticoneLabel2.Size = new System.Drawing.Size(101, 26);
             this.siticoneLabel2.TabIndex = 4;
             this.siticoneLabel2.Text = "Khoá 2018";
             // 

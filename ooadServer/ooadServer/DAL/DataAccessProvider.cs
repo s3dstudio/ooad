@@ -520,5 +520,34 @@ namespace ooadServer.DAL
         {
             return _context.tkbnhomlop.ToList();
         }
+
+        public void AddKHOAHOCRecord(KHOAHOC kh)
+        {
+            _context.khoahoc.Add(kh);
+            _context.SaveChanges();
+        }
+
+        public void UpdateKHOAHOCRecord(KHOAHOC kh)
+        {
+            _context.khoahoc.Update(kh);
+            _context.SaveChanges();
+        }
+
+        public void DeleteKHOAHOCRecord(string id)
+        {
+            var entity = _context.khoahoc.FirstOrDefault(t => Convert.ToString(t.idkhoahoc) == id);
+            _context.khoahoc.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public KHOAHOC GetKHOAHOCSingleRecord(string id)
+        {
+            return _context.khoahoc.FirstOrDefault(t => Convert.ToString(t.idkhoahoc) == id);
+        }
+
+        public List<KHOAHOC> GetKHOAHOCRecords()
+        {
+            return _context.khoahoc.ToList();
+        }
     }
 }

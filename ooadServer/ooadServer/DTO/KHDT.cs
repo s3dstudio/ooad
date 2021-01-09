@@ -12,6 +12,11 @@ namespace ooadServer.DTO
         public int idhdt { get; set; }
         public int idchuyennganh { get; set; }
         public int idlhdt { get; set; }
+        public int idkhoahoc {get;set;}
 
+        public static explicit operator KHDT(List<KHDT> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using ooadServer.DTO;
 using ooadServer.DAL;
+using ooadServer.BUS;
 
 namespace ooadServer.Controllers
 {
@@ -21,6 +22,13 @@ namespace ooadServer.Controllers
         public IEnumerable<KHDT> Get()
         {
             return _dataAccessProvider.GetKHDTRecords();
+        }
+
+        [HttpGet("getfromyear/{year}")]
+        public IEnumerable<KHDT> GetFromYear(string year)
+        {
+            KHDT_BUS khdt_bus = new KHDT_BUS(_dataAccessProvider);
+            return khdt_bus.GetKHDTFromYear(Int32.Parse(year));
         }
 
         [HttpPost("post")]
