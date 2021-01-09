@@ -25,6 +25,7 @@ namespace ooad.UC
             TextBox textBox = new TextBox();
             textBox.Location = new Point(textBox2.Location.X, textBox2.Location.Y + (50 * temp));
             textBox.Width = 199;
+            textBox.Name = "tb" + temp.ToString();
             this.Controls.Add(textBox);
             temp++;
         }
@@ -36,17 +37,18 @@ namespace ooad.UC
 
         private void siticoneGradientButton2_Click(object sender, EventArgs e)
         {
-            var bytes = Guid.NewGuid().ToByteArray();
-            Array.Resize(ref bytes, 2);
-            var bigInt = new BigInteger(bytes);
-            if (bigInt < 0)
-                bigInt = -bigInt;
+            //var bytes = Guid.NewGuid().ToByteArray();
+            //Array.Resize(ref bytes, 2);
+            //var bigInt = new BigInteger(bytes);
+            //if (bigInt < 0)
+            //    bigInt = -bigInt;
 
-            KHOAHOC kh = new KHOAHOC();
-            kh.Idkhoahoc = long.Parse(bigInt.ToString());
-            kh.Namkhoahoc = Int32.Parse(textBox1.Text);
+            //KHOAHOC kh = new KHOAHOC();
+            //kh.Idkhoahoc = long.Parse(bigInt.ToString());
+            //if(textBox1.Text != "")
+            //    kh.Namkhoahoc = Int32.Parse(textBox1.Text);
 
-            Client.Client.Instance.Post("api/khoahoc/post/", kh);
+            //Client.Client.Instance.Post("api/khoahoc/post/", kh);
 
             this.SendToBack();
         }
