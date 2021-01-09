@@ -3,6 +3,7 @@ using System;
 using System.Drawing;
 using System.Numerics;
 using System.Windows.Forms;
+using ooad.GUI;
 
 namespace ooad.UC
 {
@@ -22,11 +23,11 @@ namespace ooad.UC
             label.Width = siticoneLabel1.Width/5;
             label.Font = new Font("Roboto", 9, FontStyle.Regular);
             this.Controls.Add(label);
-            TextBox textBox = new TextBox();
-            textBox.Location = new Point(textBox2.Location.X, textBox2.Location.Y + (50 * temp));
-            textBox.Width = 199;
-            textBox.Name = "tb" + temp.ToString();
-            this.Controls.Add(textBox);
+            Siticone.UI.WinForms.SiticoneRoundedComboBox siticoneRoundedComboBox = new Siticone.UI.WinForms.SiticoneRoundedComboBox();
+            siticoneRoundedComboBox.Location = new Point(siticoneRoundedComboBox2.Location.X, siticoneRoundedComboBox2.Location.Y + (50 * temp));
+            siticoneRoundedComboBox.Width = 199;
+            siticoneRoundedComboBox.Name = "tb" + temp.ToString();
+            this.Controls.Add(siticoneRoundedComboBox);
             temp++;
         }
 
@@ -51,6 +52,12 @@ namespace ooad.UC
             //Client.Client.Instance.Post("api/khoahoc/post/", kh);
 
             this.SendToBack();
+        }
+
+        private void siticoneCircleButton1_Click(object sender, EventArgs e)
+        {
+            ThemKhoa tk = new ThemKhoa();
+            tk.Show();
         }
     }
 }

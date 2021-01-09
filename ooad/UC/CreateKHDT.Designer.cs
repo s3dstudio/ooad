@@ -35,9 +35,10 @@ namespace ooad.UC
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.siticoneGradientButton1 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.siticoneGradientButton2 = new Siticone.UI.WinForms.SiticoneGradientButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.siticoneRoundedComboBox2 = new Siticone.UI.WinForms.SiticoneRoundedComboBox();
+            this.siticoneCircleButton1 = new Siticone.UI.WinForms.SiticoneCircleButton();
             this.siticonePictureBox1 = new Siticone.UI.WinForms.SiticonePictureBox();
+            this.lollipopTextBox1 = new LollipopTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,10 +80,10 @@ namespace ooad.UC
             this.linkLabel1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.Location = new System.Drawing.Point(26, 214);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(80, 15);
+            this.linkLabel1.Size = new System.Drawing.Size(49, 15);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Thêm khoa...";
+            this.linkLabel1.Text = "Thêm...";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // siticoneGradientButton1
@@ -122,19 +123,38 @@ namespace ooad.UC
             this.siticoneGradientButton2.Text = "Đồng ý";
             this.siticoneGradientButton2.Click += new System.EventHandler(this.siticoneGradientButton2_Click);
             // 
-            // textBox1
+            // siticoneRoundedComboBox2
             // 
-            this.textBox1.Location = new System.Drawing.Point(74, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 20);
-            this.textBox1.TabIndex = 9;
+            this.siticoneRoundedComboBox2.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneRoundedComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.siticoneRoundedComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.siticoneRoundedComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.siticoneRoundedComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.siticoneRoundedComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.siticoneRoundedComboBox2.HoveredState.Parent = this.siticoneRoundedComboBox2;
+            this.siticoneRoundedComboBox2.ItemHeight = 30;
+            this.siticoneRoundedComboBox2.ItemsAppearance.Parent = this.siticoneRoundedComboBox2;
+            this.siticoneRoundedComboBox2.Location = new System.Drawing.Point(74, 165);
+            this.siticoneRoundedComboBox2.Name = "siticoneRoundedComboBox2";
+            this.siticoneRoundedComboBox2.ShadowDecoration.Parent = this.siticoneRoundedComboBox2;
+            this.siticoneRoundedComboBox2.Size = new System.Drawing.Size(199, 36);
+            this.siticoneRoundedComboBox2.TabIndex = 12;
             // 
-            // textBox2
+            // siticoneCircleButton1
             // 
-            this.textBox2.Location = new System.Drawing.Point(74, 175);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 20);
-            this.textBox2.TabIndex = 10;
+            this.siticoneCircleButton1.CheckedState.Parent = this.siticoneCircleButton1;
+            this.siticoneCircleButton1.CustomImages.Parent = this.siticoneCircleButton1;
+            this.siticoneCircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneCircleButton1.ForeColor = System.Drawing.Color.White;
+            this.siticoneCircleButton1.HoveredState.Parent = this.siticoneCircleButton1;
+            this.siticoneCircleButton1.Location = new System.Drawing.Point(279, 171);
+            this.siticoneCircleButton1.Name = "siticoneCircleButton1";
+            this.siticoneCircleButton1.ShadowDecoration.Mode = Siticone.UI.WinForms.Enums.ShadowMode.Circle;
+            this.siticoneCircleButton1.ShadowDecoration.Parent = this.siticoneCircleButton1;
+            this.siticoneCircleButton1.Size = new System.Drawing.Size(30, 30);
+            this.siticoneCircleButton1.TabIndex = 14;
+            this.siticoneCircleButton1.Text = "+";
+            this.siticoneCircleButton1.Click += new System.EventHandler(this.siticoneCircleButton1_Click);
             // 
             // siticonePictureBox1
             // 
@@ -147,14 +167,30 @@ namespace ooad.UC
             this.siticonePictureBox1.TabIndex = 3;
             this.siticonePictureBox1.TabStop = false;
             // 
+            // lollipopTextBox1
+            // 
+            this.lollipopTextBox1.FocusedColor = "#508ef5";
+            this.lollipopTextBox1.FontColor = "#999999";
+            this.lollipopTextBox1.IsEnabled = true;
+            this.lollipopTextBox1.Location = new System.Drawing.Point(74, 125);
+            this.lollipopTextBox1.MaxLength = 32767;
+            this.lollipopTextBox1.Multiline = false;
+            this.lollipopTextBox1.Name = "lollipopTextBox1";
+            this.lollipopTextBox1.ReadOnly = false;
+            this.lollipopTextBox1.Size = new System.Drawing.Size(190, 24);
+            this.lollipopTextBox1.TabIndex = 13;
+            this.lollipopTextBox1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.lollipopTextBox1.UseSystemPasswordChar = false;
+            // 
             // CreateKHDT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.siticoneCircleButton1);
+            this.Controls.Add(this.lollipopTextBox1);
+            this.Controls.Add(this.siticoneRoundedComboBox2);
             this.Controls.Add(this.siticoneGradientButton2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.siticoneGradientButton1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.siticoneLabel3);
@@ -178,7 +214,8 @@ namespace ooad.UC
         private System.Windows.Forms.LinkLabel linkLabel1;
         private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton1;
         private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private Siticone.UI.WinForms.SiticoneRoundedComboBox siticoneRoundedComboBox2;
+        private LollipopTextBox lollipopTextBox1;
+        private Siticone.UI.WinForms.SiticoneCircleButton siticoneCircleButton1;
     }
 }
