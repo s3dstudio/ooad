@@ -243,9 +243,7 @@ D:\Git\ooad\ooad\obj\Debug\ooad.UC.UC_DKGD.resources
 D:\Git\ooad\ooad\obj\Debug\ooad.UC.UC_DKHP.resources
 D:\Git\ooad\ooad\obj\Debug\ooad.UC.UC_DPC.resources
 D:\Git\ooad\ooad\obj\Debug\ooad.UC.UC_Duyet.resources
-D:\Git\ooad\ooad\obj\Debug\ooad.UC.UC_KHDT.resources
 D:\Git\ooad\ooad\obj\Debug\ooad.UC.UC_MNL.resources
-D:\Git\ooad\ooad\obj\Debug\ooad.UC.UC_PCGD.resources
 D:\Git\ooad\ooad\obj\Debug\ooad.csproj.GenerateResource.cache
 D:\Git\ooad\ooad\obj\Debug\ooad.exe.licenses
 D:\Git\ooad\ooad\obj\Debug\ooad.csproj.CoreCompileInputs.cache
