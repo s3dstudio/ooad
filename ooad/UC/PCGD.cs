@@ -18,7 +18,7 @@ namespace ooad.UC
         {
             InitializeComponent();
 
-            string jsonString = Client.Client.Instance.Get("api/NHOMLOP/get");
+            var jsonString = Client.Client.Instance.Get("api/NHOMLOP/get");
             _listNhomlop = NHOMLOP.FromJson(jsonString);
 
             var bindingList = new BindingList<NHOMLOP>(_listNhomlop);

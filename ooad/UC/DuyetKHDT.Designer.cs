@@ -49,6 +49,7 @@ namespace ooad.UC
             this.siticoneGradientButton2.Size = new System.Drawing.Size(112, 45);
             this.siticoneGradientButton2.TabIndex = 10;
             this.siticoneGradientButton2.Text = "Đồng ý";
+            this.siticoneGradientButton2.Click += new System.EventHandler(this.siticoneGradientButton2_Click);
             // 
             // siticoneGradientButton1
             // 

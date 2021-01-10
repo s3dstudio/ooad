@@ -48,10 +48,10 @@ namespace ooad.GUI
             this.siticonePanel2 = new Siticone.UI.WinForms.SiticonePanel();
             this.siticoneDragControl1 = new Siticone.UI.WinForms.SiticoneDragControl(this.components);
             this.siticonePanel3 = new Siticone.UI.WinForms.SiticonePanel();
+            this.siticoneButton8 = new Siticone.UI.WinForms.SiticoneButton();
             this.siticoneCircleButton2 = new Siticone.UI.WinForms.SiticoneCircleButton();
             this.siticoneButton6 = new Siticone.UI.WinForms.SiticoneButton();
             this.siticoneButton7 = new Siticone.UI.WinForms.SiticoneButton();
-            this.siticoneButton8 = new Siticone.UI.WinForms.SiticoneButton();
             this.khdt1 = new ooad.UC.KHDT();
             this.pcgd1 = new ooad.UC.PCGD();
             this.kqht1 = new ooad.UC.KQHT();
@@ -69,11 +69,11 @@ namespace ooad.GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Acre Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
             this.label1.Location = new System.Drawing.Point(25, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 32);
+            this.label1.Size = new System.Drawing.Size(156, 31);
             this.label1.TabIndex = 17;
             this.label1.Text = "E-Learning";
             // 
@@ -344,6 +344,22 @@ namespace ooad.GUI
             this.siticonePanel3.Size = new System.Drawing.Size(894, 604);
             this.siticonePanel3.TabIndex = 20;
             // 
+            // siticoneButton8
+            // 
+            this.siticoneButton8.CheckedState.Parent = this.siticoneButton8;
+            this.siticoneButton8.CustomImages.Parent = this.siticoneButton8;
+            this.siticoneButton8.FillColor = System.Drawing.Color.Transparent;
+            this.siticoneButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
+            this.siticoneButton8.HoveredState.Parent = this.siticoneButton8;
+            this.siticoneButton8.Location = new System.Drawing.Point(528, 20);
+            this.siticoneButton8.Name = "siticoneButton8";
+            this.siticoneButton8.ShadowDecoration.Parent = this.siticoneButton8;
+            this.siticoneButton8.Size = new System.Drawing.Size(88, 45);
+            this.siticoneButton8.TabIndex = 13;
+            this.siticoneButton8.Text = "KHDT MỚI";
+            this.siticoneButton8.Click += new System.EventHandler(this.siticoneButton8_Click);
+            // 
             // siticoneCircleButton2
             // 
             this.siticoneCircleButton2.CheckedState.Parent = this.siticoneCircleButton2;
@@ -358,13 +374,14 @@ namespace ooad.GUI
             this.siticoneCircleButton2.Size = new System.Drawing.Size(30, 30);
             this.siticoneCircleButton2.TabIndex = 9;
             this.siticoneCircleButton2.Text = "0";
+            this.siticoneCircleButton2.Click += new System.EventHandler(this.siticoneCircleButton2_Click);
             // 
             // siticoneButton6
             // 
             this.siticoneButton6.CheckedState.Parent = this.siticoneButton6;
             this.siticoneButton6.CustomImages.Parent = this.siticoneButton6;
             this.siticoneButton6.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneButton6.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
             this.siticoneButton6.HoveredState.Parent = this.siticoneButton6;
             this.siticoneButton6.Location = new System.Drawing.Point(716, 20);
@@ -380,7 +397,7 @@ namespace ooad.GUI
             this.siticoneButton7.CheckedState.Parent = this.siticoneButton7;
             this.siticoneButton7.CustomImages.Parent = this.siticoneButton7;
             this.siticoneButton7.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneButton7.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
             this.siticoneButton7.HoveredState.Parent = this.siticoneButton7;
             this.siticoneButton7.Location = new System.Drawing.Point(622, 20);
@@ -390,22 +407,6 @@ namespace ooad.GUI
             this.siticoneButton7.TabIndex = 7;
             this.siticoneButton7.Text = "TẠO MỚI";
             this.siticoneButton7.Click += new System.EventHandler(this.siticoneButton7_Click);
-            // 
-            // siticoneButton8
-            // 
-            this.siticoneButton8.CheckedState.Parent = this.siticoneButton8;
-            this.siticoneButton8.CustomImages.Parent = this.siticoneButton8;
-            this.siticoneButton8.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneButton8.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
-            this.siticoneButton8.HoveredState.Parent = this.siticoneButton8;
-            this.siticoneButton8.Location = new System.Drawing.Point(528, 20);
-            this.siticoneButton8.Name = "siticoneButton8";
-            this.siticoneButton8.ShadowDecoration.Parent = this.siticoneButton8;
-            this.siticoneButton8.Size = new System.Drawing.Size(88, 45);
-            this.siticoneButton8.TabIndex = 13;
-            this.siticoneButton8.Text = "KHDT MỚI";
-            this.siticoneButton8.Click += new System.EventHandler(this.siticoneButton8_Click);
             // 
             // khdt1
             // 

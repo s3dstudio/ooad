@@ -5,6 +5,7 @@ using System.Numerics;
 using System.Windows.Forms;
 using ooad.GUI;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ooad.UC
 {
@@ -68,6 +69,7 @@ namespace ooad.UC
             kh.Idkhoahoc = long.Parse(bigInt.ToString());
             if (lollipopTextBox1.Text != "")
                 kh.Namkhoahoc = Int32.Parse(lollipopTextBox1.Text);
+            kh.Active = false;
 
             Client.Client.Instance.Post("api/khoahoc/post/", kh);
 
@@ -89,6 +91,7 @@ namespace ooad.UC
                 khdt.Idchuyennganh = chuyennganh.Idchuyennganh;
                 khdt.Idlhdt = 1;
                 khdt.Idkhoahoc = kh.Idkhoahoc;
+                khdt.Active = false;
 
                 Client.Client.Instance.Post("api/KHDT/post/", khdt);
             }
@@ -98,11 +101,11 @@ namespace ooad.UC
 
         private void siticoneCircleButton1_Click(object sender, EventArgs e)
         {
-            List<List<CHUYENNGANH>> data = new List<List<CHUYENNGANH>>();
-            foreach(var item in _listCombobox)
-            {
-                data.Add((List<CHUYENNGANH>)item.DataSource);
-            }
+            //List<List<CHUYENNGANH>> data = new List<List<CHUYENNGANH>>();
+            //foreach(var item in _listCombobox)
+            //{
+            //    data.Add((List<CHUYENNGANH>)item.DataSource);
+            //}
             ThemKhoa tk = new ThemKhoa();
             tk.Show();
         }

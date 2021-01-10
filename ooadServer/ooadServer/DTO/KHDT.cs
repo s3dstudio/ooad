@@ -13,6 +13,7 @@ namespace ooadServer.DTO
         public int idchuyennganh { get; set; }
         public int idlhdt { get; set; }
         public int idkhoahoc {get;set;}
+        public bool active { get; set; }
 
         public static explicit operator KHDT(List<KHDT> v)
         {

@@ -36,11 +36,27 @@ namespace ooad.GUI
             k.Text = this.tempM;
             k.Show();
 
-            
+           
+
         }
         private void Main_Load(object sender, EventArgs e)
         {
             siticoneShadowForm1.SetShadowForm(this);
+
+
+            var jsonString = Client.Client.Instance.Get("api/KHOAHOC/get");
+            var listKHOAHOC = DTO.KHOAHOC.FromJson(jsonString);
+
+            int count = listKHOAHOC.Count();
+
+            int value = 0;
+            for (int i = 0; i < count; i++)
+            {
+                if (!listKHOAHOC[i].Active)
+                    value++;
+
+            }
+            siticoneCircleButton2.Text = value.ToString();
         }
 
         private void roundButton1_Click(object sender, EventArgs e)
@@ -119,6 +135,11 @@ namespace ooad.GUI
         {
             ooad.GUI.KHDT k = new KHDT();
             k.Show();
+        }
+
+        private void siticoneCircleButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

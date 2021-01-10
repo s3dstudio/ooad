@@ -45,6 +45,7 @@ namespace ooad.Client
                     var jsonData = readData.Content.ReadAsStringAsync();
                     jsonString = jsonData.Result;
                 }
+
                 return jsonString;
             }
             catch

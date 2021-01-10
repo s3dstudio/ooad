@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace ooad.DTO
 {
-    class KHDT
+    public class KHDT
     {
         [JsonProperty("idkhdt")]
         public long Idkhdt { get; set; }
@@ -22,6 +22,9 @@ namespace ooad.DTO
 
         [JsonProperty("idkhoahoc")]
         public long Idkhoahoc { get; set; }
+
+        [JsonProperty("active")]
+        public bool Active { get; set; }
 
         public static List<KHDT> FromJson(string json) => JsonConvert.DeserializeObject<List<KHDT>>(json, ooad.DTO.Converter.Settings);
 

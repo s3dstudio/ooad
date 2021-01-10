@@ -294,7 +294,6 @@
       <DependentUpon>UC_MNL.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\ooad.DTO.CHUYENNGANH.datasource" />
     <None Include="Properties\DataSources\ooad.DTO.NHOMLOP.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

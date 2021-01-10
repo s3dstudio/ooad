@@ -9,6 +9,7 @@ namespace ooadServer.DTO
     {
         public int idkhoahoc { get; set; }
         public int namkhoahoc { get; set; }
+        public bool active { get; set; }
 
     }
 }

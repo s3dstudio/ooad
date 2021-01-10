@@ -28,15 +28,18 @@ namespace ooad.UC
         {
             check();
 
-            string jsonString = Client.Client.Instance.Get("api/KHOAHOC/get");
+            var jsonString = Client.Client.Instance.Get("api/KHOAHOC/get");
             var listKHOAHOC = DTO.KHOAHOC.FromJson(jsonString);
 
             int count = listKHOAHOC.Count();
             for (int i = 0; i < count; i++)
             {
-                UC_Component uC_Component = new UC_Component(listKHOAHOC[i].Namkhoahoc);
-                uC_Component.Location = new Point(20 + (i * 300), 0);
-                tableLayoutPanel1.Controls.Add(uC_Component);
+                if (listKHOAHOC[i].Active)
+                {
+                    UC_Component uC_Component = new UC_Component(listKHOAHOC[i]);
+                    uC_Component.Location = new Point(20 + (i * 300), 0);
+                    tableLayoutPanel1.Controls.Add(uC_Component);
+                }
             }
         }
 

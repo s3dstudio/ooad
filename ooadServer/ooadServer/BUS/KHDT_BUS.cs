@@ -27,7 +27,5 @@ namespace ooadServer.BUS
 
             return query;
         }
-
-
     }
 }
