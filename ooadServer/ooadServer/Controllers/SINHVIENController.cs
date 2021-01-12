@@ -23,6 +23,19 @@ namespace ooadServer.Controllers
             return _dataAccessProvider.GetSINHVIENRecords();
         }
 
+        [HttpGet("getbyusername/{username}")]
+        public SINHVIEN GetByUsername(string username)
+        {
+            //List<SINHVIEN> sinhvien = _dataAccessProvider.GetSINHVIENRecords();
+
+            //var query = (from sv in sinhvien
+            //             where sv.username == username
+            //             select sv
+            //    );
+ 
+            return _dataAccessProvider.GetSINHVIENByUsername(username);
+        }
+
         [HttpPost("post")]
         public IActionResult Create([FromBody] SINHVIEN k)
         {

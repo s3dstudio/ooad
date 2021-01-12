@@ -18,7 +18,11 @@ namespace ooadServer.DTO
         public string bixoa { get; set; }
         public string lydoxoa { get; set; }
         public string anh { get; set; }
-        public int iduser { get; set; }
+        public string username { get; set; }
 
+        public static implicit operator SINHVIEN(List<SINHVIEN> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

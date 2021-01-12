@@ -61,7 +61,8 @@ namespace ooad.GUI
             siticoneShadowForm1.SetShadowForm(this);
 
             LoadNumberOfDuyet();
-           
+
+            siticoneLabel1.Text = Client.User.Instance.hoten;
         }
 
         private void roundButton1_Click(object sender, EventArgs e)

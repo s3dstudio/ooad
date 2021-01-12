@@ -37,8 +37,9 @@ namespace ooad.UC
             this.siticoneGradientButton2 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.siticoneGradientButton1 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.siticoneDataGridView1 = new Siticone.UI.WinForms.SiticoneDataGridView();
+            this.dKHPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.idnhomlopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenhocphanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.khoaquanlyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +48,6 @@ namespace ooad.UC
             this.thuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tietbatdauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tietketthucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dKHPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dKHPBindingSource)).BeginInit();
@@ -122,7 +122,7 @@ namespace ooad.UC
             this.siticoneDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.siticoneDataGridView1.ColumnHeadersHeight = 21;
             this.siticoneDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
+            this.check,
             this.idnhomlopDataGridViewTextBoxColumn,
             this.tenhocphanDataGridViewTextBoxColumn,
             this.khoaquanlyDataGridViewTextBoxColumn,
@@ -171,6 +171,10 @@ namespace ooad.UC
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // dKHPBindingSource
+            // 
+            this.dKHPBindingSource.DataSource = typeof(ooad.DTO.DKHP);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -182,11 +186,11 @@ namespace ooad.UC
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐĂNG KÝ HỌC PHẦN";
             // 
-            // Column1
+            // check
             // 
-            this.Column1.HeaderText = "Check";
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.check.HeaderText = "Check";
+            this.check.Name = "check";
+            this.check.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // idnhomlopDataGridViewTextBoxColumn
             // 
@@ -236,10 +240,6 @@ namespace ooad.UC
             this.tietketthucDataGridViewTextBoxColumn.HeaderText = "Tiết kết thúc";
             this.tietketthucDataGridViewTextBoxColumn.Name = "tietketthucDataGridViewTextBoxColumn";
             // 
-            // dKHPBindingSource
-            // 
-            this.dKHPBindingSource.DataSource = typeof(ooad.DTO.DKHP);
-            // 
             // UC_DKHP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,7 +263,7 @@ namespace ooad.UC
         private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton2;
         private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton1;
         private System.Windows.Forms.BindingSource dKHPBindingSource;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn check;
         private System.Windows.Forms.DataGridViewTextBoxColumn idnhomlopDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenhocphanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn khoaquanlyDataGridViewTextBoxColumn;

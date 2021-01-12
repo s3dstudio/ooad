@@ -33,9 +33,11 @@ namespace ooad.UC
         {
             for(int i =0;i<siticoneDataGridView1.Rows.Count;i++)
             {
-                if ((bool)siticoneDataGridView1[0, i].Value == true)
+                bool check = Convert.ToBoolean(siticoneDataGridView1.Rows[i].Cells["check"].Value.ToString());
+                
+                if(check)
                 {
-                    
+
                 }
             }
             this.SendToBack();

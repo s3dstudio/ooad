@@ -63,11 +63,25 @@ namespace ooad.GUI
             {
                 if (users.Username == userName && users.Password == passWord)
                 {
+                    jsonString = Client.Client.Instance.Get("api/sinhvien/getbyusername/" + userName);
+                    DTO.SINHVIEN sv = DTO.SINHVIEN.FromJsonToObject(jsonString);
+
+                    Client.User.Instance.iduser = (int)sv.Idsv;
+                    Client.User.Instance.userName = userName;
+                    Client.User.Instance.passWord = passWord;
+                    Client.User.Instance.hoten = sv.Hoten;
+                    Client.User.Instance.gioitinh = sv.Gioitinh;
+                    Client.User.Instance.hktt = sv.Hktt;
+                    Client.User.Instance.idkhoa = (int)sv.Idkhoa;
+                    Client.User.Instance.idrole = (int)users.Idrole;
+
                     GUI.Main main = new Main();
 
                     main.Show();
 
                     this.Hide();
+
+                   
                 }
             }
             else MessageBox.Show("Sai Tài khoản hoặc mật khẩu");

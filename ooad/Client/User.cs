@@ -30,6 +30,17 @@ namespace ooad.Client
         {
         }
 
-        private DTO.USER userInfo;
+        public string userName { get; set; }
+        public string passWord { get; set; }
+        public int idrole { get; set; }
+        public int iduser { get; set; }
+        public string hoten { get; set; }
+        public string ngaysinh { get; set; }
+        public string gioitinh { get; set; }
+        public string hktt { get; set; }
+        public int idkhoa { get; set; }
+
+
+        
     }
 }

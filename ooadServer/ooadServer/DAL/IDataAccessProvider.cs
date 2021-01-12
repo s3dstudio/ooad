@@ -78,6 +78,7 @@ namespace ooadServer.DAL
         void UpdateSINHVIENRecord(SINHVIEN sv);
         void DeleteSINHVIENRecord(string id);
         SINHVIEN GetSINHVIENSingleRecord(string id);
+        SINHVIEN GetSINHVIENByUsername(string usernames);
         List<SINHVIEN> GetSINHVIENRecords();
 
         void AddSUCCHUARecord(SUCCHUA sc);

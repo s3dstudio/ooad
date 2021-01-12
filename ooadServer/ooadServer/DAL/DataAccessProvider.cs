@@ -636,5 +636,10 @@ namespace ooadServer.DAL
         {
             return _context.role.ToList();
         }
+
+        public SINHVIEN GetSINHVIENByUsername(string usernames)
+        {
+            return _context.sinhvien.FirstOrDefault(t => Convert.ToString(t.username) == usernames);
+        }
     }
 }

@@ -35,7 +35,7 @@ namespace ooad.UC
                // tiet++;
             }
 
-            var jsonString = Client.Client.Instance.Get("api/TKB/get/1");
+            var jsonString = Client.Client.Instance.Get("api/TKB/get/" + Client.User.Instance.iduser);
             _listTKBData = TKB.FromJson(jsonString);
 
             foreach(var item in _listTKBData)
