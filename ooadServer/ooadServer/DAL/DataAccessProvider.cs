@@ -549,5 +549,34 @@ namespace ooadServer.DAL
         {
             return _context.khoahoc.ToList();
         }
+
+        public void AddCHITIETKHDTRecord(CHITIETKHDT ct)
+        {
+            _context.chitietkhdt.Add(ct);
+            _context.SaveChanges();
+        }
+
+        public void UpdateCHITIETKHDTRecord(CHITIETKHDT ct)
+        {
+            _context.chitietkhdt.Update(ct);
+            _context.SaveChanges();
+        }
+
+        public void DeleteCHITIETKHDTRecord(string id)
+        {
+            var entity = _context.chitietkhdt.FirstOrDefault(t => Convert.ToString(t.idchitietkhdt) == id);
+            _context.chitietkhdt.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public CHITIETKHDT GetCHITIETKHDTSingleRecord(string id)
+        {
+            return _context.chitietkhdt.FirstOrDefault(t => Convert.ToString(t.idchitietkhdt) == id);
+        }
+
+        public List<CHITIETKHDT> GetCHITIETKHDTRecords()
+        {
+            return _context.chitietkhdt.ToList();
+        }
     }
 }

@@ -119,6 +119,7 @@
     <Compile Include="Controls\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DTO\CHITIETKEHOACH.cs" />
     <Compile Include="DTO\CHUYENNGANH.cs" />
     <Compile Include="DTO\Converter.cs" />
     <Compile Include="DTO\KHDT.cs" />
@@ -294,6 +295,7 @@
       <DependentUpon>UC_MNL.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ooad.DTO.CHITIETKEHOACH.datasource" />
     <None Include="Properties\DataSources\ooad.DTO.NHOMLOP.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

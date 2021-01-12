@@ -28,6 +28,7 @@ namespace ooadServer.DAL
         public DbSet<TKBSV> tkbsv { get; set; }
         public DbSet<TKBNHOMLOP> tkbnhomlop { get; set; }
         public DbSet<KHOAHOC> khoahoc { get; set; }
+        public DbSet<CHITIETKHDT> chitietkhdt { get; set; }
 
 
 
@@ -69,6 +70,8 @@ namespace ooadServer.DAL
                 .HasKey("idtkbnhomlop");
             builder.Entity<KHOAHOC>()
                 .HasKey("idkhoahoc");
+            builder.Entity<CHITIETKHDT>()
+                .HasKey("idchitietkhdt");
         }
 
         public override int SaveChanges()

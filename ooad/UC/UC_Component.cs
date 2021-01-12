@@ -34,7 +34,7 @@ namespace ooad.UC
                 {
                     linkLabel[i] = new LinkLabel();
                     linkLabel[i].Text = _listKHDT[i].Tenkhdt;
-                    linkLabel[i].Name = "ll" + i.ToString();
+                    linkLabel[i].Name = _listKHDT[i].Idkhdt.ToString();
                     linkLabel[i].AutoSize = true;
                     linkLabel[i].Location = new Point(17, 90 + (20 * i));
                     linkLabel[i].LinkColor = Color.White;
@@ -45,6 +45,7 @@ namespace ooad.UC
                     {
                         //(((LinkLabel)s).Name+" Clicked"); //lưu ý handle như dòng này
                         m.tempM = ((LinkLabel)s).Text;
+                        m.idCTKHDT = ((LinkLabel)s).Name;
                     });
                     linkLabel[i].Click += m.khdt_load;
                     this.metroListView1.Controls.Add(linkLabel[i]);

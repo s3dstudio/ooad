@@ -38,7 +38,7 @@ namespace ooad.Client
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(url);
                 var response = client.GetAsync(path);
-                response.Wait();
+                //response.Wait();
                 var readData = response.Result;
                 if (readData.IsSuccessStatusCode)
                 {

@@ -14,6 +14,8 @@ namespace ooad.GUI
     public partial class Main : Form
     {
         public string tempM { get; set; }
+        public string idCTKHDT { get; set; }
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
        (
@@ -33,17 +35,12 @@ namespace ooad.GUI
         public void khdt_load (object sender, EventArgs args)
         {
             KHDT k = new KHDT();
+            k.LoadData(idCTKHDT);
             k.Text = this.tempM;
             k.Show();
-
-           
-
         }
-        private void Main_Load(object sender, EventArgs e)
+        public void LoadNumberOfDuyet()
         {
-            siticoneShadowForm1.SetShadowForm(this);
-
-
             var jsonString = Client.Client.Instance.Get("api/KHOAHOC/get");
             var listKHOAHOC = DTO.KHOAHOC.FromJson(jsonString);
 
@@ -57,6 +54,14 @@ namespace ooad.GUI
 
             }
             siticoneCircleButton2.Text = value.ToString();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            siticoneShadowForm1.SetShadowForm(this);
+
+            LoadNumberOfDuyet();
+           
         }
 
         private void roundButton1_Click(object sender, EventArgs e)
@@ -123,17 +128,23 @@ namespace ooad.GUI
 
         private void siticoneButton7_Click(object sender, EventArgs e)
         {
+            createKHDT1.SetDuyetKHDTUC(duyetKHDT1);
+            createKHDT1.SetMainForm(this);
             createKHDT1.BringToFront();
         }
 
         private void siticoneButton6_Click(object sender, EventArgs e)
         {
+            //duyetKHDT1.LoadData();
+            duyetKHDT1.SetKHDTUC(khdt1);
+            duyetKHDT1.SetMainForm(this);
             duyetKHDT1.BringToFront();
         }
 
         private void siticoneButton8_Click(object sender, EventArgs e)
         {
             ooad.GUI.KHDT k = new KHDT();
+            //k.LoadData("6");
             k.Show();
         }
 

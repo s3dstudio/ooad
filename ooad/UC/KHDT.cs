@@ -13,6 +13,7 @@ namespace ooad.UC
 {
     public partial class KHDT : UserControl
     {
+
         public KHDT()
         {
             InitializeComponent();
@@ -28,6 +29,32 @@ namespace ooad.UC
         {
             check();
 
+            this.LoadData();
+
+        }
+
+        private void siticoneButton1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void AddUcComponents(DTO.KHOAHOC kh,int count)
+        {
+
+            UC_Component uC_Component = new UC_Component(kh);
+            uC_Component.Location = new Point(20 + (count * 300), 0);
+            tableLayoutPanel1.Controls.Add(uC_Component);
+
+        }
+
+        public int CountUcComponents()
+        {
+            return tableLayoutPanel1.Controls.Count;
+        }
+        public void LoadData()
+        {
+            tableLayoutPanel1.Controls.Clear();
+
             var jsonString = Client.Client.Instance.Get("api/KHOAHOC/get");
             var listKHOAHOC = DTO.KHOAHOC.FromJson(jsonString);
 
@@ -36,16 +63,10 @@ namespace ooad.UC
             {
                 if (listKHOAHOC[i].Active)
                 {
-                    UC_Component uC_Component = new UC_Component(listKHOAHOC[i]);
-                    uC_Component.Location = new Point(20 + (i * 300), 0);
-                    tableLayoutPanel1.Controls.Add(uC_Component);
+                    AddUcComponents(listKHOAHOC[i],i);
+                    //_listComponents.Add(uC_Component);
                 }
             }
-        }
-
-        private void siticoneButton1_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

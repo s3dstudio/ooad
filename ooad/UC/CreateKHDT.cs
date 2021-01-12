@@ -15,6 +15,11 @@ namespace ooad.UC
 
         private List<ComboBox> _listCombobox;
 
+        private UC.DuyetKHDT _duyetKHDT;
+
+        private GUI.Main _MainForm;
+
+
         public CreateKHDT()
         {
             InitializeComponent();
@@ -96,6 +101,9 @@ namespace ooad.UC
                 Client.Client.Instance.Post("api/KHDT/post/", khdt);
             }
 
+            this._duyetKHDT.AddUcComponents(kh, _duyetKHDT.CountUcComponents());
+            this._MainForm.LoadNumberOfDuyet();
+
             this.SendToBack();
         }
 
@@ -108,6 +116,15 @@ namespace ooad.UC
             //}
             ThemKhoa tk = new ThemKhoa();
             tk.Show();
+        }
+
+        public void SetDuyetKHDTUC(UC.DuyetKHDT duyetKHDT)
+        {
+            this._duyetKHDT = duyetKHDT;
+        }
+        public void SetMainForm(GUI.Main main)
+        {
+            this._MainForm = main;
         }
     }
 }

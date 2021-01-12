@@ -116,5 +116,11 @@ namespace ooadServer.DAL
         KHOAHOC GetKHOAHOCSingleRecord(string id);
         List<KHOAHOC> GetKHOAHOCRecords();
 
+        void AddCHITIETKHDTRecord(CHITIETKHDT ct);
+        void UpdateCHITIETKHDTRecord(CHITIETKHDT ct);
+        void DeleteCHITIETKHDTRecord(string id);
+        CHITIETKHDT GetCHITIETKHDTSingleRecord(string id);
+        List<CHITIETKHDT> GetCHITIETKHDTRecords();
+
     }
 }
