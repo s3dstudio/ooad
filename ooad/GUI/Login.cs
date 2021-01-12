@@ -50,5 +50,30 @@ namespace ooad.GUI
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void lollipopButton1_Click(object sender, EventArgs e)
+        {
+            string userName = lollipopTextBox1.Text;
+            string passWord = lollipopTextBox2.Text;
+
+            var jsonString = Client.Client.Instance.Get("api/user/getbyusername/" + userName);
+            DTO.USER users = DTO.USER.FromJsonToObject(jsonString);
+
+            if (users != null)
+            {
+                if (users.Username == userName && users.Password == passWord)
+                {
+                    GUI.Main main = new Main();
+
+                    main.Show();
+
+                    this.Hide();
+                }
+            }
+            else MessageBox.Show("Sai Tài khoản hoặc mật khẩu");
+            
+
+            
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace ooad.UC
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -36,15 +37,20 @@ namespace ooad.UC
             this.siticoneGradientButton2 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.siticoneGradientButton1 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.siticoneDataGridView1 = new Siticone.UI.WinForms.SiticoneDataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idnhomlopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenhocphanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khoaquanlyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sotinchiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giangvienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tietbatdauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tietketthucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dKHPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dKHPBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,6 +81,7 @@ namespace ooad.UC
             this.siticoneGradientButton2.Size = new System.Drawing.Size(112, 45);
             this.siticoneGradientButton2.TabIndex = 16;
             this.siticoneGradientButton2.Text = "Đồng ý";
+            this.siticoneGradientButton2.Click += new System.EventHandler(this.siticoneGradientButton2_Click);
             // 
             // siticoneGradientButton1
             // 
@@ -100,6 +107,7 @@ namespace ooad.UC
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.siticoneDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.siticoneDataGridView1.AutoGenerateColumns = false;
             this.siticoneDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.siticoneDataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.siticoneDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -115,11 +123,15 @@ namespace ooad.UC
             this.siticoneDataGridView1.ColumnHeadersHeight = 21;
             this.siticoneDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
+            this.idnhomlopDataGridViewTextBoxColumn,
+            this.tenhocphanDataGridViewTextBoxColumn,
+            this.khoaquanlyDataGridViewTextBoxColumn,
+            this.sotinchiDataGridViewTextBoxColumn,
+            this.giangvienDataGridViewTextBoxColumn,
+            this.thuDataGridViewTextBoxColumn,
+            this.tietbatdauDataGridViewTextBoxColumn,
+            this.tietketthucDataGridViewTextBoxColumn});
+            this.siticoneDataGridView1.DataSource = this.dKHPBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -159,46 +171,74 @@ namespace ooad.UC
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
+            this.label1.Location = new System.Drawing.Point(30, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(214, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ĐĂNG KÝ HỌC PHẦN";
+            // 
             // Column1
             // 
             this.Column1.HeaderText = "Check";
             this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // Column2
+            // idnhomlopDataGridViewTextBoxColumn
             // 
-            this.Column2.HeaderText = "Lớp";
-            this.Column2.Name = "Column2";
+            this.idnhomlopDataGridViewTextBoxColumn.DataPropertyName = "Idnhomlop";
+            this.idnhomlopDataGridViewTextBoxColumn.HeaderText = "Mã lớp";
+            this.idnhomlopDataGridViewTextBoxColumn.Name = "idnhomlopDataGridViewTextBoxColumn";
             // 
-            // Column3
+            // tenhocphanDataGridViewTextBoxColumn
             // 
-            this.Column3.HeaderText = "Tên MH";
-            this.Column3.Name = "Column3";
+            this.tenhocphanDataGridViewTextBoxColumn.DataPropertyName = "Tenhocphan";
+            this.tenhocphanDataGridViewTextBoxColumn.HeaderText = "Tên học phần";
+            this.tenhocphanDataGridViewTextBoxColumn.Name = "tenhocphanDataGridViewTextBoxColumn";
             // 
-            // Column4
+            // khoaquanlyDataGridViewTextBoxColumn
             // 
-            this.Column4.HeaderText = "Khoa QL";
-            this.Column4.Name = "Column4";
+            this.khoaquanlyDataGridViewTextBoxColumn.DataPropertyName = "Khoaquanly";
+            this.khoaquanlyDataGridViewTextBoxColumn.HeaderText = "Khoa quản lý";
+            this.khoaquanlyDataGridViewTextBoxColumn.Name = "khoaquanlyDataGridViewTextBoxColumn";
             // 
-            // Column5
+            // sotinchiDataGridViewTextBoxColumn
             // 
-            this.Column5.HeaderText = "Số TC";
-            this.Column5.Name = "Column5";
+            this.sotinchiDataGridViewTextBoxColumn.DataPropertyName = "Sotinchi";
+            this.sotinchiDataGridViewTextBoxColumn.HeaderText = "Số tín chỉ";
+            this.sotinchiDataGridViewTextBoxColumn.Name = "sotinchiDataGridViewTextBoxColumn";
             // 
-            // Column6
+            // giangvienDataGridViewTextBoxColumn
             // 
-            this.Column6.HeaderText = "GV";
-            this.Column6.Name = "Column6";
+            this.giangvienDataGridViewTextBoxColumn.DataPropertyName = "Giangvien";
+            this.giangvienDataGridViewTextBoxColumn.HeaderText = "Giảng viên";
+            this.giangvienDataGridViewTextBoxColumn.Name = "giangvienDataGridViewTextBoxColumn";
             // 
-            // label1
+            // thuDataGridViewTextBoxColumn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
-            this.label1.Location = new System.Drawing.Point(30, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ĐĂNG KÝ HỌC PHẦN";
+            this.thuDataGridViewTextBoxColumn.DataPropertyName = "Thu";
+            this.thuDataGridViewTextBoxColumn.HeaderText = "Thứ";
+            this.thuDataGridViewTextBoxColumn.Name = "thuDataGridViewTextBoxColumn";
+            // 
+            // tietbatdauDataGridViewTextBoxColumn
+            // 
+            this.tietbatdauDataGridViewTextBoxColumn.DataPropertyName = "Tietbatdau";
+            this.tietbatdauDataGridViewTextBoxColumn.HeaderText = "Tiết bắt đầu";
+            this.tietbatdauDataGridViewTextBoxColumn.Name = "tietbatdauDataGridViewTextBoxColumn";
+            // 
+            // tietketthucDataGridViewTextBoxColumn
+            // 
+            this.tietketthucDataGridViewTextBoxColumn.DataPropertyName = "Tietketthuc";
+            this.tietketthucDataGridViewTextBoxColumn.HeaderText = "Tiết kết thúc";
+            this.tietketthucDataGridViewTextBoxColumn.Name = "tietketthucDataGridViewTextBoxColumn";
+            // 
+            // dKHPBindingSource
+            // 
+            this.dKHPBindingSource.DataSource = typeof(ooad.DTO.DKHP);
             // 
             // UC_DKHP
             // 
@@ -210,6 +250,7 @@ namespace ooad.UC
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dKHPBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -219,13 +260,17 @@ namespace ooad.UC
         private System.Windows.Forms.Panel panel1;
         private Siticone.UI.WinForms.SiticoneDataGridView siticoneDataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewButtonColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton2;
         private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton1;
+        private System.Windows.Forms.BindingSource dKHPBindingSource;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idnhomlopDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenhocphanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn khoaquanlyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sotinchiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giangvienDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tietbatdauDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tietketthucDataGridViewTextBoxColumn;
     }
 }

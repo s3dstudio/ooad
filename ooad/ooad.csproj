@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client\Client.cs" />
+    <Compile Include="Client\User.cs" />
     <Compile Include="Controls\LollipopButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -122,10 +123,12 @@
     <Compile Include="DTO\CHITIETKEHOACH.cs" />
     <Compile Include="DTO\CHUYENNGANH.cs" />
     <Compile Include="DTO\Converter.cs" />
+    <Compile Include="DTO\DKHP.cs" />
     <Compile Include="DTO\KHDT.cs" />
     <Compile Include="DTO\KHOAHOC.cs" />
     <Compile Include="DTO\NHOMLOP.cs" />
     <Compile Include="DTO\TKB.cs" />
+    <Compile Include="DTO\USER.cs" />
     <Compile Include="GUI\KHDT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +299,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ooad.DTO.CHITIETKEHOACH.datasource" />
+    <None Include="Properties\DataSources\ooad.DTO.DKHP.datasource" />
     <None Include="Properties\DataSources\ooad.DTO.NHOMLOP.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

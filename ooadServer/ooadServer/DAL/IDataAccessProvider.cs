@@ -122,5 +122,17 @@ namespace ooadServer.DAL
         CHITIETKHDT GetCHITIETKHDTSingleRecord(string id);
         List<CHITIETKHDT> GetCHITIETKHDTRecords();
 
+        void AddUSERRecord(USER user);
+        void UpdateUSERRecord(USER user);
+        void DeleteUSERRecord(string username);
+        USER GetUSERSingleRecord(string username);
+        List<USER> GetUSERRecords();
+
+        void AddROLERecord(ROLE role);
+        void UpdateROLERecord(ROLE role);
+        void DeleteROLERecord(string id);
+        ROLE GetROLESingleRecord(string id);
+        List<ROLE> GetROLERecords();
+
     }
 }

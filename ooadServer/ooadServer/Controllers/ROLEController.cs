@@ -11,49 +11,43 @@ namespace ooadServer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HOCPHANController : Controller
+    public class ROLEController : Controller
     {
         private readonly IDataAccessProvider _dataAccessProvider;
-        public HOCPHANController(IDataAccessProvider dataAccessProvider)
+        public ROLEController(IDataAccessProvider dataAccessProvider)
         {
             _dataAccessProvider = dataAccessProvider;
         }
         [HttpGet("get")]
-        public IEnumerable<HOCPHAN> Get()
+        public IEnumerable<ROLE> Get()
         {
-            return _dataAccessProvider.GetHOCPHANRecords();
+            return _dataAccessProvider.GetROLERecords();
         }
-        [HttpGet("dkhp/get")]
-        public IEnumerable<DKHP> GetDKHP()
-        {
-            DKHP_BUS dKHP_BUS = new DKHP_BUS(_dataAccessProvider);
-
-            return dKHP_BUS.GetThongTinDKHP();
-        }
+        [HttpGet("getct/{id}")]
 
         [HttpPost("post")]
-        public IActionResult Create([FromBody] HOCPHAN k)
+        public IActionResult Create([FromBody] ROLE k)
         {
             if (ModelState.IsValid)
             {
-                _dataAccessProvider.AddHOCPHANRecord(k);
+                _dataAccessProvider.AddROLERecord(k);
                 return Ok();
             }
             return BadRequest();
         }
 
         [HttpGet("getid/{id}")]
-        public HOCPHAN Details(string id)
+        public ROLE Details(string id)
         {
-            return _dataAccessProvider.GetHOCPHANSingleRecord(id);
+            return _dataAccessProvider.GetROLESingleRecord(id);
         }
 
         [HttpPut("edit")]
-        public IActionResult Edit([FromBody] HOCPHAN k)
+        public IActionResult Edit([FromBody] ROLE k)
         {
             if (ModelState.IsValid)
             {
-                _dataAccessProvider.UpdateHOCPHANRecord(k);
+                _dataAccessProvider.UpdateROLERecord(k);
                 return Ok();
             }
             return BadRequest();
@@ -61,13 +55,13 @@ namespace ooadServer.Controllers
         [HttpDelete("delete/{id}")]
         public IActionResult Delete(string id)
         {
-            var data = _dataAccessProvider.GetHOCPHANSingleRecord(id);
+            var data = _dataAccessProvider.GetROLESingleRecord(id);
             Console.WriteLine(id);
             if (data == null)
             {
                 return NotFound();
             }
-            _dataAccessProvider.DeleteHOCPHANRecord(id);
+            _dataAccessProvider.DeleteROLERecord(id);
             return Ok();
         }
     }

@@ -79,7 +79,7 @@ namespace ooad.GUI
             this.materialLabel1.Location = new System.Drawing.Point(754, 219);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(109, 18);
+            this.materialLabel1.Size = new System.Drawing.Size(112, 20);
             this.materialLabel1.TabIndex = 8;
             this.materialLabel1.Text = "Your username";
             // 
@@ -92,7 +92,7 @@ namespace ooad.GUI
             this.materialLabel2.Location = new System.Drawing.Point(754, 285);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(75, 18);
+            this.materialLabel2.Size = new System.Drawing.Size(77, 20);
             this.materialLabel2.TabIndex = 9;
             this.materialLabel2.Text = "Password";
             // 
@@ -201,6 +201,7 @@ namespace ooad.GUI
             this.lollipopButton1.Size = new System.Drawing.Size(152, 38);
             this.lollipopButton1.TabIndex = 4;
             this.lollipopButton1.Text = "Login";
+            this.lollipopButton1.Click += new System.EventHandler(this.lollipopButton1_Click);
             // 
             // panel1
             // 

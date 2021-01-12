@@ -22,5 +22,15 @@ namespace ooad.UC
             this.SendToBack();
             this.Hide();
         }
+
+        private void siticoneGradientButton1_Click_1(object sender, EventArgs e)
+        {
+            this.SendToBack();
+        }
+
+        private void siticoneGradientButton2_Click(object sender, EventArgs e)
+        {
+            this.SendToBack();
+        }
     }
 }

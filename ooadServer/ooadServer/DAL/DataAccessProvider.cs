@@ -19,7 +19,7 @@ namespace ooadServer.DAL
         public void AddKHDTRecord(KHDT k)
         {
             _context.khdt.Add(k);
-            _context.SaveChanges();
+            _context.SaveChangesAsync();
         }
 
         public void UpdateKHDTRecord(KHDT k)
@@ -577,6 +577,64 @@ namespace ooadServer.DAL
         public List<CHITIETKHDT> GetCHITIETKHDTRecords()
         {
             return _context.chitietkhdt.ToList();
+        }
+
+        public void AddUSERRecord(USER user)
+        {
+            _context.user.Add(user);
+            _context.SaveChanges();
+        }
+
+        public void UpdateUSERRecord(USER user)
+        {
+            _context.user.Update(user);
+            _context.SaveChanges();
+        }
+
+        public void DeleteUSERRecord(string username)
+        {
+            var entity = _context.user.FirstOrDefault(t => Convert.ToString(t.username) == username);
+            _context.user.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public USER GetUSERSingleRecord(string username)
+        {
+            return _context.user.FirstOrDefault(t => Convert.ToString(t.username) == username);
+        }
+
+        public List<USER> GetUSERRecords()
+        {
+            return _context.user.ToList();
+        }
+
+        public void AddROLERecord(ROLE role)
+        {
+            _context.role.Add(role);
+            _context.SaveChanges();
+        }
+
+        public void UpdateROLERecord(ROLE role)
+        {
+            _context.role.Update(role);
+            _context.SaveChanges();
+        }
+
+        public void DeleteROLERecord(string id)
+        {
+            var entity = _context.role.FirstOrDefault(t => Convert.ToString(t.idrole) == id);
+            _context.role.Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public ROLE GetROLESingleRecord(string id)
+        {
+            return _context.role.FirstOrDefault(t => Convert.ToString(t.idrole) == id);
+        }
+
+        public List<ROLE> GetROLERecords()
+        {
+            return _context.role.ToList();
         }
     }
 }
