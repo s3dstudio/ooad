@@ -74,12 +74,12 @@ namespace ooad.GUI
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto Medium", 11F);
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel1.Location = new System.Drawing.Point(754, 219);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(112, 20);
+            this.materialLabel1.Size = new System.Drawing.Size(113, 20);
             this.materialLabel1.TabIndex = 8;
             this.materialLabel1.Text = "Your username";
             // 
@@ -87,7 +87,7 @@ namespace ooad.GUI
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto Medium", 11F);
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel2.Location = new System.Drawing.Point(754, 285);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -144,9 +144,8 @@ namespace ooad.GUI
             this.lollipopTextBox2.ReadOnly = false;
             this.lollipopTextBox2.Size = new System.Drawing.Size(300, 24);
             this.lollipopTextBox2.TabIndex = 11;
-            this.lollipopTextBox2.Text = "At least 6 characters";
             this.lollipopTextBox2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.lollipopTextBox2.UseSystemPasswordChar = false;
+            this.lollipopTextBox2.UseSystemPasswordChar = true;
             // 
             // lollipopTextBox1
             // 

@@ -33,6 +33,8 @@ namespace ooad.DTO
 
         [JsonProperty("tietketthuc")]
         public long Tietketthuc { get; set; }
+        [JsonProperty("idtkbnhomlop")]
+        public long Idtkbnhomlop { get; set; }
 
         public static List<DKHP> FromJson(string json) => JsonConvert.DeserializeObject<List<DKHP>>(json, Converter.Settings);
 

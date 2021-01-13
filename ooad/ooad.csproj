@@ -121,6 +121,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DTO\CHITIETKEHOACH.cs" />
+    <Compile Include="DTO\CHITIETKQHT.cs" />
     <Compile Include="DTO\CHUYENNGANH.cs" />
     <Compile Include="DTO\Converter.cs" />
     <Compile Include="DTO\DKHP.cs" />
@@ -300,6 +301,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ooad.DTO.CHITIETKEHOACH.datasource" />
+    <None Include="Properties\DataSources\ooad.DTO.CHITIETKQHT.datasource" />
     <None Include="Properties\DataSources\ooad.DTO.DKHP.datasource" />
     <None Include="Properties\DataSources\ooad.DTO.NHOMLOP.datasource" />
     <None Include="Properties\Settings.settings">

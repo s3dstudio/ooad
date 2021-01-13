@@ -16,6 +16,8 @@ namespace ooad.UC
         {
             InitializeComponent();
 
+            siticoneDataGridView1.AllowUserToAddRows = false;
+
             var jsonString = Client.Client.Instance.Get("api/hocphan/dkhp/get");
             List<DTO.DKHP> dkhp = DTO.DKHP.FromJson(jsonString);
 
@@ -31,15 +33,17 @@ namespace ooad.UC
 
         private void siticoneGradientButton2_Click(object sender, EventArgs e)
         {
+            int c = 0;
             for(int i =0;i<siticoneDataGridView1.Rows.Count;i++)
             {
-                bool check = Convert.ToBoolean(siticoneDataGridView1.Rows[i].Cells["check"].Value.ToString());
+                bool check = Convert.ToBoolean(siticoneDataGridView1.Rows[i].Cells["check"].Value?.ToString());
                 
                 if(check)
                 {
-
+                    c++;
                 }
             }
+            Console.WriteLine(c.ToString());
             this.SendToBack();
         }
     }

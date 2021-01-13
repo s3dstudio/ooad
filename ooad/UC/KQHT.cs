@@ -15,6 +15,12 @@ namespace ooad.UC
         public KQHT()
         {
             InitializeComponent();
+
+            var jsonString = Client.Client.Instance.Get("api/ketquahoctap/getbyusername/" + Client.User.Instance.userName);
+            List<DTO.CHITIETKQHT> listChitiet = DTO.CHITIETKQHT.FromJson(jsonString);
+
+            siticoneDataGridView1.DataSource = listChitiet;
+        
         }
     }
 }
