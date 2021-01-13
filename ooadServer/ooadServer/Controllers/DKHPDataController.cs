@@ -28,8 +28,12 @@ namespace ooadServer.Controllers
         {
             if (ModelState.IsValid)
             {
-                _dataAccessProvider.AddDKHP_DataRecord(k);
-                return Ok();
+                List<DKHPData> dkhpdata = _dataAccessProvider.GetDKHP_DataRecords();
+                if(dkhpdata.FirstOrDefault(t => t.idsv == k.idsv && t.idtkbnhomlop == k.idtkbnhomlop) == null)
+                {
+                    _dataAccessProvider.AddDKHP_DataRecord(k);
+                    return Ok();
+                }
             }
             return BadRequest();
         }

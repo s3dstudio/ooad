@@ -25,14 +25,14 @@ namespace ooad.UC
                 col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 col.HeaderCell.Style.Font = new Font("Roboto", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
             }
-            while(siticoneDataGridView1.Rows.Count<10)
+            while (siticoneDataGridView1.Rows.Count<10)
             {
-                //int tiet = 1;
-                
                 siticoneDataGridView1.Rows.Add();
-              // siticoneDataGridView1[1, tiet].Value = "Tiết " + tiet;
+            }
 
-               // tiet++;
+            for(int i =1;i<= 10;i++)
+            {
+                siticoneDataGridView1.Rows[i - 1].Cells["tiet"].Value = "Tiết " + i;
             }
 
             var jsonString = Client.Client.Instance.Get("api/TKB/get/" + Client.User.Instance.iduser);

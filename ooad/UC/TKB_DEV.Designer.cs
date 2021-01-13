@@ -36,7 +36,7 @@ namespace ooad.UC
             this.schedulerDataStorage1 = new DevExpress.XtraScheduler.SchedulerDataStorage(this.components);
             this.siticoneDataGridView1 = new Siticone.UI.WinForms.SiticoneDataGridView();
             this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
-            this.TIẾT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,7 +73,7 @@ namespace ooad.UC
             this.siticoneDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.siticoneDataGridView1.ColumnHeadersHeight = 35;
             this.siticoneDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TIẾT,
+            this.tiet,
             this.Column1,
             this.Column2,
             this.Column3,
@@ -136,11 +136,11 @@ namespace ooad.UC
             this.siticoneLabel1.TabIndex = 2;
             this.siticoneLabel1.Text = "THỜI KHOÁ BIỂU";
             // 
-            // TIẾT
+            // tiet
             // 
-            this.TIẾT.HeaderText = "TIẾT";
-            this.TIẾT.Name = "TIẾT";
-            this.TIẾT.ReadOnly = true;
+            this.tiet.HeaderText = "TIẾT";
+            this.tiet.Name = "tiet";
+            this.tiet.ReadOnly = true;
             // 
             // Column1
             // 
@@ -207,7 +207,7 @@ namespace ooad.UC
         private DevExpress.XtraScheduler.SchedulerDataStorage schedulerDataStorage1;
         private Siticone.UI.WinForms.SiticoneDataGridView siticoneDataGridView1;
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TIẾT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tiet;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

@@ -47,6 +47,18 @@ namespace ooad.UC
             this.siticoneLabel2 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
             this.label1 = new System.Windows.Forms.Label();
+            this.lollipopTextBox6 = new LollipopTextBox();
+            this.lollipopTextBox7 = new LollipopTextBox();
+            this.lollipopTextBox8 = new LollipopTextBox();
+            this.lollipopTextBox9 = new LollipopTextBox();
+            this.lollipopTextBox10 = new LollipopTextBox();
+            this.siticoneLabel6 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.siticoneLabel7 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.siticoneLabel8 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.siticoneLabel9 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.siticoneLabel10 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.lollipopTextBox11 = new LollipopTextBox();
+            this.siticoneLabel11 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticonePanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,6 +66,18 @@ namespace ooad.UC
             // 
             // siticonePanel1
             // 
+            this.siticonePanel1.Controls.Add(this.lollipopTextBox11);
+            this.siticonePanel1.Controls.Add(this.siticoneLabel11);
+            this.siticonePanel1.Controls.Add(this.lollipopTextBox6);
+            this.siticonePanel1.Controls.Add(this.lollipopTextBox7);
+            this.siticonePanel1.Controls.Add(this.lollipopTextBox8);
+            this.siticonePanel1.Controls.Add(this.lollipopTextBox9);
+            this.siticonePanel1.Controls.Add(this.lollipopTextBox10);
+            this.siticonePanel1.Controls.Add(this.siticoneLabel6);
+            this.siticonePanel1.Controls.Add(this.siticoneLabel7);
+            this.siticonePanel1.Controls.Add(this.siticoneLabel8);
+            this.siticonePanel1.Controls.Add(this.siticoneLabel9);
+            this.siticonePanel1.Controls.Add(this.siticoneLabel10);
             this.siticonePanel1.Controls.Add(this.panel1);
             this.siticonePanel1.Controls.Add(this.lollipopTextBox5);
             this.siticonePanel1.Controls.Add(this.lollipopTextBox4);
@@ -167,7 +191,7 @@ namespace ooad.UC
             this.lollipopTextBox5.FocusedColor = "#508ef5";
             this.lollipopTextBox5.FontColor = "#999999";
             this.lollipopTextBox5.IsEnabled = true;
-            this.lollipopTextBox5.Location = new System.Drawing.Point(581, 138);
+            this.lollipopTextBox5.Location = new System.Drawing.Point(148, 226);
             this.lollipopTextBox5.MaxLength = 32767;
             this.lollipopTextBox5.Multiline = false;
             this.lollipopTextBox5.Name = "lollipopTextBox5";
@@ -182,7 +206,7 @@ namespace ooad.UC
             this.lollipopTextBox4.FocusedColor = "#508ef5";
             this.lollipopTextBox4.FontColor = "#999999";
             this.lollipopTextBox4.IsEnabled = true;
-            this.lollipopTextBox4.Location = new System.Drawing.Point(581, 104);
+            this.lollipopTextBox4.Location = new System.Drawing.Point(148, 196);
             this.lollipopTextBox4.MaxLength = 32767;
             this.lollipopTextBox4.Multiline = false;
             this.lollipopTextBox4.Name = "lollipopTextBox4";
@@ -241,21 +265,21 @@ namespace ooad.UC
             // 
             this.siticoneLabel5.BackColor = System.Drawing.Color.Transparent;
             this.siticoneLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneLabel5.Location = new System.Drawing.Point(467, 138);
+            this.siticoneLabel5.Location = new System.Drawing.Point(34, 236);
             this.siticoneLabel5.Name = "siticoneLabel5";
-            this.siticoneLabel5.Size = new System.Drawing.Size(102, 18);
+            this.siticoneLabel5.Size = new System.Drawing.Size(48, 18);
             this.siticoneLabel5.TabIndex = 5;
-            this.siticoneLabel5.Text = "Số tiết thực hành: ";
+            this.siticoneLabel5.Text = "Học kỳ:";
             // 
             // siticoneLabel4
             // 
             this.siticoneLabel4.BackColor = System.Drawing.Color.Transparent;
             this.siticoneLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneLabel4.Location = new System.Drawing.Point(467, 104);
+            this.siticoneLabel4.Location = new System.Drawing.Point(34, 202);
             this.siticoneLabel4.Name = "siticoneLabel4";
-            this.siticoneLabel4.Size = new System.Drawing.Size(94, 18);
+            this.siticoneLabel4.Size = new System.Drawing.Size(83, 18);
             this.siticoneLabel4.TabIndex = 4;
-            this.siticoneLabel4.Text = "Số tiết lý thuyết: ";
+            this.siticoneLabel4.Text = "Mã nhóm lớp:";
             // 
             // siticoneLabel3
             // 
@@ -263,9 +287,9 @@ namespace ooad.UC
             this.siticoneLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneLabel3.Location = new System.Drawing.Point(34, 167);
             this.siticoneLabel3.Name = "siticoneLabel3";
-            this.siticoneLabel3.Size = new System.Drawing.Size(59, 18);
+            this.siticoneLabel3.Size = new System.Drawing.Size(84, 18);
             this.siticoneLabel3.TabIndex = 3;
-            this.siticoneLabel3.Text = "Số tín chỉ:";
+            this.siticoneLabel3.Text = "Thời gian mở:";
             // 
             // siticoneLabel2
             // 
@@ -297,6 +321,156 @@ namespace ooad.UC
             this.label1.Size = new System.Drawing.Size(157, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "MỞ HỌC PHẦN";
+            // 
+            // lollipopTextBox6
+            // 
+            this.lollipopTextBox6.FocusedColor = "#508ef5";
+            this.lollipopTextBox6.FontColor = "#999999";
+            this.lollipopTextBox6.IsEnabled = true;
+            this.lollipopTextBox6.Location = new System.Drawing.Point(561, 226);
+            this.lollipopTextBox6.MaxLength = 32767;
+            this.lollipopTextBox6.Multiline = false;
+            this.lollipopTextBox6.Name = "lollipopTextBox6";
+            this.lollipopTextBox6.ReadOnly = false;
+            this.lollipopTextBox6.Size = new System.Drawing.Size(273, 24);
+            this.lollipopTextBox6.TabIndex = 31;
+            this.lollipopTextBox6.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.lollipopTextBox6.UseSystemPasswordChar = false;
+            // 
+            // lollipopTextBox7
+            // 
+            this.lollipopTextBox7.FocusedColor = "#508ef5";
+            this.lollipopTextBox7.FontColor = "#999999";
+            this.lollipopTextBox7.IsEnabled = true;
+            this.lollipopTextBox7.Location = new System.Drawing.Point(561, 196);
+            this.lollipopTextBox7.MaxLength = 32767;
+            this.lollipopTextBox7.Multiline = false;
+            this.lollipopTextBox7.Name = "lollipopTextBox7";
+            this.lollipopTextBox7.ReadOnly = false;
+            this.lollipopTextBox7.Size = new System.Drawing.Size(273, 24);
+            this.lollipopTextBox7.TabIndex = 30;
+            this.lollipopTextBox7.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.lollipopTextBox7.UseSystemPasswordChar = false;
+            // 
+            // lollipopTextBox8
+            // 
+            this.lollipopTextBox8.FocusedColor = "#508ef5";
+            this.lollipopTextBox8.FontColor = "#999999";
+            this.lollipopTextBox8.IsEnabled = true;
+            this.lollipopTextBox8.Location = new System.Drawing.Point(561, 167);
+            this.lollipopTextBox8.MaxLength = 32767;
+            this.lollipopTextBox8.Multiline = false;
+            this.lollipopTextBox8.Name = "lollipopTextBox8";
+            this.lollipopTextBox8.ReadOnly = false;
+            this.lollipopTextBox8.Size = new System.Drawing.Size(273, 24);
+            this.lollipopTextBox8.TabIndex = 29;
+            this.lollipopTextBox8.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.lollipopTextBox8.UseSystemPasswordChar = false;
+            // 
+            // lollipopTextBox9
+            // 
+            this.lollipopTextBox9.FocusedColor = "#508ef5";
+            this.lollipopTextBox9.FontColor = "#999999";
+            this.lollipopTextBox9.IsEnabled = true;
+            this.lollipopTextBox9.Location = new System.Drawing.Point(561, 134);
+            this.lollipopTextBox9.MaxLength = 32767;
+            this.lollipopTextBox9.Multiline = false;
+            this.lollipopTextBox9.Name = "lollipopTextBox9";
+            this.lollipopTextBox9.ReadOnly = false;
+            this.lollipopTextBox9.Size = new System.Drawing.Size(273, 24);
+            this.lollipopTextBox9.TabIndex = 28;
+            this.lollipopTextBox9.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.lollipopTextBox9.UseSystemPasswordChar = false;
+            // 
+            // lollipopTextBox10
+            // 
+            this.lollipopTextBox10.FocusedColor = "#508ef5";
+            this.lollipopTextBox10.FontColor = "#999999";
+            this.lollipopTextBox10.IsEnabled = true;
+            this.lollipopTextBox10.Location = new System.Drawing.Point(561, 104);
+            this.lollipopTextBox10.MaxLength = 32767;
+            this.lollipopTextBox10.Multiline = false;
+            this.lollipopTextBox10.Name = "lollipopTextBox10";
+            this.lollipopTextBox10.ReadOnly = false;
+            this.lollipopTextBox10.Size = new System.Drawing.Size(273, 24);
+            this.lollipopTextBox10.TabIndex = 27;
+            this.lollipopTextBox10.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.lollipopTextBox10.UseSystemPasswordChar = false;
+            // 
+            // siticoneLabel6
+            // 
+            this.siticoneLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel6.Location = new System.Drawing.Point(447, 236);
+            this.siticoneLabel6.Name = "siticoneLabel6";
+            this.siticoneLabel6.Size = new System.Drawing.Size(77, 18);
+            this.siticoneLabel6.TabIndex = 26;
+            this.siticoneLabel6.Text = "Tiết bắt đầu:";
+            // 
+            // siticoneLabel7
+            // 
+            this.siticoneLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel7.Location = new System.Drawing.Point(447, 202);
+            this.siticoneLabel7.Name = "siticoneLabel7";
+            this.siticoneLabel7.Size = new System.Drawing.Size(29, 18);
+            this.siticoneLabel7.TabIndex = 25;
+            this.siticoneLabel7.Text = "Thứ:";
+            // 
+            // siticoneLabel8
+            // 
+            this.siticoneLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel8.Location = new System.Drawing.Point(447, 167);
+            this.siticoneLabel8.Name = "siticoneLabel8";
+            this.siticoneLabel8.Size = new System.Drawing.Size(67, 18);
+            this.siticoneLabel8.TabIndex = 24;
+            this.siticoneLabel8.Text = "Phòng TH:";
+            // 
+            // siticoneLabel9
+            // 
+            this.siticoneLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel9.Location = new System.Drawing.Point(447, 134);
+            this.siticoneLabel9.Name = "siticoneLabel9";
+            this.siticoneLabel9.Size = new System.Drawing.Size(64, 18);
+            this.siticoneLabel9.TabIndex = 23;
+            this.siticoneLabel9.Text = "Phòng LT:";
+            // 
+            // siticoneLabel10
+            // 
+            this.siticoneLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel10.Location = new System.Drawing.Point(447, 104);
+            this.siticoneLabel10.Name = "siticoneLabel10";
+            this.siticoneLabel10.Size = new System.Drawing.Size(70, 18);
+            this.siticoneLabel10.TabIndex = 22;
+            this.siticoneLabel10.Text = "Giảng viên:";
+            // 
+            // lollipopTextBox11
+            // 
+            this.lollipopTextBox11.FocusedColor = "#508ef5";
+            this.lollipopTextBox11.FontColor = "#999999";
+            this.lollipopTextBox11.IsEnabled = true;
+            this.lollipopTextBox11.Location = new System.Drawing.Point(561, 251);
+            this.lollipopTextBox11.MaxLength = 32767;
+            this.lollipopTextBox11.Multiline = false;
+            this.lollipopTextBox11.Name = "lollipopTextBox11";
+            this.lollipopTextBox11.ReadOnly = false;
+            this.lollipopTextBox11.Size = new System.Drawing.Size(273, 24);
+            this.lollipopTextBox11.TabIndex = 33;
+            this.lollipopTextBox11.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.lollipopTextBox11.UseSystemPasswordChar = false;
+            // 
+            // siticoneLabel11
+            // 
+            this.siticoneLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel11.Location = new System.Drawing.Point(447, 261);
+            this.siticoneLabel11.Name = "siticoneLabel11";
+            this.siticoneLabel11.Size = new System.Drawing.Size(77, 18);
+            this.siticoneLabel11.TabIndex = 32;
+            this.siticoneLabel11.Text = "Tiết kết thúc:";
             // 
             // UC_MNL
             // 
@@ -335,5 +509,17 @@ namespace ooad.UC
         private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private LollipopTextBox lollipopTextBox6;
+        private LollipopTextBox lollipopTextBox7;
+        private LollipopTextBox lollipopTextBox8;
+        private LollipopTextBox lollipopTextBox9;
+        private LollipopTextBox lollipopTextBox10;
+        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel6;
+        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel7;
+        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel8;
+        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel9;
+        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel10;
+        private LollipopTextBox lollipopTextBox11;
+        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel11;
     }
 }
