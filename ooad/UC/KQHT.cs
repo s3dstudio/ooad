@@ -10,8 +10,9 @@ using System.Windows.Forms;
 
 namespace ooad.UC
 {
-    public partial class KQHT : UserControl
+    public partial class KQHT : UserControl   
     {
+        private double dtb= 0 ,tong = 0.0;
         public KQHT()
         {
             InitializeComponent();
@@ -20,7 +21,21 @@ namespace ooad.UC
             List<DTO.CHITIETKQHT> listChitiet = DTO.CHITIETKQHT.FromJson(jsonString);
 
             siticoneDataGridView1.DataSource = listChitiet;
-        
+
+            int count = listChitiet.Count();
+            for (i = 0; i < count; i++)
+            {
+                tong += listChitiet[i].Ketqua;
+
+            }
+            dtb = Math.Round((tong / count),1);
+
+            siticoneTextBox1.Text = dtb.ToString();
+
         }
+
+
+        int i;
     }
+    
 }

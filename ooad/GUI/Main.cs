@@ -38,6 +38,7 @@ namespace ooad.GUI
             k.LoadData(idCTKHDT);
             k.Text = this.tempM;
             k.Show();
+            siticoneButton8.Hide();
         }
         public void LoadNumberOfDuyet()
         {
@@ -61,8 +62,8 @@ namespace ooad.GUI
             siticoneShadowForm1.SetShadowForm(this);
 
             LoadNumberOfDuyet();
-
             siticoneLabel1.Text = Client.User.Instance.hoten;
+            
         }
 
         private void roundButton1_Click(object sender, EventArgs e)
@@ -83,7 +84,7 @@ namespace ooad.GUI
                 siticoneButton6.BringToFront();
                 siticoneButton7.BringToFront();
                 siticoneCircleButton2.BringToFront();
-                siticoneButton8.BringToFront();
+               // siticoneButton8.BringToFront();
             }
         }
 
@@ -144,14 +145,19 @@ namespace ooad.GUI
 
         private void siticoneButton8_Click(object sender, EventArgs e)
         {
-            ooad.GUI.KHDT k = new KHDT();
-            //k.LoadData("6");
-            k.Show();
+            //ooad.GUI.KHDT k = new KHDT();
+            ////k.LoadData("6");
+            //k.Show();
         }
 
         private void siticoneCircleButton2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void siticoneLabel1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

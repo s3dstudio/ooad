@@ -26,7 +26,7 @@ namespace ooad.UC
 
             jsonString = Client.Client.Instance.Get("api/CHUYENNGANH/get");
 
-            siticoneRoundedComboBox2.DataSource = CHUYENNGANH.FromJson(jsonString);
+            siticoneRoundedComboBox2.DataSource =CHUYENNGANH.FromJson(jsonString);
             siticoneRoundedComboBox2.ValueMember = "idchuyennganh";
             siticoneRoundedComboBox2.DisplayMember = "tenchuyennganh";
 

@@ -126,9 +126,12 @@
     <Compile Include="DTO\Converter.cs" />
     <Compile Include="DTO\DKHP.cs" />
     <Compile Include="DTO\DKHPData.cs" />
+    <Compile Include="DTO\GIANGVIEN.cs" />
+    <Compile Include="DTO\HOCPHAN.cs" />
     <Compile Include="DTO\KHDT.cs" />
     <Compile Include="DTO\KHOAHOC.cs" />
     <Compile Include="DTO\NHOMLOP.cs" />
+    <Compile Include="DTO\PHONGHOC.cs" />
     <Compile Include="DTO\SINHVIEN.cs" />
     <Compile Include="DTO\TKB.cs" />
     <Compile Include="DTO\TKBNHOMLOP.cs" />
@@ -156,6 +159,12 @@
     </Compile>
     <Compile Include="GUI\ThemKhoa.Designer.cs">
       <DependentUpon>ThemKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -255,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThemKhoa.resx">
       <DependentUpon>ThemKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

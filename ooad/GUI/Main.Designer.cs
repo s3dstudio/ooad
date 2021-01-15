@@ -59,6 +59,8 @@ namespace ooad.GUI
             this.createKHDT1 = new ooad.UC.CreateKHDT();
             this.duyetKHDT1 = new ooad.UC.DuyetKHDT();
             this.tkB_DEV1 = new ooad.UC.TKB_DEV();
+           
+
             this.roundButton2 = new ooad.Controls.RoundButton();
             this.roundButton1 = new ooad.Controls.RoundButton();
             this.siticonePanel1.SuspendLayout();
@@ -155,6 +157,7 @@ namespace ooad.GUI
             this.siticoneLabel1.Size = new System.Drawing.Size(41, 17);
             this.siticoneLabel1.TabIndex = 19;
             this.siticoneLabel1.Text = "User1";
+            this.siticoneLabel1.Click += new System.EventHandler(this.siticoneLabel1_Click);
             // 
             // siticoneCirclePictureBox1
             // 

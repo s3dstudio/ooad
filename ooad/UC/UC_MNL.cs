@@ -8,15 +8,53 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ooad.DTO;
+using ooad.GUI;
 namespace ooad.UC
 {
     public partial class UC_MNL : UserControl
     {
         UC.UC_DKHP _dkhp;
+        private string jsonString,jsonString1, jsonString2, jsonString3;
+
+        private List<ComboBox> _listCombobox,_listCombobox1,_listCombobox2,_listCombobox3;
         public UC_MNL()
         {
             InitializeComponent();
+
+            jsonString = Client.Client.Instance.Get("api/HOCPHAN/get");
+
+            siticoneRoundedComboBox1.DataSource = HOCPHAN.FromJson(jsonString);
+            siticoneRoundedComboBox1.ValueMember = "idhocphan";
+            siticoneRoundedComboBox1.DisplayMember = "idhocphan";
+
+            _listCombobox = new List<ComboBox>();
+            _listCombobox.Add(siticoneRoundedComboBox1);
+
+            jsonString1 = Client.Client.Instance.Get("api/GIANGVIEN/get");
+
+            siticoneRoundedComboBox2.DataSource = GIANGVIEN.FromJson(jsonString1);
+            siticoneRoundedComboBox2.ValueMember = "idgiangvien";
+            siticoneRoundedComboBox2.DisplayMember = "tengv";
+
+            _listCombobox1 = new List<ComboBox>();
+            _listCombobox1.Add(siticoneRoundedComboBox2);
+
+            jsonString2 = Client.Client.Instance.Get("api/PHONGHOC/get");
+
+            siticoneRoundedComboBox3.DataSource = PHONGHOC.FromJson(jsonString2);
+            siticoneRoundedComboBox3.ValueMember = "idphonghoc";
+            siticoneRoundedComboBox3.DisplayMember = "sohieu";
+
+            _listCombobox2 = new List<ComboBox>();
+            _listCombobox2.Add(siticoneRoundedComboBox3);
+
+            siticoneRoundedComboBox4.DataSource = PHONGHOC.FromJson(jsonString2);
+            siticoneRoundedComboBox4.ValueMember = "idphonghoc";
+            siticoneRoundedComboBox4.DisplayMember = "sohieu";
+
+            _listCombobox3 = new List<ComboBox>();
+            _listCombobox3.Add(siticoneRoundedComboBox4);
         }
 
         private void siticoneGradientButton1_Click(object sender, EventArgs e)
@@ -36,7 +74,7 @@ namespace ooad.UC
             DTO.NHOMLOP nhomlop = new DTO.NHOMLOP();
 
             nhomlop.Idnhomlop = lollipopTextBox4.Text;
-            nhomlop.Idhocphan = lollipopTextBox1.Text;
+            nhomlop.Idhocphan = siticoneRoundedComboBox1.Text;
             nhomlop.Ten = lollipopTextBox2.Text;
             nhomlop.Thoigianmo = DateTimeOffset.Parse(lollipopTextBox3.Text);
 
@@ -48,13 +86,13 @@ namespace ooad.UC
 
             DTO.TKBNHOMLOP tkbnl = new DTO.TKBNHOMLOP();
             tkbnl.Hocky = lollipopTextBox5.Text;
-            tkbnl.Idgiangvien = long.Parse(lollipopTextBox6.Text);
+            tkbnl.Idgiangvien = long.Parse(siticoneRoundedComboBox2.ValueMember);
             tkbnl.Idnhomlop = lollipopTextBox4.Text;
-            tkbnl.Idphonglt = long.Parse(lollipopTextBox7.Text);
-            tkbnl.Idphongth = long.Parse(lollipopTextBox8.Text);
+            tkbnl.Idphonglt = long.Parse(siticoneRoundedComboBox4.Text);
+            tkbnl.Idphongth = long.Parse(siticoneRoundedComboBox4.Text);
             tkbnl.Idtkbnhomlop = long.Parse(bigInt.ToString());
-            tkbnl.Thu = long.Parse(lollipopTextBox9.Text);
-            tkbnl.Tietbatdau = long.Parse(lollipopTextBox10.Text);
+            tkbnl.Thu = long.Parse(lollipopTextBox7.Text);
+            tkbnl.Tietbatdau = long.Parse(lollipopTextBox6.Text);
             tkbnl.Tietketthuc = long.Parse(lollipopTextBox11.Text);
             tkbnl.Tuan = "1,2,3,4,5";
 
@@ -69,6 +107,12 @@ namespace ooad.UC
         public void SetDKHP(UC.UC_DKHP dk)
         {
             _dkhp = dk;
+        }
+
+        private void siticonePanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+           
         }
     }
 }

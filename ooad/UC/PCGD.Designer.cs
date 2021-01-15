@@ -37,34 +37,38 @@ namespace ooad.UC
             this.siticoneLabel3 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel2 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneDataGridView1 = new Siticone.UI.WinForms.SiticoneDataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idnhomlopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idhocphanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoigianmoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nHOMLOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneButton2 = new Siticone.UI.WinForms.SiticoneButton();
             this.siticoneButton1 = new Siticone.UI.WinForms.SiticoneButton();
             this.uC_DKGD1 = new ooad.UC.UC_DKGD();
             this.uC_DPC1 = new ooad.UC.UC_DPC();
             this.cHUYENNGANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nHOMLOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.idnhomlopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idhocphanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thoigianmoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siticoneGradientButton2 = new Siticone.UI.WinForms.SiticoneGradientButton();
+            this.siticoneGradientButton1 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cHUYENNGANHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHOMLOPBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHUYENNGANHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // siticonePanel1
             // 
+            this.siticonePanel1.Controls.Add(this.siticoneGradientButton2);
+            this.siticonePanel1.Controls.Add(this.siticoneGradientButton1);
             this.siticonePanel1.Controls.Add(this.siticoneLabel3);
             this.siticonePanel1.Controls.Add(this.siticoneLabel2);
             this.siticonePanel1.Controls.Add(this.siticoneDataGridView1);
             this.siticonePanel1.Controls.Add(this.siticoneLabel1);
             this.siticonePanel1.Controls.Add(this.siticoneButton2);
             this.siticonePanel1.Controls.Add(this.siticoneButton1);
-            this.siticonePanel1.Controls.Add(this.uC_DKGD1);
             this.siticonePanel1.Controls.Add(this.uC_DPC1);
+            this.siticonePanel1.Controls.Add(this.uC_DKGD1);
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
             this.siticonePanel1.Name = "siticonePanel1";
@@ -159,6 +163,39 @@ namespace ooad.UC
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Chọn";
+            this.Column1.Name = "Column1";
+            // 
+            // idnhomlopDataGridViewTextBoxColumn
+            // 
+            this.idnhomlopDataGridViewTextBoxColumn.DataPropertyName = "Idnhomlop";
+            this.idnhomlopDataGridViewTextBoxColumn.HeaderText = "Mã Nhóm Lớp";
+            this.idnhomlopDataGridViewTextBoxColumn.Name = "idnhomlopDataGridViewTextBoxColumn";
+            // 
+            // idhocphanDataGridViewTextBoxColumn
+            // 
+            this.idhocphanDataGridViewTextBoxColumn.DataPropertyName = "Idhocphan";
+            this.idhocphanDataGridViewTextBoxColumn.HeaderText = "Mã HP";
+            this.idhocphanDataGridViewTextBoxColumn.Name = "idhocphanDataGridViewTextBoxColumn";
+            // 
+            // tenDataGridViewTextBoxColumn
+            // 
+            this.tenDataGridViewTextBoxColumn.DataPropertyName = "Ten";
+            this.tenDataGridViewTextBoxColumn.HeaderText = "Tên HP";
+            this.tenDataGridViewTextBoxColumn.Name = "tenDataGridViewTextBoxColumn";
+            // 
+            // thoigianmoDataGridViewTextBoxColumn
+            // 
+            this.thoigianmoDataGridViewTextBoxColumn.DataPropertyName = "Thoigianmo";
+            this.thoigianmoDataGridViewTextBoxColumn.HeaderText = "Thời Gian Mở";
+            this.thoigianmoDataGridViewTextBoxColumn.Name = "thoigianmoDataGridViewTextBoxColumn";
+            // 
+            // nHOMLOPBindingSource
+            // 
+            this.nHOMLOPBindingSource.DataSource = typeof(ooad.DTO.NHOMLOP);
+            // 
             // siticoneLabel1
             // 
             this.siticoneLabel1.BackColor = System.Drawing.Color.Transparent;
@@ -225,38 +262,40 @@ namespace ooad.UC
             // 
             this.cHUYENNGANHBindingSource.DataSource = typeof(ooad.DTO.CHUYENNGANH);
             // 
-            // nHOMLOPBindingSource
+            // siticoneGradientButton2
             // 
-            this.nHOMLOPBindingSource.DataSource = typeof(ooad.DTO.NHOMLOP);
+            this.siticoneGradientButton2.BorderRadius = 10;
+            this.siticoneGradientButton2.CheckedState.Parent = this.siticoneGradientButton2;
+            this.siticoneGradientButton2.CustomImages.Parent = this.siticoneGradientButton2;
+            this.siticoneGradientButton2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.siticoneGradientButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneGradientButton2.ForeColor = System.Drawing.Color.White;
+            this.siticoneGradientButton2.HoveredState.Parent = this.siticoneGradientButton2;
+            this.siticoneGradientButton2.Location = new System.Drawing.Point(763, 543);
+            this.siticoneGradientButton2.Name = "siticoneGradientButton2";
+            this.siticoneGradientButton2.ShadowDecoration.Parent = this.siticoneGradientButton2;
+            this.siticoneGradientButton2.Size = new System.Drawing.Size(112, 45);
+            this.siticoneGradientButton2.TabIndex = 12;
+            this.siticoneGradientButton2.Text = "Đồng ý";
             // 
-            // Column1
+            // siticoneGradientButton1
             // 
-            this.Column1.HeaderText = "Chọn";
-            this.Column1.Name = "Column1";
-            // 
-            // idnhomlopDataGridViewTextBoxColumn
-            // 
-            this.idnhomlopDataGridViewTextBoxColumn.DataPropertyName = "Idnhomlop";
-            this.idnhomlopDataGridViewTextBoxColumn.HeaderText = "Mã Nhóm Lớp";
-            this.idnhomlopDataGridViewTextBoxColumn.Name = "idnhomlopDataGridViewTextBoxColumn";
-            // 
-            // idhocphanDataGridViewTextBoxColumn
-            // 
-            this.idhocphanDataGridViewTextBoxColumn.DataPropertyName = "Idhocphan";
-            this.idhocphanDataGridViewTextBoxColumn.HeaderText = "Mã HP";
-            this.idhocphanDataGridViewTextBoxColumn.Name = "idhocphanDataGridViewTextBoxColumn";
-            // 
-            // tenDataGridViewTextBoxColumn
-            // 
-            this.tenDataGridViewTextBoxColumn.DataPropertyName = "Ten";
-            this.tenDataGridViewTextBoxColumn.HeaderText = "Tên HP";
-            this.tenDataGridViewTextBoxColumn.Name = "tenDataGridViewTextBoxColumn";
-            // 
-            // thoigianmoDataGridViewTextBoxColumn
-            // 
-            this.thoigianmoDataGridViewTextBoxColumn.DataPropertyName = "Thoigianmo";
-            this.thoigianmoDataGridViewTextBoxColumn.HeaderText = "Thời Gian Mở";
-            this.thoigianmoDataGridViewTextBoxColumn.Name = "thoigianmoDataGridViewTextBoxColumn";
+            this.siticoneGradientButton1.BorderColor = System.Drawing.Color.DimGray;
+            this.siticoneGradientButton1.BorderRadius = 10;
+            this.siticoneGradientButton1.BorderThickness = 1;
+            this.siticoneGradientButton1.CheckedState.Parent = this.siticoneGradientButton1;
+            this.siticoneGradientButton1.CustomImages.Parent = this.siticoneGradientButton1;
+            this.siticoneGradientButton1.FillColor = System.Drawing.Color.White;
+            this.siticoneGradientButton1.FillColor2 = System.Drawing.Color.White;
+            this.siticoneGradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneGradientButton1.ForeColor = System.Drawing.Color.DimGray;
+            this.siticoneGradientButton1.HoveredState.Parent = this.siticoneGradientButton1;
+            this.siticoneGradientButton1.Location = new System.Drawing.Point(626, 543);
+            this.siticoneGradientButton1.Name = "siticoneGradientButton1";
+            this.siticoneGradientButton1.ShadowDecoration.Parent = this.siticoneGradientButton1;
+            this.siticoneGradientButton1.Size = new System.Drawing.Size(112, 45);
+            this.siticoneGradientButton1.TabIndex = 11;
+            this.siticoneGradientButton1.Text = "Huỷ";
             // 
             // PCGD
             // 
@@ -269,8 +308,8 @@ namespace ooad.UC
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cHUYENNGANHBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHOMLOPBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHUYENNGANHBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,5 +332,7 @@ namespace ooad.UC
         private System.Windows.Forms.DataGridViewTextBoxColumn thoigianmoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource nHOMLOPBindingSource;
         private System.Windows.Forms.BindingSource cHUYENNGANHBindingSource;
+        private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton2;
+        private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton1;
     }
 }

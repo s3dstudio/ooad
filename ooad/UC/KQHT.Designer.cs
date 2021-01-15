@@ -34,9 +34,9 @@ namespace ooad.UC
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticonePanel1 = new Siticone.UI.WinForms.SiticonePanel();
+            this.siticoneTextBox1 = new Siticone.UI.WinForms.SiticoneTextBox();
+            this.lollipopLabel1 = new LollipopLabel();
             this.siticoneDataGridView1 = new Siticone.UI.WinForms.SiticoneDataGridView();
-            this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
-            this.cHITIETKQHTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idketquahoctapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idhocphanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idnhomlopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +46,10 @@ namespace ooad.UC
             this.thuchanhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ketquaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cHITIETKQHTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.siticoneTextBox2 = new Siticone.UI.WinForms.SiticoneTextBox();
+            this.lollipopLabel2 = new LollipopLabel();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHITIETKQHTBindingSource)).BeginInit();
@@ -53,6 +57,10 @@ namespace ooad.UC
             // 
             // siticonePanel1
             // 
+            this.siticonePanel1.Controls.Add(this.siticoneTextBox2);
+            this.siticonePanel1.Controls.Add(this.lollipopLabel2);
+            this.siticonePanel1.Controls.Add(this.siticoneTextBox1);
+            this.siticonePanel1.Controls.Add(this.lollipopLabel1);
             this.siticonePanel1.Controls.Add(this.siticoneDataGridView1);
             this.siticonePanel1.Controls.Add(this.siticoneLabel1);
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -61,6 +69,44 @@ namespace ooad.UC
             this.siticonePanel1.ShadowDecoration.Parent = this.siticonePanel1;
             this.siticonePanel1.Size = new System.Drawing.Size(894, 604);
             this.siticonePanel1.TabIndex = 0;
+            // 
+            // siticoneTextBox1
+            // 
+            this.siticoneTextBox1.Animated = false;
+            this.siticoneTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.siticoneTextBox1.DefaultText = "";
+            this.siticoneTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.siticoneTextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.siticoneTextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.siticoneTextBox1.DisabledState.Parent = this.siticoneTextBox1;
+            this.siticoneTextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.siticoneTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.siticoneTextBox1.FocusedState.Parent = this.siticoneTextBox1;
+            this.siticoneTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.siticoneTextBox1.HoveredState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.siticoneTextBox1.HoveredState.Parent = this.siticoneTextBox1;
+            this.siticoneTextBox1.Location = new System.Drawing.Point(171, 502);
+            this.siticoneTextBox1.Name = "siticoneTextBox1";
+            this.siticoneTextBox1.PasswordChar = '\0';
+            this.siticoneTextBox1.PlaceholderText = "";
+            this.siticoneTextBox1.SelectedText = "";
+            this.siticoneTextBox1.ShadowDecoration.Parent = this.siticoneTextBox1;
+            this.siticoneTextBox1.Size = new System.Drawing.Size(76, 35);
+            this.siticoneTextBox1.TabIndex = 4;
+            // 
+            // lollipopLabel1
+            // 
+            this.lollipopLabel1.AutoSize = true;
+            this.lollipopLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.lollipopLabel1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lollipopLabel1.ForeColor = System.Drawing.Color.Black;
+            this.lollipopLabel1.Location = new System.Drawing.Point(27, 511);
+            this.lollipopLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lollipopLabel1.Name = "lollipopLabel1";
+            this.lollipopLabel1.Size = new System.Drawing.Size(149, 17);
+            this.lollipopLabel1.TabIndex = 3;
+            this.lollipopLabel1.Text = "Điểm số trung bình :";
             // 
             // siticoneDataGridView1
             // 
@@ -105,8 +151,9 @@ namespace ooad.UC
             this.siticoneDataGridView1.Location = new System.Drawing.Point(25, 100);
             this.siticoneDataGridView1.Name = "siticoneDataGridView1";
             this.siticoneDataGridView1.RowHeadersVisible = false;
+            this.siticoneDataGridView1.RowHeadersWidth = 51;
             this.siticoneDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.siticoneDataGridView1.Size = new System.Drawing.Size(843, 416);
+            this.siticoneDataGridView1.Size = new System.Drawing.Size(843, 378);
             this.siticoneDataGridView1.TabIndex = 2;
             this.siticoneDataGridView1.Theme = Siticone.UI.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -131,6 +178,73 @@ namespace ooad.UC
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.siticoneDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // idketquahoctapDataGridViewTextBoxColumn
+            // 
+            this.idketquahoctapDataGridViewTextBoxColumn.DataPropertyName = "Idketquahoctap";
+            this.idketquahoctapDataGridViewTextBoxColumn.HeaderText = "Mã KQHT";
+            this.idketquahoctapDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idketquahoctapDataGridViewTextBoxColumn.Name = "idketquahoctapDataGridViewTextBoxColumn";
+            // 
+            // idhocphanDataGridViewTextBoxColumn
+            // 
+            this.idhocphanDataGridViewTextBoxColumn.DataPropertyName = "Idhocphan";
+            this.idhocphanDataGridViewTextBoxColumn.HeaderText = "Mã học phần";
+            this.idhocphanDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idhocphanDataGridViewTextBoxColumn.Name = "idhocphanDataGridViewTextBoxColumn";
+            // 
+            // idnhomlopDataGridViewTextBoxColumn
+            // 
+            this.idnhomlopDataGridViewTextBoxColumn.DataPropertyName = "Idnhomlop";
+            this.idnhomlopDataGridViewTextBoxColumn.HeaderText = "Mã nhóm lớp";
+            this.idnhomlopDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idnhomlopDataGridViewTextBoxColumn.Name = "idnhomlopDataGridViewTextBoxColumn";
+            // 
+            // tenhocphanDataGridViewTextBoxColumn
+            // 
+            this.tenhocphanDataGridViewTextBoxColumn.DataPropertyName = "Tenhocphan";
+            this.tenhocphanDataGridViewTextBoxColumn.HeaderText = "Tên học phần";
+            this.tenhocphanDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tenhocphanDataGridViewTextBoxColumn.Name = "tenhocphanDataGridViewTextBoxColumn";
+            // 
+            // sotinchiDataGridViewTextBoxColumn
+            // 
+            this.sotinchiDataGridViewTextBoxColumn.DataPropertyName = "Sotinchi";
+            this.sotinchiDataGridViewTextBoxColumn.HeaderText = "Số tín chỉ";
+            this.sotinchiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sotinchiDataGridViewTextBoxColumn.Name = "sotinchiDataGridViewTextBoxColumn";
+            // 
+            // quatrinhDataGridViewTextBoxColumn
+            // 
+            this.quatrinhDataGridViewTextBoxColumn.DataPropertyName = "Quatrinh";
+            this.quatrinhDataGridViewTextBoxColumn.HeaderText = "Quá trình";
+            this.quatrinhDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.quatrinhDataGridViewTextBoxColumn.Name = "quatrinhDataGridViewTextBoxColumn";
+            // 
+            // thuchanhDataGridViewTextBoxColumn
+            // 
+            this.thuchanhDataGridViewTextBoxColumn.DataPropertyName = "Thuchanh";
+            this.thuchanhDataGridViewTextBoxColumn.HeaderText = "Thực hành";
+            this.thuchanhDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.thuchanhDataGridViewTextBoxColumn.Name = "thuchanhDataGridViewTextBoxColumn";
+            // 
+            // thiDataGridViewTextBoxColumn
+            // 
+            this.thiDataGridViewTextBoxColumn.DataPropertyName = "Thi";
+            this.thiDataGridViewTextBoxColumn.HeaderText = "Thi";
+            this.thiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.thiDataGridViewTextBoxColumn.Name = "thiDataGridViewTextBoxColumn";
+            // 
+            // ketquaDataGridViewTextBoxColumn
+            // 
+            this.ketquaDataGridViewTextBoxColumn.DataPropertyName = "Ketqua";
+            this.ketquaDataGridViewTextBoxColumn.HeaderText = "Kết quả";
+            this.ketquaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ketquaDataGridViewTextBoxColumn.Name = "ketquaDataGridViewTextBoxColumn";
+            // 
+            // cHITIETKQHTBindingSource
+            // 
+            this.cHITIETKQHTBindingSource.DataSource = typeof(ooad.DTO.CHITIETKQHT);
+            // 
             // siticoneLabel1
             // 
             this.siticoneLabel1.BackColor = System.Drawing.Color.Transparent;
@@ -142,63 +256,43 @@ namespace ooad.UC
             this.siticoneLabel1.TabIndex = 1;
             this.siticoneLabel1.Text = "KẾT QUẢ HỌC TẬP";
             // 
-            // cHITIETKQHTBindingSource
+            // siticoneTextBox2
             // 
-            this.cHITIETKQHTBindingSource.DataSource = typeof(ooad.DTO.CHITIETKQHT);
+            this.siticoneTextBox2.Animated = false;
+            this.siticoneTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.siticoneTextBox2.DefaultText = "";
+            this.siticoneTextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.siticoneTextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.siticoneTextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.siticoneTextBox2.DisabledState.Parent = this.siticoneTextBox2;
+            this.siticoneTextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.siticoneTextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.siticoneTextBox2.FocusedState.Parent = this.siticoneTextBox2;
+            this.siticoneTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneTextBox2.ForeColor = System.Drawing.Color.Black;
+            this.siticoneTextBox2.HoveredState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.siticoneTextBox2.HoveredState.Parent = this.siticoneTextBox2;
+            this.siticoneTextBox2.Location = new System.Drawing.Point(398, 502);
+            this.siticoneTextBox2.Name = "siticoneTextBox2";
+            this.siticoneTextBox2.PasswordChar = '\0';
+            this.siticoneTextBox2.PlaceholderText = "";
+            this.siticoneTextBox2.SelectedText = "";
+            this.siticoneTextBox2.ShadowDecoration.Parent = this.siticoneTextBox2;
+            this.siticoneTextBox2.Size = new System.Drawing.Size(76, 35);
+            this.siticoneTextBox2.TabIndex = 6;
             // 
-            // idketquahoctapDataGridViewTextBoxColumn
+            // lollipopLabel2
             // 
-            this.idketquahoctapDataGridViewTextBoxColumn.DataPropertyName = "Idketquahoctap";
-            this.idketquahoctapDataGridViewTextBoxColumn.HeaderText = "Mã KQHT";
-            this.idketquahoctapDataGridViewTextBoxColumn.Name = "idketquahoctapDataGridViewTextBoxColumn";
-            // 
-            // idhocphanDataGridViewTextBoxColumn
-            // 
-            this.idhocphanDataGridViewTextBoxColumn.DataPropertyName = "Idhocphan";
-            this.idhocphanDataGridViewTextBoxColumn.HeaderText = "Mã học phần";
-            this.idhocphanDataGridViewTextBoxColumn.Name = "idhocphanDataGridViewTextBoxColumn";
-            // 
-            // idnhomlopDataGridViewTextBoxColumn
-            // 
-            this.idnhomlopDataGridViewTextBoxColumn.DataPropertyName = "Idnhomlop";
-            this.idnhomlopDataGridViewTextBoxColumn.HeaderText = "Mã nhóm lớp";
-            this.idnhomlopDataGridViewTextBoxColumn.Name = "idnhomlopDataGridViewTextBoxColumn";
-            // 
-            // tenhocphanDataGridViewTextBoxColumn
-            // 
-            this.tenhocphanDataGridViewTextBoxColumn.DataPropertyName = "Tenhocphan";
-            this.tenhocphanDataGridViewTextBoxColumn.HeaderText = "Tên học phần";
-            this.tenhocphanDataGridViewTextBoxColumn.Name = "tenhocphanDataGridViewTextBoxColumn";
-            // 
-            // sotinchiDataGridViewTextBoxColumn
-            // 
-            this.sotinchiDataGridViewTextBoxColumn.DataPropertyName = "Sotinchi";
-            this.sotinchiDataGridViewTextBoxColumn.HeaderText = "Số tín chỉ";
-            this.sotinchiDataGridViewTextBoxColumn.Name = "sotinchiDataGridViewTextBoxColumn";
-            // 
-            // quatrinhDataGridViewTextBoxColumn
-            // 
-            this.quatrinhDataGridViewTextBoxColumn.DataPropertyName = "Quatrinh";
-            this.quatrinhDataGridViewTextBoxColumn.HeaderText = "Quá trình";
-            this.quatrinhDataGridViewTextBoxColumn.Name = "quatrinhDataGridViewTextBoxColumn";
-            // 
-            // thuchanhDataGridViewTextBoxColumn
-            // 
-            this.thuchanhDataGridViewTextBoxColumn.DataPropertyName = "Thuchanh";
-            this.thuchanhDataGridViewTextBoxColumn.HeaderText = "Thực hành";
-            this.thuchanhDataGridViewTextBoxColumn.Name = "thuchanhDataGridViewTextBoxColumn";
-            // 
-            // thiDataGridViewTextBoxColumn
-            // 
-            this.thiDataGridViewTextBoxColumn.DataPropertyName = "Thi";
-            this.thiDataGridViewTextBoxColumn.HeaderText = "Thi";
-            this.thiDataGridViewTextBoxColumn.Name = "thiDataGridViewTextBoxColumn";
-            // 
-            // ketquaDataGridViewTextBoxColumn
-            // 
-            this.ketquaDataGridViewTextBoxColumn.DataPropertyName = "Ketqua";
-            this.ketquaDataGridViewTextBoxColumn.HeaderText = "Kết quả";
-            this.ketquaDataGridViewTextBoxColumn.Name = "ketquaDataGridViewTextBoxColumn";
+            this.lollipopLabel2.AutoSize = true;
+            this.lollipopLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.lollipopLabel2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lollipopLabel2.ForeColor = System.Drawing.Color.Black;
+            this.lollipopLabel2.Location = new System.Drawing.Point(283, 511);
+            this.lollipopLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lollipopLabel2.Name = "lollipopLabel2";
+            this.lollipopLabel2.Size = new System.Drawing.Size(110, 17);
+            this.lollipopLabel2.TabIndex = 5;
+            this.lollipopLabel2.Text = "Tín chỉ tích luỹ:";
             // 
             // KQHT
             // 
@@ -231,5 +325,9 @@ namespace ooad.UC
         private System.Windows.Forms.DataGridViewTextBoxColumn thiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ketquaDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource cHITIETKQHTBindingSource;
+        private Siticone.UI.WinForms.SiticoneTextBox siticoneTextBox1;
+        private LollipopLabel lollipopLabel1;
+        private Siticone.UI.WinForms.SiticoneTextBox siticoneTextBox2;
+        private LollipopLabel lollipopLabel2;
     }
 }

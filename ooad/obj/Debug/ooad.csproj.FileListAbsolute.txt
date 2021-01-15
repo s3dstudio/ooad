@@ -383,3 +383,9 @@ C:\Users\Lenovo\Desktop\git\minhduc2\ooad\ooad\obj\Debug\ooad.exe
 C:\Users\Lenovo\Desktop\git\minhduc2\ooad\ooad\obj\Debug\ooad.pdb
 C:\Users\Lenovo\Desktop\git\minhduc2\ooad\ooad\obj\Debug\ooad.GUI.ThemKhoa.resources
 D:\Git\ooad\ooad\obj\Debug\ooad.GUI.ThemKhoa.resources
+C:\Users\Lenovo\Desktop\git\ooad\ooad\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lenovo\Desktop\git\ooad\ooad\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Lenovo\Desktop\git\ooad\ooad\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lenovo\Desktop\git\ooad\ooad\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Lenovo\Desktop\git\ooad\ooad\obj\Debug\ooad.GUI.ThemKhoa.resources
+C:\Users\Lenovo\Desktop\git\ooad\ooad\obj\Debug\ooad.GUI.User.resources
