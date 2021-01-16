@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,8 @@ namespace ooad.GUI
 {
     public partial class KHDT : MaterialForm
     {
+        private string _idKHDT;
+        public string tenKHDT { get; set; }
         public KHDT()
         {
             InitializeComponent();
@@ -26,6 +29,7 @@ namespace ooad.GUI
                 Primary.Blue500, Accent.LightBlue200,
                 TextShade.WHITE);
             dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.ReadOnly = true;
             //foreach (DataGridViewColumn col in dataGridView1.Columns)
             //{
             //    col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -82,17 +86,18 @@ namespace ooad.GUI
 
         public void LoadData(string id)
         {
+            _idKHDT = id;
             var jsonString = Client.Client.Instance.Get("api/chitietkhdt/getct/" + id);
             List<DTO.CHITIETKEHOACH> khdt = DTO.CHITIETKEHOACH.FromJson(jsonString);
 
             var bindingList = new BindingList<DTO.CHITIETKEHOACH>(khdt);
             var source = new BindingSource(bindingList, null);
 
+            tbMaKHDT.Text = id;
+            tbChuyennganh.Text = tenKHDT;
             if (khdt.Count > 0)
             {
-                label1.Text += "\t" + khdt[0].Idkhdt.ToString();
-                label2.Text += "\t" + khdt[0].Idhdt.ToString();
-                label3.Text += "\t" + khdt[0].Tenkhdt;
+                tbHDT.Text = khdt[0].Idhdt.ToString();
             }
 
             dataGridView1.DataSource = source;
@@ -105,7 +110,48 @@ namespace ooad.GUI
 
         private void siticoneGradientButton2_Click(object sender, EventArgs e)
         {
+            //if (beforeEdit != dataGridView1.Rows.Count)
+            {
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                {
+                    if (dataGridView1.Rows[i].Cells["idhocphan"].Value?.ToString() != "" && dataGridView1.Rows[i].Cells["idhocphan"].Value?.ToString() != "")
+                    {
+                        DTO.CHITIETKEHOACH ctkh = new DTO.CHITIETKEHOACH();
+
+                        var bytes = Guid.NewGuid().ToByteArray();
+                        Array.Resize(ref bytes, 2);
+                        var bigInt = new BigInteger(bytes);
+                        if (bigInt < 0)
+                            bigInt = -bigInt;
+
+                        ctkh.Idchitietkhdt = long.Parse(bigInt.ToString());
+                        ctkh.Idhdt = long.Parse(tbHDT.Text);
+                        ctkh.Idhocphan = dataGridView1.Rows[i].Cells["idhocphan"].Value?.ToString();
+                        ctkh.Idkhdt = long.Parse(_idKHDT);
+                        ctkh.Sotietlythuyet = long.Parse(dataGridView1.Rows[i].Cells["sotietlythuyet"].Value?.ToString());
+                        ctkh.Sotietthamquan = long.Parse(dataGridView1.Rows[i].Cells["sotietthamquan"].Value?.ToString());
+                        ctkh.Sotietthuchanh = long.Parse(dataGridView1.Rows[i].Cells["sotietthuchanh"].Value?.ToString());
+                        ctkh.Sotiettuhoc = long.Parse(dataGridView1.Rows[i].Cells["sotiettuhoc"].Value?.ToString());
+                        ctkh.Sotinchi = long.Parse(dataGridView1.Rows[i].Cells["sotinchi"].Value?.ToString());
+                        ctkh.Tenhocphan = dataGridView1.Rows[i].Cells["tenhocphan"].Value?.ToString();
+                        ctkh.Tenkhdt = this.tenKHDT;
+
+                        Client.Client.Instance.Post("api/chitietkhdt/post", ctkh);
+                    }
+
+                }
+            }
+
             this.Close();
+        }
+
+        private void btnSuaKHDT_Click(object sender, EventArgs e)
+        {
+            int beforeEdit = dataGridView1.Rows.Count;
+
+            dataGridView1.ReadOnly = false;
+            tbHDT.Enabled = true;
+            tbMaKHDT.Text = _idKHDT;  
         }
     }
 }

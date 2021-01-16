@@ -28,5 +28,7 @@ namespace ooad.DTO
 
         public static List<KHDT> FromJson(string json) => JsonConvert.DeserializeObject<List<KHDT>>(json, ooad.DTO.Converter.Settings);
 
+        public static KHDT FromJsonToObject(string json) => JsonConvert.DeserializeObject<KHDT>(json, ooad.DTO.Converter.Settings);
+
     }
 }

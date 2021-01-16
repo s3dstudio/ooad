@@ -34,16 +34,20 @@ namespace ooad.GUI
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cHITIETKEHOACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.siticoneGradientButton2 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.siticoneGradientButton1 = new Siticone.UI.WinForms.SiticoneGradientButton();
-            this.idhocphanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenhocphanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sotinchiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sotietlythuyetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sotietthuchanhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sotiettuhocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sotietthamquanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cHITIETKEHOACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbChuyennganh = new Siticone.UI.WinForms.SiticoneTextBox();
+            this.tbMaKHDT = new Siticone.UI.WinForms.SiticoneTextBox();
+            this.tbHDT = new Siticone.UI.WinForms.SiticoneTextBox();
+            this.btnSuaKHDT = new Siticone.UI.WinForms.SiticoneGradientButton();
+            this.idhocphan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenhocphan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sotinchi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sotietlythuyet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sotietthuchanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sotiettuhoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sotietthamquan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHITIETKEHOACHBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -51,16 +55,16 @@ namespace ooad.GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 89);
+            this.label1.Location = new System.Drawing.Point(42, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mã số: ";
+            this.label1.Text = "Mã KHDT: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 112);
+            this.label2.Location = new System.Drawing.Point(42, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 1;
@@ -83,13 +87,13 @@ namespace ooad.GUI
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idhocphanDataGridViewTextBoxColumn,
-            this.tenhocphanDataGridViewTextBoxColumn,
-            this.sotinchiDataGridViewTextBoxColumn,
-            this.sotietlythuyetDataGridViewTextBoxColumn,
-            this.sotietthuchanhDataGridViewTextBoxColumn,
-            this.sotiettuhocDataGridViewTextBoxColumn,
-            this.sotietthamquanDataGridViewTextBoxColumn});
+            this.idhocphan,
+            this.tenhocphan,
+            this.sotinchi,
+            this.sotietlythuyet,
+            this.sotietthuchanh,
+            this.sotiettuhoc,
+            this.sotietthamquan});
             this.dataGridView1.DataSource = this.cHITIETKEHOACHBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(45, 152);
             this.dataGridView1.Name = "dataGridView1";
@@ -97,6 +101,10 @@ namespace ooad.GUI
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             this.dataGridView1.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView1_CellPainting);
+            // 
+            // cHITIETKEHOACHBindingSource
+            // 
+            this.cHITIETKEHOACHBindingSource.DataSource = typeof(ooad.DTO.CHITIETKEHOACH);
             // 
             // siticoneGradientButton2
             // 
@@ -135,51 +143,147 @@ namespace ooad.GUI
             this.siticoneGradientButton1.Text = "Huỷ";
             this.siticoneGradientButton1.Click += new System.EventHandler(this.siticoneGradientButton1_Click);
             // 
-            // idhocphanDataGridViewTextBoxColumn
+            // tbChuyennganh
             // 
-            this.idhocphanDataGridViewTextBoxColumn.DataPropertyName = "Idhocphan";
-            this.idhocphanDataGridViewTextBoxColumn.HeaderText = "Mã học phần";
-            this.idhocphanDataGridViewTextBoxColumn.Name = "idhocphanDataGridViewTextBoxColumn";
+            this.tbChuyennganh.Animated = false;
+            this.tbChuyennganh.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbChuyennganh.DefaultText = "";
+            this.tbChuyennganh.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbChuyennganh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbChuyennganh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbChuyennganh.DisabledState.Parent = this.tbChuyennganh;
+            this.tbChuyennganh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbChuyennganh.Enabled = false;
+            this.tbChuyennganh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbChuyennganh.FocusedState.Parent = this.tbChuyennganh;
+            this.tbChuyennganh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbChuyennganh.ForeColor = System.Drawing.Color.Black;
+            this.tbChuyennganh.HoveredState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbChuyennganh.HoveredState.Parent = this.tbChuyennganh;
+            this.tbChuyennganh.Location = new System.Drawing.Point(131, 128);
+            this.tbChuyennganh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbChuyennganh.Name = "tbChuyennganh";
+            this.tbChuyennganh.PasswordChar = '\0';
+            this.tbChuyennganh.PlaceholderText = "";
+            this.tbChuyennganh.SelectedText = "";
+            this.tbChuyennganh.ShadowDecoration.Parent = this.tbChuyennganh;
+            this.tbChuyennganh.Size = new System.Drawing.Size(275, 21);
+            this.tbChuyennganh.TabIndex = 47;
             // 
-            // tenhocphanDataGridViewTextBoxColumn
+            // tbMaKHDT
             // 
-            this.tenhocphanDataGridViewTextBoxColumn.DataPropertyName = "Tenhocphan";
-            this.tenhocphanDataGridViewTextBoxColumn.HeaderText = "Tên học phần";
-            this.tenhocphanDataGridViewTextBoxColumn.Name = "tenhocphanDataGridViewTextBoxColumn";
+            this.tbMaKHDT.Animated = false;
+            this.tbMaKHDT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbMaKHDT.DefaultText = "";
+            this.tbMaKHDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbMaKHDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbMaKHDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbMaKHDT.DisabledState.Parent = this.tbMaKHDT;
+            this.tbMaKHDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbMaKHDT.Enabled = false;
+            this.tbMaKHDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbMaKHDT.FocusedState.Parent = this.tbMaKHDT;
+            this.tbMaKHDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMaKHDT.ForeColor = System.Drawing.Color.Black;
+            this.tbMaKHDT.HoveredState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbMaKHDT.HoveredState.Parent = this.tbMaKHDT;
+            this.tbMaKHDT.Location = new System.Drawing.Point(131, 67);
+            this.tbMaKHDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbMaKHDT.Name = "tbMaKHDT";
+            this.tbMaKHDT.PasswordChar = '\0';
+            this.tbMaKHDT.PlaceholderText = "";
+            this.tbMaKHDT.SelectedText = "";
+            this.tbMaKHDT.ShadowDecoration.Parent = this.tbMaKHDT;
+            this.tbMaKHDT.Size = new System.Drawing.Size(275, 25);
+            this.tbMaKHDT.TabIndex = 48;
             // 
-            // sotinchiDataGridViewTextBoxColumn
+            // tbHDT
             // 
-            this.sotinchiDataGridViewTextBoxColumn.DataPropertyName = "Sotinchi";
-            this.sotinchiDataGridViewTextBoxColumn.HeaderText = "Số tín chỉ";
-            this.sotinchiDataGridViewTextBoxColumn.Name = "sotinchiDataGridViewTextBoxColumn";
+            this.tbHDT.Animated = false;
+            this.tbHDT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbHDT.DefaultText = "";
+            this.tbHDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbHDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbHDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbHDT.DisabledState.Parent = this.tbHDT;
+            this.tbHDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbHDT.Enabled = false;
+            this.tbHDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbHDT.FocusedState.Parent = this.tbHDT;
+            this.tbHDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbHDT.ForeColor = System.Drawing.Color.Black;
+            this.tbHDT.HoveredState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbHDT.HoveredState.Parent = this.tbHDT;
+            this.tbHDT.Location = new System.Drawing.Point(131, 97);
+            this.tbHDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbHDT.Name = "tbHDT";
+            this.tbHDT.PasswordChar = '\0';
+            this.tbHDT.PlaceholderText = "";
+            this.tbHDT.SelectedText = "";
+            this.tbHDT.ShadowDecoration.Parent = this.tbHDT;
+            this.tbHDT.Size = new System.Drawing.Size(275, 25);
+            this.tbHDT.TabIndex = 49;
             // 
-            // sotietlythuyetDataGridViewTextBoxColumn
+            // btnSuaKHDT
             // 
-            this.sotietlythuyetDataGridViewTextBoxColumn.DataPropertyName = "Sotietlythuyet";
-            this.sotietlythuyetDataGridViewTextBoxColumn.HeaderText = "Số tín chỉ LT";
-            this.sotietlythuyetDataGridViewTextBoxColumn.Name = "sotietlythuyetDataGridViewTextBoxColumn";
+            this.btnSuaKHDT.BorderRadius = 10;
+            this.btnSuaKHDT.CheckedState.Parent = this.btnSuaKHDT;
+            this.btnSuaKHDT.CustomImages.Parent = this.btnSuaKHDT;
+            this.btnSuaKHDT.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnSuaKHDT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSuaKHDT.ForeColor = System.Drawing.Color.White;
+            this.btnSuaKHDT.HoveredState.Parent = this.btnSuaKHDT;
+            this.btnSuaKHDT.Location = new System.Drawing.Point(642, 115);
+            this.btnSuaKHDT.Name = "btnSuaKHDT";
+            this.btnSuaKHDT.ShadowDecoration.Parent = this.btnSuaKHDT;
+            this.btnSuaKHDT.Size = new System.Drawing.Size(112, 34);
+            this.btnSuaKHDT.TabIndex = 50;
+            this.btnSuaKHDT.Text = "Sửa KHĐT";
+            this.btnSuaKHDT.Click += new System.EventHandler(this.btnSuaKHDT_Click);
             // 
-            // sotietthuchanhDataGridViewTextBoxColumn
+            // idhocphan
             // 
-            this.sotietthuchanhDataGridViewTextBoxColumn.DataPropertyName = "Sotietthuchanh";
-            this.sotietthuchanhDataGridViewTextBoxColumn.HeaderText = "Số tín chỉ TH";
-            this.sotietthuchanhDataGridViewTextBoxColumn.Name = "sotietthuchanhDataGridViewTextBoxColumn";
+            this.idhocphan.DataPropertyName = "Idhocphan";
+            this.idhocphan.HeaderText = "Mã học phần";
+            this.idhocphan.Name = "idhocphan";
+            this.idhocphan.ReadOnly = true;
+            this.idhocphan.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // sotiettuhocDataGridViewTextBoxColumn
+            // tenhocphan
             // 
-            this.sotiettuhocDataGridViewTextBoxColumn.DataPropertyName = "Sotiettuhoc";
-            this.sotiettuhocDataGridViewTextBoxColumn.HeaderText = "Số tín chỉ Tự học";
-            this.sotiettuhocDataGridViewTextBoxColumn.Name = "sotiettuhocDataGridViewTextBoxColumn";
+            this.tenhocphan.DataPropertyName = "Tenhocphan";
+            this.tenhocphan.HeaderText = "Tên học phần";
+            this.tenhocphan.Name = "tenhocphan";
             // 
-            // sotietthamquanDataGridViewTextBoxColumn
+            // sotinchi
             // 
-            this.sotietthamquanDataGridViewTextBoxColumn.DataPropertyName = "Sotietthamquan";
-            this.sotietthamquanDataGridViewTextBoxColumn.HeaderText = "Số tín chỉ tham quan";
-            this.sotietthamquanDataGridViewTextBoxColumn.Name = "sotietthamquanDataGridViewTextBoxColumn";
+            this.sotinchi.DataPropertyName = "Sotinchi";
+            this.sotinchi.HeaderText = "Số tín chỉ";
+            this.sotinchi.Name = "sotinchi";
             // 
-            // cHITIETKEHOACHBindingSource
+            // sotietlythuyet
             // 
-            this.cHITIETKEHOACHBindingSource.DataSource = typeof(ooad.DTO.CHITIETKEHOACH);
+            this.sotietlythuyet.DataPropertyName = "Sotietlythuyet";
+            this.sotietlythuyet.HeaderText = "Số tín chỉ LT";
+            this.sotietlythuyet.Name = "sotietlythuyet";
+            // 
+            // sotietthuchanh
+            // 
+            this.sotietthuchanh.DataPropertyName = "Sotietthuchanh";
+            this.sotietthuchanh.HeaderText = "Số tín chỉ TH";
+            this.sotietthuchanh.Name = "sotietthuchanh";
+            // 
+            // sotiettuhoc
+            // 
+            this.sotiettuhoc.DataPropertyName = "Sotiettuhoc";
+            this.sotiettuhoc.HeaderText = "Số tín chỉ Tự học";
+            this.sotiettuhoc.Name = "sotiettuhoc";
+            // 
+            // sotietthamquan
+            // 
+            this.sotietthamquan.DataPropertyName = "Sotietthamquan";
+            this.sotietthamquan.HeaderText = "Số tín chỉ tham quan";
+            this.sotietthamquan.Name = "sotietthamquan";
             // 
             // KHDT
             // 
@@ -187,6 +291,10 @@ namespace ooad.GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 568);
+            this.Controls.Add(this.btnSuaKHDT);
+            this.Controls.Add(this.tbHDT);
+            this.Controls.Add(this.tbMaKHDT);
+            this.Controls.Add(this.tbChuyennganh);
             this.Controls.Add(this.siticoneGradientButton2);
             this.Controls.Add(this.siticoneGradientButton1);
             this.Controls.Add(this.dataGridView1);
@@ -211,13 +319,17 @@ namespace ooad.GUI
         private System.Windows.Forms.DataGridView dataGridView1;
         private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton2;
         private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idhocphanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenhocphanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sotinchiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sotietlythuyetDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sotietthuchanhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sotiettuhocDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sotietthamquanDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource cHITIETKEHOACHBindingSource;
+        private Siticone.UI.WinForms.SiticoneTextBox tbChuyennganh;
+        private Siticone.UI.WinForms.SiticoneTextBox tbMaKHDT;
+        private Siticone.UI.WinForms.SiticoneTextBox tbHDT;
+        private Siticone.UI.WinForms.SiticoneGradientButton btnSuaKHDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idhocphan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenhocphan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sotinchi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sotietlythuyet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sotietthuchanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sotiettuhoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sotietthamquan;
     }
 }

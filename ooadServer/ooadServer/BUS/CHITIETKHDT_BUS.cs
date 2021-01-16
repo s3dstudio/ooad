@@ -42,17 +42,6 @@ namespace ooadServer.BUS
                              sotietthamquan = hp.sotietthamquan
                          }).ToList();
 
-            //List<CHITIETKEHOACH> result = new List<CHITIETKEHOACH>();
-
-            //foreach (var item in query)
-            //{
-            //    CHITIETKEHOACH temp = new CHITIETKEHOACH();
-
-            //    temp.idchitietkhdt = item.idchitietkhdt;
-            //    temp.idkhdt = item.idkhdt;
-            //    temp.idhdt = temp.
-            //}
-
             return query;
 
         }

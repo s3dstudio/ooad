@@ -35,8 +35,9 @@ namespace ooad.GUI
         public void khdt_load (object sender, EventArgs args)
         {
             KHDT k = new KHDT();
-            k.LoadData(idCTKHDT);
+            k.tenKHDT = this.tempM;
             k.Text = this.tempM;
+            k.LoadData(idCTKHDT);
             k.Show();
             //siticoneButton8.Hide();
         }
