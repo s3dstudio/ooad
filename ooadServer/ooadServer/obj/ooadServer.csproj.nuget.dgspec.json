@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Git\\ooad\\ooadServer\\ooadServer\\ooadServer.csproj": {}
+    "C:\\Users\\LENOVO\\Desktop\\ooad\\ooadServer\\ooadServer\\ooadServer.csproj": {}
   },
   "projects": {
-    "D:\\Git\\ooad\\ooadServer\\ooadServer\\ooadServer.csproj": {
+    "C:\\Users\\LENOVO\\Desktop\\ooad\\ooadServer\\ooadServer\\ooadServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git\\ooad\\ooadServer\\ooadServer\\ooadServer.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\ooad\\ooadServer\\ooadServer\\ooadServer.csproj",
         "projectName": "ooadServer",
-        "projectPath": "D:\\Git\\ooad\\ooadServer\\ooadServer\\ooadServer.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\Desktop\\ooad\\ooadServer\\ooadServer\\ooadServer.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "D:\\Git\\ooad\\ooadServer\\ooadServer\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\Desktop\\ooad\\ooadServer\\ooadServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",

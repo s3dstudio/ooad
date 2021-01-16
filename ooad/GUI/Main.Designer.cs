@@ -38,7 +38,6 @@ namespace ooad.GUI
             this.siticoneGradientButton2 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.siticoneCircleButton1 = new Siticone.UI.WinForms.SiticoneCircleButton();
             this.siticoneLabel2 = new Siticone.UI.WinForms.SiticoneLabel();
-            this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneCirclePictureBox1 = new Siticone.UI.WinForms.SiticoneCirclePictureBox();
             this.siticoneButton4 = new Siticone.UI.WinForms.SiticoneButton();
             this.siticoneButton5 = new Siticone.UI.WinForms.SiticoneButton();
@@ -48,21 +47,19 @@ namespace ooad.GUI
             this.siticonePanel2 = new Siticone.UI.WinForms.SiticonePanel();
             this.siticoneDragControl1 = new Siticone.UI.WinForms.SiticoneDragControl(this.components);
             this.siticonePanel3 = new Siticone.UI.WinForms.SiticonePanel();
-            this.siticoneButton8 = new Siticone.UI.WinForms.SiticoneButton();
             this.siticoneCircleButton2 = new Siticone.UI.WinForms.SiticoneCircleButton();
             this.siticoneButton6 = new Siticone.UI.WinForms.SiticoneButton();
             this.siticoneButton7 = new Siticone.UI.WinForms.SiticoneButton();
+            this.User = new System.Windows.Forms.LinkLabel();
             this.khdt1 = new ooad.UC.KHDT();
             this.pcgd1 = new ooad.UC.PCGD();
-            this.kqht1 = new ooad.UC.KQHT();
             this.hp1 = new ooad.UC.HP();
             this.createKHDT1 = new ooad.UC.CreateKHDT();
             this.duyetKHDT1 = new ooad.UC.DuyetKHDT();
             this.tkB_DEV1 = new ooad.UC.TKB_DEV();
-           
-
             this.roundButton2 = new ooad.Controls.RoundButton();
             this.roundButton1 = new ooad.Controls.RoundButton();
+            this.kqht1 = new ooad.UC.KQHT();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneCirclePictureBox1)).BeginInit();
             this.siticonePanel3.SuspendLayout();
@@ -82,10 +79,10 @@ namespace ooad.GUI
             // siticonePanel1
             // 
             this.siticonePanel1.BorderRadius = 20;
+            this.siticonePanel1.Controls.Add(this.User);
             this.siticonePanel1.Controls.Add(this.siticoneGradientButton2);
             this.siticonePanel1.Controls.Add(this.siticoneCircleButton1);
             this.siticonePanel1.Controls.Add(this.siticoneLabel2);
-            this.siticonePanel1.Controls.Add(this.siticoneLabel1);
             this.siticonePanel1.Controls.Add(this.siticoneCirclePictureBox1);
             this.siticonePanel1.Controls.Add(this.siticoneButton4);
             this.siticonePanel1.Controls.Add(this.siticoneButton5);
@@ -148,17 +145,6 @@ namespace ooad.GUI
             this.siticoneLabel2.TabIndex = 19;
             this.siticoneLabel2.Text = "Student";
             // 
-            // siticoneLabel1
-            // 
-            this.siticoneLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneLabel1.Location = new System.Drawing.Point(73, 555);
-            this.siticoneLabel1.Name = "siticoneLabel1";
-            this.siticoneLabel1.Size = new System.Drawing.Size(41, 17);
-            this.siticoneLabel1.TabIndex = 19;
-            this.siticoneLabel1.Text = "User1";
-            this.siticoneLabel1.Click += new System.EventHandler(this.siticoneLabel1_Click);
-            // 
             // siticoneCirclePictureBox1
             // 
             this.siticoneCirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("siticoneCirclePictureBox1.Image")));
@@ -198,6 +184,7 @@ namespace ooad.GUI
             this.siticoneButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.siticoneButton4.TextOffset = new System.Drawing.Point(15, 0);
             this.siticoneButton4.CheckedChanged += new System.EventHandler(this.siticoneButton4_CheckedChanged);
+            this.siticoneButton4.Click += new System.EventHandler(this.siticoneButton4_Click);
             // 
             // siticoneButton5
             // 
@@ -330,13 +317,11 @@ namespace ooad.GUI
             this.siticonePanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.siticonePanel3.Controls.Add(this.siticoneButton8);
             this.siticonePanel3.Controls.Add(this.siticoneCircleButton2);
             this.siticonePanel3.Controls.Add(this.siticoneButton6);
             this.siticonePanel3.Controls.Add(this.siticoneButton7);
             this.siticonePanel3.Controls.Add(this.khdt1);
             this.siticonePanel3.Controls.Add(this.pcgd1);
-            this.siticonePanel3.Controls.Add(this.kqht1);
             this.siticonePanel3.Controls.Add(this.hp1);
             this.siticonePanel3.Controls.Add(this.createKHDT1);
             this.siticonePanel3.Controls.Add(this.duyetKHDT1);
@@ -346,22 +331,6 @@ namespace ooad.GUI
             this.siticonePanel3.ShadowDecoration.Parent = this.siticonePanel3;
             this.siticonePanel3.Size = new System.Drawing.Size(894, 604);
             this.siticonePanel3.TabIndex = 20;
-            // 
-            // siticoneButton8
-            // 
-            this.siticoneButton8.CheckedState.Parent = this.siticoneButton8;
-            this.siticoneButton8.CustomImages.Parent = this.siticoneButton8;
-            this.siticoneButton8.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
-            this.siticoneButton8.HoveredState.Parent = this.siticoneButton8;
-            this.siticoneButton8.Location = new System.Drawing.Point(528, 20);
-            this.siticoneButton8.Name = "siticoneButton8";
-            this.siticoneButton8.ShadowDecoration.Parent = this.siticoneButton8;
-            this.siticoneButton8.Size = new System.Drawing.Size(88, 45);
-            this.siticoneButton8.TabIndex = 13;
-            this.siticoneButton8.Text = "KHDT MỚI";
-            this.siticoneButton8.Click += new System.EventHandler(this.siticoneButton8_Click);
             // 
             // siticoneCircleButton2
             // 
@@ -411,6 +380,19 @@ namespace ooad.GUI
             this.siticoneButton7.Text = "TẠO MỚI";
             this.siticoneButton7.Click += new System.EventHandler(this.siticoneButton7_Click);
             // 
+            // User
+            // 
+            this.User.AutoSize = true;
+            this.User.LinkColor = System.Drawing.Color.Black;
+            this.User.Location = new System.Drawing.Point(71, 554);
+            this.User.Name = "User";
+            this.User.Size = new System.Drawing.Size(29, 13);
+            this.User.TabIndex = 26;
+            this.User.TabStop = true;
+            this.User.Text = "User";
+            this.User.VisitedLinkColor = System.Drawing.Color.Black;
+            this.User.Click += new System.EventHandler(this.User_Click);
+            // 
             // khdt1
             // 
             this.khdt1.BackColor = System.Drawing.Color.White;
@@ -419,7 +401,7 @@ namespace ooad.GUI
             this.khdt1.Name = "khdt1";
             this.khdt1.Size = new System.Drawing.Size(894, 604);
             this.khdt1.TabIndex = 0;
-            this.khdt1.Load += new System.EventHandler(this.khdt1_Load);
+            //this.khdt1.Load += new System.EventHandler(this.khdt1_Load);
             // 
             // pcgd1
             // 
@@ -429,15 +411,6 @@ namespace ooad.GUI
             this.pcgd1.Name = "pcgd1";
             this.pcgd1.Size = new System.Drawing.Size(894, 604);
             this.pcgd1.TabIndex = 3;
-            // 
-            // kqht1
-            // 
-            this.kqht1.BackColor = System.Drawing.Color.White;
-            this.kqht1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kqht1.Location = new System.Drawing.Point(0, 0);
-            this.kqht1.Name = "kqht1";
-            this.kqht1.Size = new System.Drawing.Size(894, 604);
-            this.kqht1.TabIndex = 2;
             // 
             // hp1
             // 
@@ -500,6 +473,15 @@ namespace ooad.GUI
             this.roundButton1.UseVisualStyleBackColor = false;
             this.roundButton1.Click += new System.EventHandler(this.roundButton1_Click);
             // 
+            // kqht1
+            // 
+            this.kqht1.BackColor = System.Drawing.Color.White;
+            this.kqht1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kqht1.Location = new System.Drawing.Point(0, 0);
+            this.kqht1.Name = "kqht1";
+            this.kqht1.Size = new System.Drawing.Size(894, 604);
+            this.kqht1.TabIndex = 2;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -540,7 +522,6 @@ namespace ooad.GUI
         private Siticone.UI.WinForms.SiticoneCirclePictureBox siticoneCirclePictureBox1;
         private Siticone.UI.WinForms.SiticoneCircleButton siticoneCircleButton1;
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel2;
-        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel1;
         private Siticone.UI.WinForms.SiticonePanel siticonePanel2;
         private Siticone.UI.WinForms.SiticoneDragControl siticoneDragControl1;
         private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton2;
@@ -555,6 +536,6 @@ namespace ooad.GUI
         private UC.CreateKHDT createKHDT1;
         private UC.DuyetKHDT duyetKHDT1;
         private UC.TKB_DEV tkB_DEV1;
-        private Siticone.UI.WinForms.SiticoneButton siticoneButton8;
+        private System.Windows.Forms.LinkLabel User;
     }
 }

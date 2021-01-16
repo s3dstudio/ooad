@@ -8,6 +8,7 @@ namespace ooadServer.DTO
     public class DKHP
     {
         public string idnhomlop { get; set; }
+        public string idhocphan { get; set; }
         public string tenhocphan { get; set; }
         public string khoaquanly { get; set; }
         public int sotinchi { get; set; }
@@ -16,5 +17,7 @@ namespace ooadServer.DTO
         public int tietbatdau { get; set; }
         public int tietketthuc { get; set; }
         public int idtkbnhomlop { get; set; }
+        public string hocky { get; set; }
+        public string thoigianmo { get; set; }
     }
 }

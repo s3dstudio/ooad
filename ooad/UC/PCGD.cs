@@ -18,6 +18,12 @@ namespace ooad.UC
         {
             InitializeComponent();
 
+            
+
+        }
+        public void LoadData()
+        {
+
             var jsonString = Client.Client.Instance.Get("api/NHOMLOP/get");
             _listNhomlop = NHOMLOP.FromJson(jsonString);
 
@@ -25,9 +31,7 @@ namespace ooad.UC
             var source = new BindingSource(bindingList, null);
 
             siticoneDataGridView1.DataSource = source;
-
         }
-
         private void siticoneButton1_Click(object sender, EventArgs e)
         {
             uC_DKGD1.Show();

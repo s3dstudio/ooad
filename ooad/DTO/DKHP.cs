@@ -12,6 +12,8 @@ namespace ooad.DTO
 
         [JsonProperty("idnhomlop")]
         public string Idnhomlop { get; set; }
+        [JsonProperty("idhocphan")]
+        public string Idhocphan { get; set; }
 
         [JsonProperty("tenhocphan")]
         public string Tenhocphan { get; set; }
@@ -35,6 +37,10 @@ namespace ooad.DTO
         public long Tietketthuc { get; set; }
         [JsonProperty("idtkbnhomlop")]
         public long Idtkbnhomlop { get; set; }
+        [JsonProperty("hocky")]
+        public string Hocky { get; set; }
+        [JsonProperty("thoigianmo")]
+        public DateTimeOffset Thoigianmo { get; set; }
 
         public static List<DKHP> FromJson(string json) => JsonConvert.DeserializeObject<List<DKHP>>(json, Converter.Settings);
 

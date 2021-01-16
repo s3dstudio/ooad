@@ -40,11 +40,18 @@ namespace ooad.UC
         long dem =0 ;
         private void siticoneGradientButton2_Click(object sender, EventArgs e)
         {
+
             var jsonString = Client.Client.Instance.Get("api/hocphan/dkhp/getdata/" + Client.User.Instance.iduser);
             List<DTO.DKHP> dkhpdata = DTO.DKHP.FromJson(jsonString);
+            int hocky = 1;
+            if (1 < DateTime.Now.Month && DateTime.Now.Month < 6)
+                hocky = 2;
+            else if (6 < DateTime.Now.Month && DateTime.Now.Month < 8)
+                hocky = 3;
             
             for(int i =0; i < dkhpdata.Count(); i++)
             {
+                if(dkhpdata[i].Thoigianmo.Year == DateTime.Now.Year && dkhpdata[i].Hocky == hocky.ToString())
                 dem += dkhpdata[i].Sotinchi;
             }
 
@@ -58,6 +65,10 @@ namespace ooad.UC
                     dem += long.Parse(dem1);
                 }
             }
+
+
+            string hpdadangky = "";
+            bool showMessage = false;
 
             if( dem > 24) {
                 MessageBox.Show("vượt quá 24 tín chỉ");
@@ -87,13 +98,32 @@ namespace ooad.UC
                         dkhp.Idsv = Client.User.Instance.iduser;
                         dkhp.Idtkbnhomlop = query.Idtkbnhomlop;
 
+                        bool post = true;
+                        foreach (var item in _listDkhp)
+                        {
+                            if(id == item.Idnhomlop)
+                            {
+                                foreach(var data in dkhpdata)
+                                {
+                                    if (item.Idhocphan == data.Idhocphan)
+                                    {
+                                        post = false;
+                                        hpdadangky += item.Tenhocphan +"\n";
+                                        showMessage = true;
+                                    }
+                                }
+                            }
+                        }
 
-                        Client.Client.Instance.Post("api/dkhpdata/post", dkhp);
+                        if(post)
+                            Client.Client.Instance.Post("api/dkhpdata/post", dkhp);
                         //Console.WriteLine("iddkp = {0}, idtkbnl = {1} \n", dkhp.Iddkhp,dkhp.Idtkbnhomlop);
                     }
                 }
             }
-           
+
+            if (showMessage)
+                MessageBox.Show("Học phần "+ hpdadangky + " đã được đăng ký trước đó");
 
             _hp.LoadData();
 

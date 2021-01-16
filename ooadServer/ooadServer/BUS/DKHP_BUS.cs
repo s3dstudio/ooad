@@ -39,7 +39,10 @@ namespace ooadServer.BUS
                               thu = tkbnl.thu,
                               tietbatdau = tkbnl.tietbatdau,
                               tietketthuc = tkbnl.tietketthuc,
-                              idtkbnhomlop = tkbnl.idtkbnhomlop
+                              idtkbnhomlop = tkbnl.idtkbnhomlop,
+                              hocky = tkbnl.hocky,
+                              thoigianmo = nl.thoigianmo,
+                              idhocphan = hp.idhocphan
                               
                           }
                 ).ToList();
@@ -72,7 +75,10 @@ namespace ooadServer.BUS
                              thu = tkbnl.thu,
                              tietbatdau = tkbnl.tietbatdau,
                              tietketthuc = tkbnl.tietketthuc,
-                             idtkbnhomlop = tkbnl.idtkbnhomlop
+                             idtkbnhomlop = tkbnl.idtkbnhomlop,
+                             hocky = tkbnl.hocky,
+                             thoigianmo = nl.thoigianmo,
+                             idhocphan = hp.idhocphan
                          }
                 ).ToList();
 

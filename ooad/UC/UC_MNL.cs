@@ -18,6 +18,32 @@ namespace ooad.UC
         private string jsonString,jsonString1, jsonString2, jsonString3;
 
         private List<ComboBox> _listCombobox,_listCombobox1,_listCombobox2,_listCombobox3;
+
+        private void siticoneRoundedComboBox1_DisplayMemberChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void siticoneRoundedComboBox1_BindingContextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void siticoneRoundedComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<HOCPHAN> hp = HOCPHAN.FromJson(jsonString);
+            foreach(var item in hp)
+            {
+                if (item.Idhocphan == siticoneRoundedComboBox1.Text)
+                {
+                    siticoneRoundedComboBox5.Text = item.Tenhocphan;
+                    break;
+                }
+
+            }
+            
+        }
+
         public UC_MNL()
         {
             InitializeComponent();
@@ -27,6 +53,10 @@ namespace ooad.UC
             siticoneRoundedComboBox1.DataSource = HOCPHAN.FromJson(jsonString);
             siticoneRoundedComboBox1.ValueMember = "idhocphan";
             siticoneRoundedComboBox1.DisplayMember = "idhocphan";
+
+            siticoneRoundedComboBox5.DataSource = HOCPHAN.FromJson(jsonString);
+            siticoneRoundedComboBox5.ValueMember = "idhocphan";
+            siticoneRoundedComboBox5.DisplayMember = "tenhocphan";
 
             _listCombobox = new List<ComboBox>();
             _listCombobox.Add(siticoneRoundedComboBox1);
@@ -75,7 +105,7 @@ namespace ooad.UC
 
             nhomlop.Idnhomlop = lollipopTextBox4.Text;
             nhomlop.Idhocphan = siticoneRoundedComboBox1.Text;
-            nhomlop.Ten = lollipopTextBox2.Text;
+            nhomlop.Ten = siticoneRoundedComboBox5.Text;
             nhomlop.Thoigianmo = DateTimeOffset.Parse(lollipopTextBox3.Text);
 
             var bytes = Guid.NewGuid().ToByteArray();
@@ -86,7 +116,7 @@ namespace ooad.UC
 
             DTO.TKBNHOMLOP tkbnl = new DTO.TKBNHOMLOP();
             tkbnl.Hocky = lollipopTextBox5.Text;
-            tkbnl.Idgiangvien = long.Parse(siticoneRoundedComboBox2.ValueMember);
+            tkbnl.Idgiangvien = long.Parse(siticoneRoundedComboBox2.Text);
             tkbnl.Idnhomlop = lollipopTextBox4.Text;
             tkbnl.Idphonglt = long.Parse(siticoneRoundedComboBox4.Text);
             tkbnl.Idphongth = long.Parse(siticoneRoundedComboBox4.Text);
@@ -94,7 +124,7 @@ namespace ooad.UC
             tkbnl.Thu = long.Parse(lollipopTextBox7.Text);
             tkbnl.Tietbatdau = long.Parse(lollipopTextBox6.Text);
             tkbnl.Tietketthuc = long.Parse(lollipopTextBox11.Text);
-            tkbnl.Tuan = "1,2,3,4,5";
+            tkbnl.Tuan = "1,2,3,4,5,6,7,8,9,10";
 
             Client.Client.Instance.Post("api/nhomlop/post", nhomlop);
             Client.Client.Instance.Post("api/tkbnhomlop/post", tkbnl);

@@ -35,18 +35,24 @@ namespace ooad.UC
                 siticoneDataGridView1.Rows[i - 1].Cells["tiet"].Value = "Tiết " + i;
             }
 
+
+        }
+        public void LoadData()
+        {
+            if (_listTKBData != null) return;
+
             var jsonString = Client.Client.Instance.Get("api/TKB/get/" + Client.User.Instance.iduser);
             _listTKBData = TKB.FromJson(jsonString);
 
-            foreach(var item in _listTKBData)
+            foreach (var item in _listTKBData)
             {
-                for (int tiet = (int)item.Tietbatdau ; tiet <= item.Tietketthuc; tiet++)
+                for (int tiet = (int)item.Tietbatdau; tiet <= item.Tietketthuc; tiet++)
                 {
                     string value = item.Idnhomlop + Environment.NewLine + item.Tennhomlop + Environment.NewLine + item.Thoigianmo.ToString();
 
                     siticoneDataGridView1[(int)item.Thu, tiet].Value = value;
                     siticoneDataGridView1.Columns[(int)item.Thu].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-                   // siticoneDataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                    // siticoneDataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
 
                     //if (IsTheSameCellValue((int)item.Thu, tiet + 1))
                     //{
@@ -54,9 +60,6 @@ namespace ooad.UC
                     //}
                 }
             }
-
-           
-            
         }
         public bool IsTheSameCellValue(in int column,in int row)
         {

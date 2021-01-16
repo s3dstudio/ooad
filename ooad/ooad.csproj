@@ -129,6 +129,7 @@
     <Compile Include="DTO\GIANGVIEN.cs" />
     <Compile Include="DTO\HOCPHAN.cs" />
     <Compile Include="DTO\KHDT.cs" />
+    <Compile Include="DTO\KHOA.cs" />
     <Compile Include="DTO\KHOAHOC.cs" />
     <Compile Include="DTO\NHOMLOP.cs" />
     <Compile Include="DTO\PHONGHOC.cs" />

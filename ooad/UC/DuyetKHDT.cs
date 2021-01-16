@@ -30,7 +30,7 @@ namespace ooad.UC
 
         private void DuyetKHDT_Load(object sender, EventArgs e)
         {
-            LoadData();
+            //LoadData();
         }
 
         private void siticoneGradientButton2_Click(object sender, EventArgs e)

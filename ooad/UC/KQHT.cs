@@ -12,30 +12,45 @@ namespace ooad.UC
 {
     public partial class KQHT : UserControl   
     {
-        private double dtb= 0 ,tong = 0.0;
+        private double DTB = 0.0;
+        private int TongTinChi = 0;
+
         public KQHT()
         {
             InitializeComponent();
+        }
 
+        public void LoadData()
+        {
             var jsonString = Client.Client.Instance.Get("api/ketquahoctap/getbyusername/" + Client.User.Instance.userName);
             List<DTO.CHITIETKQHT> listChitiet = DTO.CHITIETKQHT.FromJson(jsonString);
 
             siticoneDataGridView1.DataSource = listChitiet;
 
+            double tong = 0.0;
             int count = listChitiet.Count();
-            for (i = 0; i < count; i++)
+            for (int i = 0; i < count; i++)
             {
                 tong += listChitiet[i].Ketqua;
+                if (listChitiet[i].Ketqua >= 5)
+                    TongTinChi += (int)listChitiet[i].Sotinchi;
 
             }
-            dtb = Math.Round((tong / count),1);
+            DTB = Math.Round((tong / count), 1);
 
-            siticoneTextBox1.Text = dtb.ToString();
+            siticoneTextBox1.Text = DTB.ToString();
+            siticoneTextBox2.Text = TongTinChi.ToString();
+        }
+
+        private void siticonePanel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 
-
-        int i;
+        private void KQHT_Load(object sender, EventArgs e)
+        {
+           LoadData();
+        }
     }
     
 }

@@ -37,6 +37,35 @@ namespace ooad.GUI
                 siticoneRoundedTextBox6.Enabled = false;
                 siticoneRoundedTextBox7.Enabled = false;
             }
+
+
+            siticoneRoundedTextBox1.Text = Client.User.Instance.hoten;
+            siticoneRoundedTextBox2.Text = Client.User.Instance.userName;
+            siticoneRoundedTextBox3.Text = Client.User.Instance.ngaysinh;
+            siticoneRoundedTextBox4.Text = Client.User.Instance.gioitinh;
+            siticoneRoundedTextBox6.Text = Client.User.Instance.hktt;
+            siticoneRoundedTextBox7.Text = Client.User.Instance.KTX;
+
+            var jsonString = Client.Client.Instance.Get("api/KHOA/get");
+            List<DTO.KHOA> khoa = DTO.KHOA.FromJson(jsonString);
+            foreach (var item in khoa)
+            {
+                if (item.Idkhoa == Client.User.Instance.idkhoa)
+                {
+                    siticoneRoundedTextBox5.Text = item.Tenkhoa;
+                    break;
+                }
+            }
+        }
+
+        private void siticoneGradientButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void siticoneGradientButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

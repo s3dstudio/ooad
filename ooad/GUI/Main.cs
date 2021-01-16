@@ -38,7 +38,7 @@ namespace ooad.GUI
             k.LoadData(idCTKHDT);
             k.Text = this.tempM;
             k.Show();
-            siticoneButton8.Hide();
+            //siticoneButton8.Hide();
         }
         public void LoadNumberOfDuyet()
         {
@@ -62,7 +62,7 @@ namespace ooad.GUI
             siticoneShadowForm1.SetShadowForm(this);
 
             LoadNumberOfDuyet();
-            siticoneLabel1.Text = Client.User.Instance.hoten;
+            User.Text = Client.User.Instance.hoten;
             
         }
 
@@ -90,7 +90,11 @@ namespace ooad.GUI
 
         private void siticoneButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if (siticoneButton2.Checked) pcgd1.BringToFront();
+            if (siticoneButton2.Checked)
+            {
+                pcgd1.LoadData();
+                pcgd1.BringToFront();
+            }
         }
 
         private void siticoneButton3_CheckedChanged(object sender, EventArgs e)
@@ -98,36 +102,29 @@ namespace ooad.GUI
             if (siticoneButton3.Checked)
             {
                 //tkb1.BringToFront();
+                tkB_DEV1.LoadData();
                 tkB_DEV1.BringToFront();
             }
         }
 
         private void siticoneButton4_CheckedChanged(object sender, EventArgs e)
         {
-            if (siticoneButton4.Checked) kqht1.BringToFront();
+            if (siticoneButton4.Checked)
+            {
+                kqht1.LoadData();
+                kqht1.BringToFront();
+            }
         }
 
         private void siticoneButton5_CheckedChanged(object sender, EventArgs e)
         {
-            if (siticoneButton5.Checked) hp1.BringToFront();
+            if (siticoneButton5.Checked)
+            {
+                hp1.LoadData();
+                hp1.BringToFront();
+            }
         }
         
-        
-        private void uC_Component1_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void khdt1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void siticoneButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void siticoneButton7_Click(object sender, EventArgs e)
         {
             createKHDT1.SetDuyetKHDTUC(duyetKHDT1);
@@ -137,7 +134,7 @@ namespace ooad.GUI
 
         private void siticoneButton6_Click(object sender, EventArgs e)
         {
-            //duyetKHDT1.LoadData();
+            duyetKHDT1.LoadData();
             duyetKHDT1.SetKHDTUC(khdt1);
             duyetKHDT1.SetMainForm(this);
             duyetKHDT1.BringToFront();
@@ -155,9 +152,16 @@ namespace ooad.GUI
 
         }
 
-        private void siticoneLabel1_Click(object sender, EventArgs e)
+
+        private void User_Click(object sender, EventArgs e)
         {
-           
+            GUI.User userForm = new User();
+            userForm.Show();
+        }
+
+        private void siticoneButton4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

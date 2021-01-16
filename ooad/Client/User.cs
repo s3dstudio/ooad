@@ -39,6 +39,7 @@ namespace ooad.Client
         public string gioitinh { get; set; }
         public string hktt { get; set; }
         public int idkhoa { get; set; }
+        public string KTX { get; set; }
 
 
         

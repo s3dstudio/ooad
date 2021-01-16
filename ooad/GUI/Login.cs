@@ -74,6 +74,8 @@ namespace ooad.GUI
                     Client.User.Instance.hktt = sv.Hktt;
                     Client.User.Instance.idkhoa = (int)sv.Idkhoa;
                     Client.User.Instance.idrole = (int)users.Idrole;
+                    Client.User.Instance.ngaysinh = sv.Ngaysinh;
+                    Client.User.Instance.KTX = sv.Ktx;
 
                     GUI.Main main = new Main();
 

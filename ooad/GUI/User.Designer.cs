@@ -339,6 +339,7 @@ namespace ooad.GUI
             this.siticoneGradientButton2.TabIndex = 50;
             this.siticoneGradientButton2.Text = "Đồng ý";
             this.siticoneGradientButton2.UseTransparentBackground = true;
+            this.siticoneGradientButton2.Click += new System.EventHandler(this.siticoneGradientButton2_Click);
             // 
             // siticoneGradientButton1
             // 
@@ -360,6 +361,7 @@ namespace ooad.GUI
             this.siticoneGradientButton1.TabIndex = 49;
             this.siticoneGradientButton1.Text = "Huỷ";
             this.siticoneGradientButton1.UseTransparentBackground = true;
+            this.siticoneGradientButton1.Click += new System.EventHandler(this.siticoneGradientButton1_Click);
             // 
             // User
             // 
