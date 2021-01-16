@@ -22,13 +22,13 @@ namespace ooad.DTO
         public string Idhocphan { get; set; }
 
         [JsonProperty("quatrinh")]
-        public long Quatrinh { get; set; }
+        public double Quatrinh { get; set; }
 
         [JsonProperty("thuchanh")]
-        public long Thuchanh { get; set; }
+        public double Thuchanh { get; set; }
 
         [JsonProperty("thi")]
-        public long Thi { get; set; }
+        public double Thi { get; set; }
 
         [JsonProperty("ketqua")]
         public double Ketqua { get; set; }

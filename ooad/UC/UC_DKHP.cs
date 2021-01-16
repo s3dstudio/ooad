@@ -61,6 +61,7 @@ namespace ooad.UC
 
             if( dem > 24) {
                 MessageBox.Show("vượt quá 24 tín chỉ");
+                dem = 0;
             
             }
                 else
@@ -90,6 +91,8 @@ namespace ooad.UC
 
                         Client.Client.Instance.Post("api/dkhpdata/post", dkhp);
                         //Console.WriteLine("iddkp = {0}, idtkbnl = {1} \n", dkhp.Iddkhp,dkhp.Idtkbnhomlop);
+
+                        dem = 0;
                     }
                 }
             }
