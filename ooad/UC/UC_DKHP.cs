@@ -137,5 +137,22 @@ namespace ooad.UC
         }
 
         public void SetHP(UC.HP hp) { _hp = hp; }
+
+        private void tbMalop_TextChanged(object sender, EventArgs e)
+        {
+            List<DTO.DKHP> temp = new List<DTO.DKHP>();
+            foreach (var item in _listDkhp)
+            {
+                if (item.Idnhomlop == tbMalop.Text)
+                {
+                    temp.Add(item);
+                }
+            }
+
+            siticoneDataGridView1.DataSource = temp;
+
+            if (temp.Count == 0)
+                siticoneDataGridView1.DataSource = _listDkhp;
+        }
     }
 }

@@ -116,10 +116,14 @@ namespace ooad.UC
 
             DTO.TKBNHOMLOP tkbnl = new DTO.TKBNHOMLOP();
             tkbnl.Hocky = lollipopTextBox5.Text;
-            tkbnl.Idgiangvien = long.Parse(siticoneRoundedComboBox2.Text);
+            List<GIANGVIEN> listgv = GIANGVIEN.FromJson(jsonString1);
+            var temp = siticoneRoundedComboBox2.SelectedItem as GIANGVIEN;
+            tkbnl.Idgiangvien = long.Parse(temp.Idgiangvien.ToString());
             tkbnl.Idnhomlop = lollipopTextBox4.Text;
-            tkbnl.Idphonglt = long.Parse(siticoneRoundedComboBox4.Text);
-            tkbnl.Idphongth = long.Parse(siticoneRoundedComboBox4.Text);
+            var phonghoclt = siticoneRoundedComboBox3.SelectedItem as PHONGHOC;
+            tkbnl.Idphonglt = long.Parse(phonghoclt.Idphonghoc.ToString());
+            var phonghocth = siticoneRoundedComboBox4.SelectedItem as PHONGHOC;
+            tkbnl.Idphongth = long.Parse(phonghocth.Idphonghoc.ToString());
             tkbnl.Idtkbnhomlop = long.Parse(bigInt.ToString());
             tkbnl.Thu = long.Parse(lollipopTextBox7.Text);
             tkbnl.Tietbatdau = long.Parse(lollipopTextBox6.Text);

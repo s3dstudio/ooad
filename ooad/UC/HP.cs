@@ -20,11 +20,13 @@ namespace ooad.UC
             uC_DKHP1.Hide();
             uC_MNL1.Hide();
 
+            cbbHocky.Items.Add("");
             cbbHocky.Items.Add("1");
             cbbHocky.Items.Add("2");
             cbbHocky.Items.Add("3");
 
             var time = DateTime.Now;
+            cbbNamHoc.Items.Add("");
             for (int i = 2000; i <= time.Year; i++)
             {
                 cbbNamHoc.Items.Add(i.ToString());
@@ -73,6 +75,17 @@ namespace ooad.UC
                 }
             }
 
+            if (cbbHocky.Text == "" && cbbNamHoc.Text == "")
+            {
+                siticoneDataGridView1.DataSource = _dkhpdata;
+                foreach (var item in _dkhpdata)
+                {
+                    _sotinchi += (int)item.Sotinchi;
+                }
+                tbSotinchi.Text = _sotinchi.ToString();
+                return;
+            }
+
             tbSotinchi.Text = _sotinchi.ToString();
             siticoneDataGridView1.DataSource = data;
 
@@ -80,6 +93,7 @@ namespace ooad.UC
 
         private void cbbNamHoc_SelectedIndexChanged(object sender, EventArgs e)
         {
+           
             List<DTO.DKHP> data = new List<DTO.DKHP>();
             _sotinchi = 0;
             foreach (var item in _dkhpdata)
@@ -89,6 +103,17 @@ namespace ooad.UC
                     _sotinchi += (int)item.Sotinchi;
                     data.Add(item);
                 }
+            }
+
+            if (cbbHocky.Text == "" && cbbNamHoc.Text == "")
+            {
+                siticoneDataGridView1.DataSource = _dkhpdata;
+                foreach (var item in _dkhpdata)
+                {
+                    _sotinchi += (int)item.Sotinchi;
+                }
+                tbSotinchi.Text = _sotinchi.ToString();
+                return;
             }
 
             tbSotinchi.Text = _sotinchi.ToString();
