@@ -122,9 +122,13 @@ namespace ooad.UC
         {
             return lollipopCheckBox1.Checked;
         }
-        //private void khdt_load(object sender, EventArgs args)
-        //{
-          
-        //}
+
+        private void lollipopCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
+        
     }
 }

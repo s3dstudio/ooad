@@ -34,13 +34,14 @@ namespace ooad.UC
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.siticoneButton1 = new Siticone.UI.WinForms.SiticoneButton();
+            this.siticoneButton7 = new Siticone.UI.WinForms.SiticoneButton();
             this.tbMalop = new Siticone.UI.WinForms.SiticoneTextBox();
+            this.lbMalop = new LollipopLabel();
             this.siticoneGradientButton2 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.siticoneGradientButton1 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.siticoneDataGridView1 = new Siticone.UI.WinForms.SiticoneDataGridView();
             this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbMalop = new LollipopLabel();
             this.Idnhomlop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenhocphanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.khoaquanlyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +51,8 @@ namespace ooad.UC
             this.tietbatdauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tietketthucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dKHPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.siticoneGradientButton3 = new Siticone.UI.WinForms.SiticoneGradientButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dKHPBindingSource)).BeginInit();
@@ -58,6 +61,9 @@ namespace ooad.UC
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.siticoneGradientButton3);
+            this.panel1.Controls.Add(this.siticoneButton1);
+            this.panel1.Controls.Add(this.siticoneButton7);
             this.panel1.Controls.Add(this.tbMalop);
             this.panel1.Controls.Add(this.lbMalop);
             this.panel1.Controls.Add(this.siticoneGradientButton2);
@@ -66,10 +72,45 @@ namespace ooad.UC
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(894, 604);
+            this.panel1.Size = new System.Drawing.Size(1192, 743);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // siticoneButton1
+            // 
+            this.siticoneButton1.CheckedState.Parent = this.siticoneButton1;
+            this.siticoneButton1.CustomImages.Parent = this.siticoneButton1;
+            this.siticoneButton1.FillColor = System.Drawing.Color.Transparent;
+            this.siticoneButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
+            this.siticoneButton1.HoveredState.Parent = this.siticoneButton1;
+            this.siticoneButton1.Location = new System.Drawing.Point(679, 48);
+            this.siticoneButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.siticoneButton1.Name = "siticoneButton1";
+            this.siticoneButton1.ShadowDecoration.Parent = this.siticoneButton1;
+            this.siticoneButton1.Size = new System.Drawing.Size(117, 55);
+            this.siticoneButton1.TabIndex = 48;
+            this.siticoneButton1.Text = "XÓA";
+            this.siticoneButton1.Click += new System.EventHandler(this.siticoneButton1_Click);
+            // 
+            // siticoneButton7
+            // 
+            this.siticoneButton7.CheckedState.Parent = this.siticoneButton7;
+            this.siticoneButton7.CustomImages.Parent = this.siticoneButton7;
+            this.siticoneButton7.FillColor = System.Drawing.Color.Transparent;
+            this.siticoneButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
+            this.siticoneButton7.HoveredState.Parent = this.siticoneButton7;
+            this.siticoneButton7.Location = new System.Drawing.Point(554, 48);
+            this.siticoneButton7.Margin = new System.Windows.Forms.Padding(4);
+            this.siticoneButton7.Name = "siticoneButton7";
+            this.siticoneButton7.ShadowDecoration.Parent = this.siticoneButton7;
+            this.siticoneButton7.Size = new System.Drawing.Size(117, 55);
+            this.siticoneButton7.TabIndex = 47;
+            this.siticoneButton7.Text = "SỬA";
+            this.siticoneButton7.Click += new System.EventHandler(this.siticoneButton7_Click);
             // 
             // tbMalop
             // 
@@ -87,16 +128,28 @@ namespace ooad.UC
             this.tbMalop.ForeColor = System.Drawing.Color.Black;
             this.tbMalop.HoveredState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbMalop.HoveredState.Parent = this.tbMalop;
-            this.tbMalop.Location = new System.Drawing.Point(676, 58);
-            this.tbMalop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbMalop.Location = new System.Drawing.Point(901, 71);
+            this.tbMalop.Margin = new System.Windows.Forms.Padding(5);
             this.tbMalop.Name = "tbMalop";
             this.tbMalop.PasswordChar = '\0';
             this.tbMalop.PlaceholderText = "";
             this.tbMalop.SelectedText = "";
             this.tbMalop.ShadowDecoration.Parent = this.tbMalop;
-            this.tbMalop.Size = new System.Drawing.Size(176, 35);
+            this.tbMalop.Size = new System.Drawing.Size(235, 43);
             this.tbMalop.TabIndex = 46;
             this.tbMalop.TextChanged += new System.EventHandler(this.tbMalop_TextChanged);
+            // 
+            // lbMalop
+            // 
+            this.lbMalop.AutoSize = true;
+            this.lbMalop.BackColor = System.Drawing.Color.Transparent;
+            this.lbMalop.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMalop.ForeColor = System.Drawing.Color.Black;
+            this.lbMalop.Location = new System.Drawing.Point(816, 82);
+            this.lbMalop.Name = "lbMalop";
+            this.lbMalop.Size = new System.Drawing.Size(73, 21);
+            this.lbMalop.TabIndex = 45;
+            this.lbMalop.Text = "Mã lớp:";
             // 
             // siticoneGradientButton2
             // 
@@ -107,10 +160,11 @@ namespace ooad.UC
             this.siticoneGradientButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneGradientButton2.ForeColor = System.Drawing.Color.White;
             this.siticoneGradientButton2.HoveredState.Parent = this.siticoneGradientButton2;
-            this.siticoneGradientButton2.Location = new System.Drawing.Point(740, 522);
+            this.siticoneGradientButton2.Location = new System.Drawing.Point(987, 642);
+            this.siticoneGradientButton2.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneGradientButton2.Name = "siticoneGradientButton2";
             this.siticoneGradientButton2.ShadowDecoration.Parent = this.siticoneGradientButton2;
-            this.siticoneGradientButton2.Size = new System.Drawing.Size(112, 45);
+            this.siticoneGradientButton2.Size = new System.Drawing.Size(149, 55);
             this.siticoneGradientButton2.TabIndex = 16;
             this.siticoneGradientButton2.Text = "Đồng ý";
             this.siticoneGradientButton2.Click += new System.EventHandler(this.siticoneGradientButton2_Click);
@@ -127,10 +181,11 @@ namespace ooad.UC
             this.siticoneGradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneGradientButton1.ForeColor = System.Drawing.Color.DimGray;
             this.siticoneGradientButton1.HoveredState.Parent = this.siticoneGradientButton1;
-            this.siticoneGradientButton1.Location = new System.Drawing.Point(606, 522);
+            this.siticoneGradientButton1.Location = new System.Drawing.Point(808, 642);
+            this.siticoneGradientButton1.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneGradientButton1.Name = "siticoneGradientButton1";
             this.siticoneGradientButton1.ShadowDecoration.Parent = this.siticoneGradientButton1;
-            this.siticoneGradientButton1.Size = new System.Drawing.Size(112, 45);
+            this.siticoneGradientButton1.Size = new System.Drawing.Size(149, 55);
             this.siticoneGradientButton1.TabIndex = 15;
             this.siticoneGradientButton1.Text = "Huỷ";
             this.siticoneGradientButton1.Click += new System.EventHandler(this.siticoneGradientButton1_Click);
@@ -174,11 +229,13 @@ namespace ooad.UC
             this.siticoneDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.siticoneDataGridView1.EnableHeadersVisualStyles = false;
             this.siticoneDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.siticoneDataGridView1.Location = new System.Drawing.Point(25, 100);
+            this.siticoneDataGridView1.Location = new System.Drawing.Point(33, 123);
+            this.siticoneDataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneDataGridView1.Name = "siticoneDataGridView1";
             this.siticoneDataGridView1.RowHeadersVisible = false;
+            this.siticoneDataGridView1.RowHeadersWidth = 51;
             this.siticoneDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.siticoneDataGridView1.Size = new System.Drawing.Size(841, 416);
+            this.siticoneDataGridView1.Size = new System.Drawing.Size(1121, 512);
             this.siticoneDataGridView1.TabIndex = 1;
             this.siticoneDataGridView1.Theme = Siticone.UI.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.siticoneDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -206,92 +263,108 @@ namespace ooad.UC
             // check
             // 
             this.check.HeaderText = "Check";
+            this.check.MinimumWidth = 6;
             this.check.Name = "check";
             this.check.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
-            this.label1.Location = new System.Drawing.Point(30, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ĐĂNG KÝ HỌC PHẦN";
-            // 
-            // lbMalop
-            // 
-            this.lbMalop.AutoSize = true;
-            this.lbMalop.BackColor = System.Drawing.Color.Transparent;
-            this.lbMalop.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMalop.ForeColor = System.Drawing.Color.Black;
-            this.lbMalop.Location = new System.Drawing.Point(612, 67);
-            this.lbMalop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbMalop.Name = "lbMalop";
-            this.lbMalop.Size = new System.Drawing.Size(58, 17);
-            this.lbMalop.TabIndex = 45;
-            this.lbMalop.Text = "Mã lớp:";
             // 
             // Idnhomlop
             // 
             this.Idnhomlop.DataPropertyName = "Idnhomlop";
             this.Idnhomlop.HeaderText = "Mã lớp";
+            this.Idnhomlop.MinimumWidth = 6;
             this.Idnhomlop.Name = "Idnhomlop";
             // 
             // tenhocphanDataGridViewTextBoxColumn
             // 
             this.tenhocphanDataGridViewTextBoxColumn.DataPropertyName = "Tenhocphan";
             this.tenhocphanDataGridViewTextBoxColumn.HeaderText = "Tên học phần";
+            this.tenhocphanDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tenhocphanDataGridViewTextBoxColumn.Name = "tenhocphanDataGridViewTextBoxColumn";
             // 
             // khoaquanlyDataGridViewTextBoxColumn
             // 
             this.khoaquanlyDataGridViewTextBoxColumn.DataPropertyName = "Khoaquanly";
             this.khoaquanlyDataGridViewTextBoxColumn.HeaderText = "Khoa quản lý";
+            this.khoaquanlyDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.khoaquanlyDataGridViewTextBoxColumn.Name = "khoaquanlyDataGridViewTextBoxColumn";
             // 
             // sotinchiDataGridViewTextBoxColumn
             // 
             this.sotinchiDataGridViewTextBoxColumn.DataPropertyName = "Sotinchi";
             this.sotinchiDataGridViewTextBoxColumn.HeaderText = "Số tín chỉ";
+            this.sotinchiDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.sotinchiDataGridViewTextBoxColumn.Name = "sotinchiDataGridViewTextBoxColumn";
             // 
             // giangvienDataGridViewTextBoxColumn
             // 
             this.giangvienDataGridViewTextBoxColumn.DataPropertyName = "Giangvien";
             this.giangvienDataGridViewTextBoxColumn.HeaderText = "Giảng viên";
+            this.giangvienDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.giangvienDataGridViewTextBoxColumn.Name = "giangvienDataGridViewTextBoxColumn";
             // 
             // thuDataGridViewTextBoxColumn
             // 
             this.thuDataGridViewTextBoxColumn.DataPropertyName = "Thu";
             this.thuDataGridViewTextBoxColumn.HeaderText = "Thứ";
+            this.thuDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.thuDataGridViewTextBoxColumn.Name = "thuDataGridViewTextBoxColumn";
             // 
             // tietbatdauDataGridViewTextBoxColumn
             // 
             this.tietbatdauDataGridViewTextBoxColumn.DataPropertyName = "Tietbatdau";
             this.tietbatdauDataGridViewTextBoxColumn.HeaderText = "Tiết bắt đầu";
+            this.tietbatdauDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tietbatdauDataGridViewTextBoxColumn.Name = "tietbatdauDataGridViewTextBoxColumn";
             // 
             // tietketthucDataGridViewTextBoxColumn
             // 
             this.tietketthucDataGridViewTextBoxColumn.DataPropertyName = "Tietketthuc";
             this.tietketthucDataGridViewTextBoxColumn.HeaderText = "Tiết kết thúc";
+            this.tietketthucDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tietketthucDataGridViewTextBoxColumn.Name = "tietketthucDataGridViewTextBoxColumn";
             // 
             // dKHPBindingSource
             // 
             this.dKHPBindingSource.DataSource = typeof(ooad.DTO.DKHP);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(53)))));
+            this.label1.Location = new System.Drawing.Point(40, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(266, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ĐĂNG KÝ HỌC PHẦN";
+            // 
+            // siticoneGradientButton3
+            // 
+            this.siticoneGradientButton3.BorderRadius = 10;
+            this.siticoneGradientButton3.CheckedState.Parent = this.siticoneGradientButton3;
+            this.siticoneGradientButton3.CustomImages.Parent = this.siticoneGradientButton3;
+            this.siticoneGradientButton3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.siticoneGradientButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneGradientButton3.ForeColor = System.Drawing.Color.White;
+            this.siticoneGradientButton3.HoveredState.Parent = this.siticoneGradientButton3;
+            this.siticoneGradientButton3.Location = new System.Drawing.Point(636, 643);
+            this.siticoneGradientButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.siticoneGradientButton3.Name = "siticoneGradientButton3";
+            this.siticoneGradientButton3.ShadowDecoration.Parent = this.siticoneGradientButton3;
+            this.siticoneGradientButton3.Size = new System.Drawing.Size(149, 55);
+            this.siticoneGradientButton3.TabIndex = 49;
+            this.siticoneGradientButton3.Text = "Cập nhật";
+            this.siticoneGradientButton3.Click += new System.EventHandler(this.siticoneGradientButton3_Click);
+            // 
             // UC_DKHP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_DKHP";
-            this.Size = new System.Drawing.Size(894, 604);
+            this.Size = new System.Drawing.Size(1192, 743);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).EndInit();
@@ -319,5 +392,8 @@ namespace ooad.UC
         private System.Windows.Forms.DataGridViewTextBoxColumn tietketthucDataGridViewTextBoxColumn;
         private Siticone.UI.WinForms.SiticoneTextBox tbMalop;
         private LollipopLabel lbMalop;
+        private Siticone.UI.WinForms.SiticoneButton siticoneButton1;
+        private Siticone.UI.WinForms.SiticoneButton siticoneButton7;
+        private Siticone.UI.WinForms.SiticoneGradientButton siticoneGradientButton3;
     }
 }

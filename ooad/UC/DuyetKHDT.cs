@@ -43,8 +43,9 @@ namespace ooad.UC
                     var list = item.GetListKHDT();
 
                     khoahoc = item.GetNamKhoaHoc();
+                  //  Console.WriteLine("idkhoahoc {0}", khoahoc.Idkhoahoc);
                     khoahoc.Active = true;
-                    Client.Client.Instance.Put("api/KHOAHOC/edit/",khoahoc);
+                    Client.Client.Instance.Put("api/KHOAHOC/edit/", khoahoc);
 
                     foreach (var khdt in list)
                     {

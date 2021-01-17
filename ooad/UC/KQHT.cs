@@ -14,6 +14,7 @@ namespace ooad.UC
     {
         private double DTB = 0.0;
         private int TongTinChi = 0;
+        List<DTO.CHITIETKQHT> listChitiet;
 
         public KQHT()
         {
@@ -23,7 +24,7 @@ namespace ooad.UC
         public void LoadData()
         {
             var jsonString = Client.Client.Instance.Get("api/ketquahoctap/getbyusername/" + Client.User.Instance.userName);
-            List<DTO.CHITIETKQHT> listChitiet = DTO.CHITIETKQHT.FromJson(jsonString);
+            listChitiet = DTO.CHITIETKQHT.FromJson(jsonString);
 
             siticoneDataGridView1.DataSource = listChitiet;
 
@@ -50,6 +51,36 @@ namespace ooad.UC
         private void KQHT_Load(object sender, EventArgs e)
         {
            LoadData();
+        }
+
+        private void siticoneButton4_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < siticoneDataGridView1.Rows.Count; i++)
+            {
+                bool check = Convert.ToBoolean(siticoneDataGridView1.Rows[i].Cells["Check"].Value?.ToString());
+
+                if (check)
+                {
+                    string id = siticoneDataGridView1.Rows[i].Cells["idketquahoctapDataGridViewTextBoxColumn"].Value?.ToString();
+
+
+
+                    DTO.CHITIETKQHT query = listChitiet.FirstOrDefault(t => Convert.ToString(t.Idketquahoctap) == id);
+
+
+
+                    //   Console.WriteLine("qua trinh ={0} ,id  ={1} ,thuc hanh ={3}, ket qua ={2}, thi ={4} \n", query.Quatrinh, query.Idketquahoctap, query.Ketqua, query.Thuchanh, query.Thi);
+
+
+
+                    Client.Client.Instance.Put("api/ketquahoctap/edit", query);
+
+
+                }
+
+            }
+
+            LoadData();
         }
     }
     

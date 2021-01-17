@@ -154,5 +154,97 @@ namespace ooad.UC
             if (temp.Count == 0)
                 siticoneDataGridView1.DataSource = _listDkhp;
         }
+
+        private void siticoneButton7_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < siticoneDataGridView1.Rows.Count; i++)
+            {
+                bool check = Convert.ToBoolean(siticoneDataGridView1.Rows[i].Cells["check"].Value?.ToString());
+
+                if (check)
+                {
+                    string id = siticoneDataGridView1.Rows[i].Cells["Idnhomlop"].Value?.ToString();
+
+
+
+                    DTO.DKHP query = _listDkhp.FirstOrDefault(t => Convert.ToString(t.Idnhomlop) == id);
+
+
+                    var jsonString1 = Client.Client.Instance.Get("api/tkbnhomlop/get");
+                    List<DTO.TKBNHOMLOP> Tkbnhomlop = DTO.TKBNHOMLOP.FromJson(jsonString1);
+
+                    foreach (var tkbnhomlop in Tkbnhomlop)
+                    {
+                        if (tkbnhomlop.Idtkbnhomlop == query.Idtkbnhomlop)
+                        {
+
+                            tkbnhomlop.Thu = query.Thu;
+                            tkbnhomlop.Tietbatdau = query.Tietbatdau;
+                            tkbnhomlop.Tietketthuc = query.Tietketthuc;
+
+                            Client.Client.Instance.Put("api/tkbnhomlop/edit", tkbnhomlop);
+
+                        }
+                    }
+
+                    // Console.WriteLine("id ={0} ,thu  ={1} ,tiet bat dau ={2}, tiet ket thuc ={3} \n", Tkbnhomlop[key].Idtkbnhomlop, Tkbnhomlop[key].Thu, Tkbnhomlop[key].Tietbatdau, Tkbnhomlop[key].Tietketthuc);
+
+
+                }
+
+            }
+
+            LoadData();
+        }
+
+        private void siticoneButton1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < siticoneDataGridView1.Rows.Count; i++)
+            {
+                bool check = Convert.ToBoolean(siticoneDataGridView1.Rows[i].Cells["check"].Value?.ToString());
+
+                if (check)
+                {
+                    string id = siticoneDataGridView1.Rows[i].Cells["Idnhomlop"].Value?.ToString();
+
+
+
+                    DTO.DKHP query = _listDkhp.FirstOrDefault(t => Convert.ToString(t.Idnhomlop) == id);
+
+                    Console.WriteLine("idtbknhomlop {0} ", query.Idtkbnhomlop);
+
+                    var jsonString2 = Client.Client.Instance.Get("api/dkhpdata/get");
+                    List<DTO.DKHPData> dkhpdatta = DTO.DKHPData.FromJson(jsonString2);
+
+                    foreach(var tkbItem in dkhpdatta)
+                    {
+                        if(tkbItem.Idtkbnhomlop == query.Idtkbnhomlop)
+                        {
+                            // Console.WriteLine("idtkbsv {0} idsv {1}", tkbItem.Iddkhp,tkbItem.Idsv);
+
+                            Client.Client.Instance.Delete("api/dkhpdata/delete/",tkbItem.Iddkhp.ToString());
+
+                        }
+                    }
+
+
+                    Client.Client.Instance.Delete("api/tkbnhomlop/delete/", query.Idtkbnhomlop.ToString());
+
+                    //  Console.WriteLine("id = {0} ,idsv  = {1} ,idtkbnhomlop  ={2} \n", dkhpdata1[keydelete].Iddkhp, dkhpdata1[keydelete].Idsv, dkhpdata1[keydelete].Idtkbnhomlop);
+
+
+
+
+                }
+
+            }
+
+            LoadData();
+        }
+
+        private void siticoneGradientButton3_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
     }
 }

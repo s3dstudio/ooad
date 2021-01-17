@@ -73,7 +73,7 @@ namespace ooad.UC
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticonePanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
-            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(4);
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.ShadowDecoration.Parent = this.siticonePanel1;
             this.siticonePanel1.Size = new System.Drawing.Size(537, 417);
@@ -84,7 +84,7 @@ namespace ooad.UC
             this.siticoneSeparator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(239)))));
             this.siticoneSeparator1.FillColor = System.Drawing.Color.White;
             this.siticoneSeparator1.Location = new System.Drawing.Point(25, 95);
-            this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneSeparator1.Name = "siticoneSeparator1";
             this.siticoneSeparator1.Size = new System.Drawing.Size(493, 16);
             this.siticoneSeparator1.TabIndex = 35;
@@ -190,7 +190,7 @@ namespace ooad.UC
             this.lollipopCheckBox1.AutoSize = true;
             this.lollipopCheckBox1.CheckColor = "#508ef5";
             this.lollipopCheckBox1.Location = new System.Drawing.Point(507, 4);
-            this.lollipopCheckBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lollipopCheckBox1.Margin = new System.Windows.Forms.Padding(4);
             this.lollipopCheckBox1.Name = "lollipopCheckBox1";
             this.lollipopCheckBox1.Size = new System.Drawing.Size(20, 20);
             this.lollipopCheckBox1.TabIndex = 25;
@@ -285,7 +285,7 @@ namespace ooad.UC
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.siticonePanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_Duyet";
             this.Size = new System.Drawing.Size(537, 417);
             this.siticonePanel1.ResumeLayout(false);
